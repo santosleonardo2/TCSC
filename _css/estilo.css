@@ -104,6 +104,29 @@ footer#rodape div#footer_left_greater_rectangle p {
     transform: skewX(45deg);
 }
 
+footer#rodape div#footer_right_greater_rectangle {
+    width: 300px;
+    height: 50px;
+    margin: -30px 200px 5px 440px;
+    transform: skewX(45deg);
+    background-color: #E6E7E8;
+    position: absolute;
+}
+
+footer#rodape div#footer_right_greater_rectangle img#ufpe_logo {
+    transform: skewX(-45deg);
+    width: 35px;
+    height: 40px;
+    margin: 5px 20px 5px 50px;
+}
+
+footer#rodape div#footer_right_greater_rectangle img#lika_logo {
+    transform: skewX(-45deg);
+    width: 50px;
+    height: 40px;
+    margin: 5px 20px 5px 20px;
+}
+
 footer#rodape div#footer_left_small_rectangle {
     width: 500px;
     height: 20px;
@@ -113,7 +136,7 @@ footer#rodape div#footer_left_small_rectangle {
     position: absolute;
 }
 
-footer#rodape div#footer_rght_small_rectangle {
+footer#rodape div#footer_right_small_rectangle {
     width: 500px;
     height: 20px;
     margin: 0px 200px 5px 420px;
