@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3cc11bf-75f1-439a-afe3-4e7ee3963b29" name="Default" comment="" />
+    <list default="true" id="a3cc11bf-75f1-439a-afe3-4e7ee3963b29" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_css/estilo.css" afterPath="$PROJECT_DIR$/_css/estilo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tela_login.html" afterPath="$PROJECT_DIR$/tela_login.html" />
+    </list>
     <ignored path="TCSC.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -24,10 +29,10 @@
       <file leaf-file-name="tela_login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tela_login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+            <state relative-caret-position="413">
+              <caret line="59" column="55" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="55" />
               <folding>
-                <element signature="e#2563#2569#0" expanded="true" />
+                <element signature="e#2969#2975#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,8 +41,8 @@
       <file leaf-file-name="estilo.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_css/estilo.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+            <state relative-caret-position="153">
+              <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -70,6 +75,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -236,12 +244,15 @@
       <workItem from="1476443731166" duration="405000" />
       <workItem from="1476446336172" duration="4194000" />
       <workItem from="1476799531776" duration="1190000" />
-      <workItem from="1476831338598" duration="1219000" />
+      <workItem from="1476831338598" duration="3173000" />
+      <workItem from="1476842478303" duration="3889000" />
+      <workItem from="1476879622361" duration="3996000" />
+      <workItem from="1476886083731" duration="2002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14143000" />
+    <option name="totallyTimeSpent" value="25984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -286,10 +297,115 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tela_login.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2969#2975#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscricao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#1120#1126#0" expanded="true" />
+            <element signature="e#1522#1528#0" expanded="true" />
+            <element signature="e#1727#1733#0" expanded="true" />
+            <element signature="e#1967#1973#0" expanded="true" />
+            <element signature="e#2143#2149#0" expanded="true" />
+            <element signature="e#2635#2641#0" expanded="true" />
+            <element signature="e#2896#2902#0" expanded="true" />
+            <element signature="e#3645#3651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tela_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <folding>
+            <element signature="e#2969#2975#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscricao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#1120#1126#0" expanded="true" />
+            <element signature="e#1522#1528#0" expanded="true" />
+            <element signature="e#1727#1733#0" expanded="true" />
+            <element signature="e#1967#1973#0" expanded="true" />
+            <element signature="e#2143#2149#0" expanded="true" />
+            <element signature="e#2635#2641#0" expanded="true" />
+            <element signature="e#2896#2902#0" expanded="true" />
+            <element signature="e#3645#3651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tela_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
+          <folding>
+            <element signature="e#2969#2975#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscricao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#1120#1126#0" expanded="true" />
+            <element signature="e#1522#1528#0" expanded="true" />
+            <element signature="e#1727#1733#0" expanded="true" />
+            <element signature="e#1967#1973#0" expanded="true" />
+            <element signature="e#2143#2149#0" expanded="true" />
+            <element signature="e#2635#2641#0" expanded="true" />
+            <element signature="e#2896#2902#0" expanded="true" />
+            <element signature="e#3645#3651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tela_login.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="96" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="96" />
           <folding>
-            <element signature="e#2563#2569#0" expanded="true" />
+            <element signature="e#2969#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -324,7 +440,7 @@
         <state relative-caret-position="527">
           <caret line="31" column="96" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="96" />
           <folding>
-            <element signature="e#2563#2569#0" expanded="true" />
+            <element signature="e#2969#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -359,7 +475,7 @@
         <state relative-caret-position="374">
           <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding>
-            <element signature="e#2563#2569#0" expanded="true" />
+            <element signature="e#2969#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -377,7 +493,7 @@
         <state relative-caret-position="374">
           <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding>
-            <element signature="e#2563#2569#0" expanded="true" />
+            <element signature="e#2969#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -395,7 +511,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2563#2569#0" expanded="true" />
+            <element signature="e#2969#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -413,7 +529,7 @@
         <state relative-caret-position="629">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
-            <element signature="e#2563#2569#0" expanded="true" />
+            <element signature="e#2969#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -431,7 +547,7 @@
         <state relative-caret-position="510">
           <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding>
-            <element signature="e#2563#2569#0" expanded="true" />
+            <element signature="e#2969#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -449,7 +565,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2563#2569#0" expanded="true" />
+            <element signature="e#2969#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -485,18 +601,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tela_login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        <state relative-caret-position="413">
+          <caret line="59" column="55" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="55" />
           <folding>
-            <element signature="e#2563#2569#0" expanded="true" />
+            <element signature="e#2969#2975#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_css/estilo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        <state relative-caret-position="153">
+          <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
           <folding />
         </state>
       </provider>

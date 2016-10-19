@@ -5,7 +5,8 @@
 }
 
 header#cabecalho {
-    border-bottom: 1px solid #606060;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 header#cabecalho h1 {
@@ -24,18 +25,44 @@ header#cabecalho h2 {
     margin-top: 0px;
 }
 
+header#cabecalho div#header_left_rectangle {
+    width: 500px;
+    height: 20px;
+    margin: 0px 200px 0px -20px;
+    transform: skewX(45deg);
+    background-color: #00AA18;
+    opacity: .5;
+    position: absolute;
+}
+
+header#cabecalho div#header_right_rectangle {
+    width: 500px;
+    height: 20px;
+    margin: 0px 200px 0px 420px;
+    background-color: #0B4900;
+    transform: skewX(45deg);
+    position: absolute;
+}
+
 body {
-    background-image: url("../_imagens/background_grid.png");
-    background-color: green;
+    background-color: #606060;
 }
 
 div#interface {
+    background-image: url("../_imagens/background_grid.png");
+    background-color: #127c03;
     color: white;
     font-family: Balsamiq, sans-serif;
     font-size: 11pt;
     width: 900px;
     padding: 10px;
     margin: -20px auto 10px auto;
+    box-shadow: 2px 2px 2px #656565;
+    transition: box-shadow 1s;
+}
+
+div#interface:hover {
+    box-shadow: 2px 2px 2px #808080;
 }
 
 p {
@@ -53,51 +80,90 @@ aside#lateral {
     display: block;
     width: 330px;
     float: right;
-    border-left: 1px solid #606060;
     padding-left: 15px;
+    margin-bottom: 40px;
 }
 
 footer#rodape {
     clear: both;
-    border-top: 1px solid #606060;
 }
 
-footer#rodape p {
+footer#rodape div#footer_left_greater_rectangle {
+    width: 300px;
+    height: 50px;
+    margin: -30px 200px 5px 150px;
+    transform: skewX(-45deg);
+    background-color: #ffffff;
+    position: absolute;
+}
+
+footer#rodape div#footer_left_greater_rectangle p {
     text-align: center;
+    color: black;
+    margin: auto 0px auto 0px;
+    transform: skewX(45deg);
+}
+
+footer#rodape div#footer_left_small_rectangle {
+    width: 500px;
+    height: 20px;
+    margin: 0px 200px 5px -20px;
+    transform: skewX(45deg);
+    background-color: #ffffff;
+    position: absolute;
+}
+
+footer#rodape div#footer_rght_small_rectangle {
+    width: 500px;
+    height: 20px;
+    margin: 0px 200px 5px 420px;
+    background-color: #E6E7E8;
+    transform: skewX(45deg);
+    position: absolute;
 }
 
 /* LOGIN */
-/* Full-width inputs */
+div#login {
+    background-color: wheat;
+    color: #0B4900;
+    padding: 10px;
+}
+
 div#login h3 {
     margin: 0px;
     text-align: center;
     font-size: 12pt;
 }
 
-div#login a {
-    text-decoration: none;
-}
-
-div#login a:hover {
-    text-decoration: underline;
-}
-
-input[type=text], input[type=password] {
+div#login input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid #d99a9b;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
-/* Set a style for all buttons */
-button {
+div#login button#login {
     background-color: #4085EB;
     color: white;
+    width: 150px;
     padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    
+}
+
+div#login button#registrar {
+    background-color: #C10000;
+    color: white;
+    width: 100px;
+    margin: 8px auto 8px auto;
+    padding: 5px 20px;
+    text-align: center;
+}
+
+div#noticias {
+    background-color: #4085EB;
 }
