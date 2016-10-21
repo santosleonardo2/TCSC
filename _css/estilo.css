@@ -25,7 +25,7 @@ header#cabecalho h2 {
     margin-top: 0px;
 }
 
-header#cabecalho div#header_left_rectangle {
+div#header_left_rectangle {
     width: 500px;
     height: 20px;
     margin: 0px 200px 0px -20px;
@@ -35,7 +35,7 @@ header#cabecalho div#header_left_rectangle {
     position: absolute;
 }
 
-header#cabecalho div#header_right_rectangle {
+div#header_right_rectangle {
     width: 500px;
     height: 20px;
     margin: 0px 200px 0px 420px;
@@ -80,15 +80,76 @@ aside#lateral {
     display: block;
     width: 330px;
     float: right;
-    padding-left: 15px;
     margin-bottom: 40px;
+}
+
+div#noticias {
+    margin: 30px 10px 0px 10px;
+    color: black;
+}
+
+div#noticias_header {
+    height: 35px;
+}
+
+div#noticias_header_circle {
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: 280px;
+    margin: 0px;
+    z-index: 1;
+}
+
+div#noticias_header_rectangle {
+    background-color: #FFFFFF;
+    height: 30px;
+    width: 320px;
+    margin: 0px;
+    position: relative;
+    top: -40px;
+    left: -20px;
+    transform: skewX(-45deg);
+    z-index: 1;
+}
+
+div#noticias_header_rectangle h2 {
+    margin: 0px;
+    color: #0B4900;
+    transform: skewX(45deg);
+    position: relative;
+    left: 50px;
+}
+
+div#noticias_header_vertical_rectangle {
+    background-color: #FFFFFF;
+    height: 25px;
+    width: 420px;
+    margin: 0px;
+    position: relative;
+    top: 135px;
+    left: 95px;
+    transform: rotate(90deg) skewX(45deg);
+    z-index: 0;
+}
+
+div#noticias_corpo {
+    background-color: #E6E7E8;
+    padding-top: 15px;
+    width: 260px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 footer#rodape {
     clear: both;
 }
 
-footer#rodape div#footer_left_greater_rectangle {
+div#footer_left_greater_rectangle {
     width: 300px;
     height: 50px;
     margin: -30px 200px 5px 150px;
@@ -97,14 +158,14 @@ footer#rodape div#footer_left_greater_rectangle {
     position: absolute;
 }
 
-footer#rodape div#footer_left_greater_rectangle p {
+div#footer_left_greater_rectangle p {
     text-align: center;
     color: black;
     margin: auto 0px auto 0px;
     transform: skewX(45deg);
 }
 
-footer#rodape div#footer_right_greater_rectangle {
+div#footer_right_greater_rectangle {
     width: 300px;
     height: 50px;
     margin: -30px 200px 5px 440px;
@@ -113,21 +174,21 @@ footer#rodape div#footer_right_greater_rectangle {
     position: absolute;
 }
 
-footer#rodape div#footer_right_greater_rectangle img#ufpe_logo {
+div#footer_right_greater_rectangle img#ufpe_logo {
     transform: skewX(-45deg);
     width: 35px;
     height: 40px;
     margin: 5px 20px 5px 50px;
 }
 
-footer#rodape div#footer_right_greater_rectangle img#lika_logo {
+div#footer_right_greater_rectangle img#lika_logo {
     transform: skewX(-45deg);
     width: 50px;
     height: 40px;
     margin: 5px 20px 5px 20px;
 }
 
-footer#rodape div#footer_left_small_rectangle {
+div#footer_left_small_rectangle {
     width: 500px;
     height: 20px;
     margin: 0px 200px 5px -20px;
@@ -136,7 +197,7 @@ footer#rodape div#footer_left_small_rectangle {
     position: absolute;
 }
 
-footer#rodape div#footer_right_small_rectangle {
+div#footer_right_small_rectangle {
     width: 500px;
     height: 20px;
     margin: 0px 200px 5px 420px;
@@ -147,46 +208,104 @@ footer#rodape div#footer_right_small_rectangle {
 
 /* LOGIN */
 div#login {
-    background-color: wheat;
-    color: #0B4900;
-    padding: 10px;
+    height: 290px;
 }
 
-div#login h3 {
+div#login_circle {
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: -25px;
+    z-index: 1;
+}
+
+div#login_rectangle {
+    background-color: #FFFFFF;
+    height: 30px;
+    width: 340px;
+    position: relative;
+    top: -40px;
+    z-index: 1;
+}
+
+div#login_rectangle h2 {
     margin: 0px;
-    text-align: center;
-    font-size: 12pt;
+    color: #0B4900;
+    position: relative;
+    left: 40px;
+}
+
+div#login_container {
+    height: 300px;
+    width: 330px;
+    position: relative;
+    top: -40px;
+    z-index: 0;
+}
+
+div#login_container_corpo {
+    height: 200px;
+    width: 260px;
+    color: #0B4900;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #E6E7E8;
+    z-index: 0;
+}
+
+div#login_container_base_esquerda {
+    height: 30px;
+    width: 200px;
+    background-color: #E6E7E8;
+    transform: skewX(45deg);
+    position: relative;
+    left: 40px;
+    z-index: -1;
+}
+
+div#login_container_base_direita {
+    height: 30px;
+    width: 200px;
+    background-color: #E6E7E8;
+    transform: skewX(-45deg);
+    position: relative;
+    left: 90px;
+    top: -30px;
+    z-index: -1;
 }
 
 div#login input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
-    border: 2px solid #d99a9b;
+    border: 2px solid #C10000;
     box-sizing: border-box;
     border-radius: 10px;
 }
 
-div#login button#login {
+button#login {
     background-color: #4085EB;
     color: white;
-    width: 150px;
-    padding: 14px 20px;
+    font-size: 12pt;
+    width: 130px;
+    padding: 8px 10px;
+    margin-top: 7px;
     border: none;
     cursor: pointer;
-    
+    transform: translate(50%, 0%);
+    z-index: 1;
 }
 
-div#login button#registrar {
+button#registrar {
     background-color: #C10000;
+    font-size: 10pt;
     color: white;
     width: 100px;
-    margin: 8px auto 8px auto;
+    margin: 4px auto 8px auto;
     padding: 5px 20px;
-    text-align: center;
-}
-
-div#noticias {
-    background-color: #4085EB;
+    transform: translate(80%, 0%);
+    z-index: 1;
 }
