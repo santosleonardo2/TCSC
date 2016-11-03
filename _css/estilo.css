@@ -5,8 +5,14 @@
 }
 
 header#cabecalho {
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+header#cabecalho img {
+    top: 20px;
+    display: block;
+    margin: 10px auto 10px auto;
+    position: relative;
 }
 
 header#cabecalho h1 {
@@ -15,33 +21,66 @@ header#cabecalho h1 {
     font-size: 28pt;
     text-shadow: 1px 1px 2px rgba(0,0,0,.6);
     padding: 0px;
-    margin-bottom: 0px;
 }
 
-header#cabecalho h2 {
-    text-align: center;
-    font-size: 14pt;
-    padding: 0px;
-    margin-top: 0px;
-}
-
-div#header_left_rectangle {
+div#header_left_top_rectangle {
     width: 500px;
     height: 20px;
     margin: 0px 200px 0px -20px;
+    top: 0px;
     transform: skewX(45deg);
     background-color: #00AA18;
-    opacity: .5;
     position: absolute;
 }
 
-div#header_right_rectangle {
+div#header_right_top_rectangle {
     width: 500px;
     height: 20px;
     margin: 0px 200px 0px 420px;
+    top: 0px;
     background-color: #0B4900;
     transform: skewX(45deg);
     position: absolute;
+}
+
+div#header_left_big_rectangle {
+    position: absolute;
+    width: 320px;
+    height: 40px;
+    margin: 0px 200px 0px -35px;
+    top: 80px;
+    transform: skewX(45deg);
+    background-color: #D0D2D3;
+}
+
+div#header_right_big_rectangle {
+    position: absolute;
+    width: 320px;
+    height: 40px;
+    margin: 0px 200px 0px 615px;
+    top: 80px;
+    transform: skewX(45deg);
+    background-color: #D0D2D3;
+}
+
+div#header_left_bottom_rectangle {
+    position: absolute;
+    width: 250px;
+    height: 20px;
+    margin: 0px 200px 0px -20px;
+    top: 70px;
+    transform: skewX(45deg);
+    background-color: #00AA18;
+}
+
+div#header_right_bottom_rectangle {
+    position: absolute;
+    width: 250px;
+    height: 20px;
+    margin: 0px 200px 0px 670px;
+    top: 110px;
+    background-color: #0B4900;
+    transform: skewX(45deg);
 }
 
 body {
@@ -50,8 +89,8 @@ body {
 
 div#interface {
     background-image: url("../_imagens/background_grid.png");
-    background-color: #127c03;
-    color: white;
+    background-color: white;
+    color: black;
     font-family: Balsamiq, sans-serif;
     font-size: 11pt;
     width: 900px;
@@ -66,14 +105,37 @@ div#interface:hover {
 }
 
 p {
-    text-align: justify;
-    text-indent: 30px;
+    text-align: center;
+    font-size: 12pt;
 }
 
 section#corpo_principal {
     display: block;
     width: 540px;
     float: left;
+    margin-bottom: 45px;
+}
+
+table#tabela_cadastro_usuario {
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabela_cadastro_usuario td {
+    padding: 10px;
+}
+
+table#tabela_cadastro_usuario label {
+    font-weight: bold;
+}
+
+table#tabela_cadastro_usuario caption {
+    font-family: Balsamiq, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.6);
+    padding-bottom: 10px;
 }
 
 aside#lateral {
@@ -81,70 +143,11 @@ aside#lateral {
     width: 330px;
     float: right;
     margin-bottom: 40px;
+    background-color: blueviolet;
 }
 
-div#noticias {
-    margin: 30px 10px 0px 10px;
-    color: black;
-}
 
-div#noticias_header {
-    height: 35px;
-}
-
-div#noticias_header_circle {
-    background-color: #FFFFFF;
-    border-radius: 50px;
-    height: 50px;
-    width: 50px;
-    position: relative;
-    left: 280px;
-    margin: 0px;
-    z-index: 1;
-}
-
-div#noticias_header_rectangle {
-    background-color: #FFFFFF;
-    height: 30px;
-    width: 320px;
-    margin: 0px;
-    position: relative;
-    top: -40px;
-    left: -20px;
-    transform: skewX(-45deg);
-    z-index: 1;
-}
-
-div#noticias_header_rectangle h2 {
-    margin: 0px;
-    color: #0B4900;
-    transform: skewX(45deg);
-    position: relative;
-    left: 50px;
-}
-
-div#noticias_header_vertical_rectangle {
-    background-color: #FFFFFF;
-    height: 25px;
-    width: 420px;
-    margin: 0px;
-    position: relative;
-    top: 135px;
-    left: 95px;
-    transform: rotate(90deg) skewX(45deg);
-    z-index: 0;
-}
-
-div#noticias_corpo {
-    background-color: #E6E7E8;
-    padding-top: 15px;
-    width: 260px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
+/* RODAPE */
 footer#rodape {
     clear: both;
 }
@@ -154,15 +157,8 @@ div#footer_left_greater_rectangle {
     height: 50px;
     margin: -30px 200px 5px 150px;
     transform: skewX(-45deg);
-    background-color: #ffffff;
+    background-color: #0B4900;
     position: absolute;
-}
-
-div#footer_left_greater_rectangle p {
-    text-align: center;
-    color: black;
-    margin: auto 0px auto 0px;
-    transform: skewX(45deg);
 }
 
 div#footer_right_greater_rectangle {
@@ -170,22 +166,8 @@ div#footer_right_greater_rectangle {
     height: 50px;
     margin: -30px 200px 5px 440px;
     transform: skewX(45deg);
-    background-color: #E6E7E8;
+    background-color: #00AA18;
     position: absolute;
-}
-
-div#footer_right_greater_rectangle img#ufpe_logo {
-    transform: skewX(-45deg);
-    width: 35px;
-    height: 40px;
-    margin: 5px 20px 5px 50px;
-}
-
-div#footer_right_greater_rectangle img#lika_logo {
-    transform: skewX(-45deg);
-    width: 50px;
-    height: 40px;
-    margin: 5px 20px 5px 20px;
 }
 
 div#footer_left_small_rectangle {
@@ -193,7 +175,7 @@ div#footer_left_small_rectangle {
     height: 20px;
     margin: 0px 200px 5px -20px;
     transform: skewX(45deg);
-    background-color: #ffffff;
+    background-color: #00AA18;
     position: absolute;
 }
 
@@ -201,111 +183,7 @@ div#footer_right_small_rectangle {
     width: 500px;
     height: 20px;
     margin: 0px 200px 5px 420px;
-    background-color: #E6E7E8;
+    background-color: #0B4900;
     transform: skewX(45deg);
     position: absolute;
-}
-
-/* LOGIN */
-div#login {
-    height: 290px;
-}
-
-div#login_circle {
-    background-color: #FFFFFF;
-    border-radius: 50px;
-    height: 50px;
-    width: 50px;
-    position: relative;
-    left: -25px;
-    z-index: 1;
-}
-
-div#login_rectangle {
-    background-color: #FFFFFF;
-    height: 30px;
-    width: 340px;
-    position: relative;
-    top: -40px;
-    z-index: 1;
-}
-
-div#login_rectangle h2 {
-    margin: 0px;
-    color: #0B4900;
-    position: relative;
-    left: 40px;
-}
-
-div#login_container {
-    height: 300px;
-    width: 330px;
-    position: relative;
-    top: -40px;
-    z-index: 0;
-}
-
-div#login_container_corpo {
-    height: 200px;
-    width: 260px;
-    color: #0B4900;
-    padding: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #E6E7E8;
-    z-index: 0;
-}
-
-div#login_container_base_esquerda {
-    height: 30px;
-    width: 200px;
-    background-color: #E6E7E8;
-    transform: skewX(45deg);
-    position: relative;
-    left: 40px;
-    z-index: -1;
-}
-
-div#login_container_base_direita {
-    height: 30px;
-    width: 200px;
-    background-color: #E6E7E8;
-    transform: skewX(-45deg);
-    position: relative;
-    left: 90px;
-    top: -30px;
-    z-index: -1;
-}
-
-div#login input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 2px solid #C10000;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-
-button#login {
-    background-color: #4085EB;
-    color: white;
-    font-size: 12pt;
-    width: 130px;
-    padding: 8px 10px;
-    margin-top: 7px;
-    border: none;
-    cursor: pointer;
-    transform: translate(50%, 0%);
-    z-index: 1;
-}
-
-button#registrar {
-    background-color: #C10000;
-    font-size: 10pt;
-    color: white;
-    width: 100px;
-    margin: 4px auto 8px auto;
-    padding: 5px 20px;
-    transform: translate(80%, 0%);
-    z-index: 1;
 }

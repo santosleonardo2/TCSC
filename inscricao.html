@@ -9,46 +9,97 @@
     <body>
         <div id="interface">
             <header id="cabecalho">
-                <h1>Atenção Básica - Saúde da Criança</h1>
-                <h2>Inscrição</h2>
+                <div id="header_left_top_rectangle"></div>
+                <div id="header_right_top_rectangle"></div>
+                <img src="_imagens/inscrição_icone.png">
+                <h1>Inscrição</h1>
+                <div id="header_left_big_rectangle"></div>
+                <div id="header_right_big_rectangle"></div>
+                <div id="header_left_bottom_rectangle"></div>
+                <div id="header_right_bottom_rectangle"></div>
             </header>
-
             <p>Olá!!!</p>
             <p>Gostaríamos de conhecer um pouco sobre você.</p>
             <p>Para sua inscrição serão feitas algumas perguntas sua formação e o uso da Caderneta de Saúde da Criança.</p>
             <p>Vamos lá?</p>
 
-            <div id="cadastro_dados_pessoas">
+            <section id="corpo_principal">
                 <form>
-                    <h3>IDENTIFICAÇÃO DO PARTICIPANTE</h3>
-                    <label>Nome Completo:</label><input type="text" placeholder="Insira nome completo" name="nome_completo" required>
-                    <br/><label>Idade:</label><input type="number" placeholder="Insira idade" name="idade_usuario" required>
-                    <br/><label>Sexo:</label><input type="radio" name="sexo_usuario" value="masculino">Masculino &nbsp; <input type="radio" name="sexo_usuario" value="Feminino">Feminino
-                    <br/><label>CPF:</label><input type="number" placeholder="Insira CPF" name="cpf_usuario" required>
+                    <table id="tabela_cadastro_usuario">
+                        <caption>IDENTIFICAÇÃO DO PARTICIPANTE</caption>
+                        <tr>
+                            <td><label>Nome Completo:</label></td>
+                            <td><input type="text" placeholder="Insira nome completo" name="nome_completo" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Idade:</label></td>
+                            <td><input type="number" placeholder="Insira idade" name="idade_usuario" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Sexo:</label></td>
+                            <td><input type="radio" name="sexo_usuario" value="masculino">Masculino</td>
+                            <td><input type="radio" name="sexo_usuario" value="Feminino">Feminino</td>
+                        </tr>
+                        <tr>
+                            <td><label>CPF:</label></td>
+                            <td><input type="text" placeholder="Insira CPF" name="cpf_usuario" required></td>
+                        </tr>
 
-                    <h3>INFORMAÇÕES DE FORMAÇÃO ACADÊMICA E ATUAÇÃO PROFISSIONAL</h3>
-                    <br/><label>Formação:</label><input type="radio" name="formacao_usuario" value="Enfermagem">Enfermagem &nbsp; <input type="radio" name="formacao_usuario" value="Medicina">Medicina
-                    <br/><label>Maior Titulação:</label><input type="radio" name="ttulacao_usuario" value="Graduacao">Graduação &nbsp; <input type="radio" name="titulacao_usuario" value="Especialização">Especialização
-                    <br/><label>Qual?</label>
-                        <br/><input type="radio" name="ttulacao_usuario_def" value="Mestrado">Mestrado, &nbsp; <label>Área:</label><input type="text" name="titulacao_area">
-                        <br/><input type="radio" name="titulacao_usuario_def" value="Doutorado">Doutorado, &nbsp; <label>Área:</label><input type="text" name="titulacao_area">
-                    <br/><label>Local de Trabalho:</label><input type="text" placeholder="Insira local de trabalho" name="local_trabalho">
+                        <tr>
+                            <td><label>Formação:</label></td>
+                            <td><input type="radio" name="formacao_usuario" value="Enfermagem">Enfermagem</td>
+                            <td><input type="radio" name="formacao_usuario" value="Medicina">Medicina</td>
+                        </tr>
+                        <tr>
+                            <td><label>Maior Titulação:</label></td>
+                            <td><input type="radio" name="titulacao_usuario" value="Graduacao">Graduação</td>
+                            <td><input type="radio" name="titulacao_usuario" value="Especialização">Especialização</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><label>Qual?</label></td>
+                            <td><input type="radio" name="titulacao_usuario_def" value="Mestrado">Mestrado</td>
+                            <td><input type="text" name="titulacao_area" placeholder="Área do mestrado"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="titulacao_usuario_def" value="Doutorado">Doutorado</td>
+                            <td><input type="text" name="titulacao_area" placeholder="Área do doutorado"></td>
+                        </tr>
 
-                    <h3>A CADERNETA DE SAÚDE DA CRIANÇA SOB A PERSPECTIVA DOS PROFISSIONAIS QUE ATUAM NA REDE BÁSICA DE SAÚDE DE RECIFE/PE</h3>
-                    <label>Você realiza consultas de puericultura?</label> <input type="radio" name="frequencia_consultas" value="sim">Sim &nbsp; <input type="radio" name="frequencia_consultas" value="nao">Não
-                    <br/><label>Você utiliza a Caderneta de Saúde da Criança quando atende lactentes ou crianças?</label> <input type="radio" name="frequencia_uso_caderneta" value="sim">Sim &nbsp; <input type="radio" name="frequencia_uso_caderneta" value="nao">Não
+                        <tr>
+                            <td><label>Local de Trabalho:</label></td>
+                            <td><input type="text" placeholder="Insira local de trabalho" name="local_trabalho"></td>
+                        </tr>
 
+                        <tr>
+                            <td><label>Você realiza consultas de puericultura?</label></td>
+                            <td><input type="radio" name="frequencia_consultas" value="sim">Sim</td>
+                            <td><input type="radio" name="frequencia_consultas" value="nao">Não</td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Você utiliza a Caderneta de Saúde da Criança quando atende lactentes ou crianças?</label></td>
+                            <td><input type="radio" name="frequencia_uso_caderneta" value="sim">Sim</td>
+                            <td><input type="radio" name="frequencia_uso_caderneta" value="nao">Não</td>
+                        </tr>
+                    </table>
+                </form>
+            </section>
+
+            <aside id="lateral">
+                <form>
                     <h3>Cadastrar Senha de Acesso</h3>
                     <label>Nome de Usuário:</label><input type="text" placeholder="Insira nome completo" name="login_usuario" required>
                     <br/><label>Email:</label><input type="text" placeholder="Insira nome completo" name="email" required>
                     <br/><label>Senha:</label><input type="password" placeholder="Insira Senha" name="senha" required>
                     <br/><label>Confirmação de Senha:</label><input type="password" placeholder="Insira Senha" name="senha" required>
                 </form>
-            </div>
+            </aside>
 
             <footer id="rodape">
-                <p>Copyright &copy; 2016 - by <a href="http://www.lika-ufpe.org/" target="_blank">LIKA</a>
-                    <br/>Fone: (81) XXXX-XXXX</p>
+                <div id="footer_right_small_rectangle"></div>
+                <div id="footer_left_small_rectangle"></div>
+                <div id="footer_left_greater_rectangle"></div>
+                <div id="footer_right_greater_rectangle"></div>
             </footer>
         </div>
     </body>
