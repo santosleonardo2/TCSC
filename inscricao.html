@@ -25,7 +25,7 @@
 
             <section id="corpo_principal">
                 <form>
-                    <table id="tabela_cadastro_usuario">
+                    <table id="tabela_dados_usuario">
                         <caption>IDENTIFICAÇÃO DO PARTICIPANTE</caption>
                         <tr>
                             <td><label>Nome Completo:</label></td>
@@ -85,14 +85,35 @@
                 </form>
             </section>
 
-            <aside id="lateral">
+            <aside id="lateral_cadastro_online">
                 <form>
-                    <h3>Cadastrar Senha de Acesso</h3>
-                    <label>Nome de Usuário:</label><input type="text" placeholder="Insira nome completo" name="login_usuario" required>
-                    <br/><label>Email:</label><input type="text" placeholder="Insira nome completo" name="email" required>
-                    <br/><label>Senha:</label><input type="password" placeholder="Insira Senha" name="senha" required>
-                    <br/><label>Confirmação de Senha:</label><input type="password" placeholder="Insira Senha" name="senha" required>
+                    <table id="tabela_cadastro_online">
+                        <div id="register_rectangle">
+                            <caption>Cadastrar Senha de Acesso</caption>
+                        </div>
+                        <tr>
+                            <td><label>Nome Usuário:</label></td>
+                            <td><input type="text" placeholder="Insira nome de usuário" name="login_usuario" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Email:</label></td>
+                            <td><input type="text" placeholder="Insira email" name="email" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Senha:</label></td>
+                            <td><input type="password" placeholder="Insira Senha" name="senha" required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Confirmação Senha:</label></td>
+                            <td><input type="password" placeholder="Confirmação de senha" name="senha" required></td>
+                        </tr>
+                    </table>
                 </form>
+                <a href="estudo_de_casos.html" target="_self"><button id="registrar" type="submit">Inscrever-se</button></a>
+                <div id="transparent_left_bottom_triangle"></div>
+                <div id="red_left_bottom_triangle"></div>
+                <div id="transparent_right_bottom_triangle"></div>
+                <div id="red_right_bottom_triangle"></div>
             </aside>
 
             <footer id="rodape">

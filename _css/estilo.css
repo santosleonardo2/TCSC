@@ -45,9 +45,9 @@ div#header_right_top_rectangle {
 
 div#header_left_big_rectangle {
     position: absolute;
-    width: 320px;
+    width: 300px;
     height: 40px;
-    margin: 0px 200px 0px -35px;
+    margin: 0px 200px 0px -30px;
     top: 80px;
     transform: skewX(45deg);
     background-color: #D0D2D3;
@@ -55,9 +55,9 @@ div#header_left_big_rectangle {
 
 div#header_right_big_rectangle {
     position: absolute;
-    width: 320px;
+    width: 300px;
     height: 40px;
-    margin: 0px 200px 0px 615px;
+    margin: 0px 200px 0px 630px;
     top: 80px;
     transform: skewX(45deg);
     background-color: #D0D2D3;
@@ -116,21 +116,21 @@ section#corpo_principal {
     margin-bottom: 45px;
 }
 
-table#tabela_cadastro_usuario {
+table#tabela_dados_usuario {
     border-spacing: 0px;
     margin-left: auto;
     margin-right: auto;
 }
 
-table#tabela_cadastro_usuario td {
+table#tabela_dados_usuario td {
     padding: 10px;
 }
 
-table#tabela_cadastro_usuario label {
+table#tabela_dados_usuario label {
     font-weight: bold;
 }
 
-table#tabela_cadastro_usuario caption {
+table#tabela_dados_usuario caption {
     font-family: Balsamiq, sans-serif;
     font-size: 14pt;
     font-weight: bold;
@@ -138,12 +138,104 @@ table#tabela_cadastro_usuario caption {
     padding-bottom: 10px;
 }
 
-aside#lateral {
+aside#lateral_cadastro_online {
     display: block;
-    width: 330px;
     float: right;
-    margin-bottom: 40px;
-    background-color: blueviolet;
+    width: 330px;
+    height: 200px;
+    padding: 5px;
+    background-color: rgba(0, 170, 24, .9);
+    z-index: 0;
+}
+
+table#tabela_cadastro_online {
+    border-spacing: 0px;
+    margin: -15px auto 0px auto;
+}
+
+table#tabela_cadastro_online td {
+    padding: 3px;
+    color: white;
+    font-size: 11pt;
+}
+
+table#tabela_cadastro_online caption {
+    position: relative;
+    font-family: Balsamiq, sans-serif;
+    font-size: 12pt;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.6);
+    margin: 2px 0px 0px 20px;
+    text-align: left;
+    top: -10px;
+}
+
+div#register_rectangle {
+    position: relative;
+    height: 25px;
+    width: 350px;
+    transform: skewX(45deg);
+    margin: -5px 0px 0px 7px;
+    background-color: #D0D2D3;
+}
+
+div#transparent_left_bottom_triangle {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 45px solid white;
+    border-right: 45px solid transparent;
+    top: -34px;
+    left: -6px;
+}
+
+div#red_left_bottom_triangle {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid #C10000;
+    border-right: 25px solid transparent;
+    top: -65px;
+    left: 0px;
+}
+
+div#transparent_right_bottom_triangle {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 45px solid white;
+    border-left: 45px solid transparent;
+    top: -104px;
+    left: 290px;
+}
+
+div#red_right_bottom_triangle {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid #C10000;
+    border-left: 25px solid transparent;
+    top: -135px;
+    left: 305px;
+}
+
+button#registrar {
+    display: block;
+    background-color: #C10000;
+    font-size: 10pt;
+    font-weight: bold;
+    color: white;
+    border-color: white;
+    width: 240px;
+    margin: 15px auto 15px auto;
+    padding: 5px 20px;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -186,4 +278,75 @@ div#footer_right_small_rectangle {
     background-color: #0B4900;
     transform: skewX(45deg);
     position: absolute;
+}
+
+
+
+/* ESTUDO DE CASOS */
+section#corpo_principal_estudo_de_casos {
+    width: 550px;
+    height: 250px;
+    margin: 30px auto 45px auto;
+}
+
+table#tabela_estudo_de_casos {
+    border-spacing: 0px;
+}
+
+table#tabela_estudo_de_casos td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table#tabela_estudo_de_casos caption {
+    font-family: Balsamiq, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.6);
+    margin: 2px 0px 0px 20px;
+    text-align: left;
+}
+
+div#estudo_de_casos_circle {
+    background-color: #FFFFFF;
+    border: 2px solid #0B4900;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: -40px;
+    top: -293px;
+    z-index: 1;
+}
+
+div#estudo_de_casos_circle img {
+    width: auto;
+    height: auto;
+    margin: 12px 0px 0px 8.5px;
+}
+
+div#estudo_de_casos_rectangle {
+    position: relative;
+    background-color: #FFFFFF;
+    border: 2px solid #0B4900;
+    height: 30px;
+    width: 550px;
+    margin: 0px;
+    top: -215px;
+    left: -15px;
+    transform: skewX(45deg);
+    z-index: 1;
+}
+
+div#estudo_de_casos_vertical_rectangle {
+    position: relative;
+    background-color: #FFFFFF;
+    border: 2px solid #0B4900;
+    height: 30px;
+    width: 220px;
+    margin: 0px;
+    top: -140px;
+    left: -125px;
+    transform: rotate(90deg) skewX(-45deg);
+    z-index: 0;
 }
