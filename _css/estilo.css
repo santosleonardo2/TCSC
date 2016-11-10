@@ -84,24 +84,17 @@ div#header_right_bottom_rectangle {
 }
 
 body {
-    background-color: #606060;
+    background-image: url("../_imagens/background_grid.png");
+    background-color: white;
 }
 
 div#interface {
-    background-image: url("../_imagens/background_grid.png");
-    background-color: white;
     color: black;
     font-family: Balsamiq, sans-serif;
     font-size: 11pt;
     width: 900px;
     padding: 10px;
     margin: -20px auto 10px auto;
-    box-shadow: 2px 2px 2px #656565;
-    transition: box-shadow 1s;
-}
-
-div#interface:hover {
-    box-shadow: 2px 2px 2px #808080;
 }
 
 p {
@@ -118,17 +111,19 @@ section#corpo_principal {
 
 table#tabela_dados_usuario {
     border-spacing: 0px;
-    margin-left: auto;
+    margin-left: 0px;
     margin-right: auto;
 }
 
 table#tabela_dados_usuario td {
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
 }
 
+/*
 table#tabela_dados_usuario label {
     font-weight: bold;
 }
+*/
 
 table#tabela_dados_usuario caption {
     font-family: Balsamiq, sans-serif;
@@ -258,8 +253,22 @@ div#footer_right_greater_rectangle {
     height: 50px;
     margin: -30px 200px 5px 440px;
     transform: skewX(45deg);
-    background-color: #00AA18;
+    background-color: #E8E8E8;
     position: absolute;
+}
+
+div#footer_right_greater_rectangle img#ufpe_logo {
+    transform: skewX(-45deg);
+    width: 35px;
+    height: 40px;
+    margin: 5px 20px 5px 50px;
+}
+
+div#footer_right_greater_rectangle img#lika_logo {
+    transform: skewX(-45deg);
+    width: 50px;
+    height: 40px;
+    margin: 5px 20px 5px 20px;
 }
 
 div#footer_left_small_rectangle {
