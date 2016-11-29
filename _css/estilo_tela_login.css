@@ -4,83 +4,178 @@
     src: url("../_fonts/BalsamiqSansRegular.ttf");
 }
 
-header#cabecalho {
-    margin-bottom: 50px;
-    margin-top: 50px;
+div#tela_login_header_left_greater_rectangle {
+    width: 300px;
+    height: 50px;
+    margin: 0px 200px 5px 150px;
+    transform: skewX(45deg);
+    background-color: #ffffff;
+    top: 10px;
+    position: absolute;
 }
 
-header#cabecalho h1 {
+div#tela_login_header_left_greater_rectangle img#ufpe_logo {
+    transform: skewX(-45deg);
+    position: relative;
+    margin: auto 5px auto 40px;
+}
+
+div#tela_login_header_left_greater_rectangle img#lika_logo {
+    transform: skewX(-45deg);
+    position: relative;
+    margin: auto 10px auto 5px;
+}
+
+div#tela_login_header_left_greater_rectangle img#ideias_logo {
+    transform: skewX(-45deg);
+    position: relative;
+    margin: auto 10px auto 5px;
+}
+
+div#tela_login_header_right_greater_rectangle p {
+    font-size: 9pt;
     text-align: center;
-    font-family: Balsamiq, sans-serif;
-    font-size: 36pt;
+    color: black;
+    margin: auto 0px auto 0px;
+    transform: skewX(45deg);
+    position: relative;
+    top: 10px;
+}
+
+div#tela_login_header_right_greater_rectangle {
+    width: 300px;
+    height: 50px;
+    margin: 0px 200px 5px 440px;
+    transform: skewX(-45deg);
+    background-color: #E6E7E8;
+    top: 10px;
+    position: absolute;
+}
+
+div#tela_login_header_left_small_rectangle {
+    background-color: #ffffff;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    height: 0;
+    width: 450px;
+    border-bottom: 20px solid #FFFFFF;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+div#tela_login_header_right_small_rectangle {
+    position: absolute;
+    top: 10px;
+    height: 0;
+    width: 450px;
+    right: 0px;
+    border-bottom: 20px solid #E6E7E8;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+}
+
+
+
+
+/* CABEÇALHO */
+header#tela_login_cabecalho {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    width: 101.7%;
+    height: 100%;
+    background-color: green;
+    position: relative;
+    left: -5px;
+}
+
+header#tela_login_cabecalho h1 {
+    text-align: center;
+    font-family: Balsamiq;
+    font-weight: normal;
+    font-size: 30pt;
     text-shadow: 1px 1px 2px rgba(0,0,0,.6);
     padding: 0px;
     margin-bottom: 0px;
 }
 
-header#cabecalho h2 {
+header#tela_login_cabecalho h2 {
     text-align: center;
     font-size: 12pt;
+    font-weight: normal;
     padding: 0px;
     margin-top: 0px;
 }
 
-div#header_left_rectangle {
-    width: 500px;
-    height: 20px;
-    margin: 0px 200px 0px -20px;
-    transform: skewX(45deg);
-    background-color: #00AA18;
-    opacity: .5;
+div#tela_login_header_left_rectangle {
+    opacity: 1;
     position: absolute;
+    display: inline-block;
+    height: 0;
+    width: 480px;
+    left: 0px;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
 }
 
-div#header_right_rectangle {
-    width: 500px;
-    height: 20px;
-    margin: 0px 200px 0px 420px;
-    background-color: #0B4900;
-    transform: skewX(45deg);
+div#tela_login_header_right_rectangle {
     position: absolute;
+    display: inline-block;
+    height: 0;
+    width: 450px;
+    right: 0px;
+    border-bottom: 20px solid #0B4900;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
 }
 
+
+/* CORPO PRINCIPAL */
 body {
-    background-image: url("../_imagens/background_grid.png");
-    background-color: #929497;
     color: white;
     font-family: Balsamiq, sans-serif;
     font-size: 12pt;
+    background-color: #58595B;
+}
+
+div#tela_login_interface {
+    background-image: url("../_imagens/background_grid_white.png");
+    background-color: #929497;
     width: 900px;
-    padding: 10px;
-    margin: -20px auto 10px auto;
+    top: -20px;
+    margin: 0px auto 0px auto;
+    padding: 0px 10px 0px 5px;
+    position: relative;
+    display: block;
 }
 
-p {
-    text-align: justify;
-    text-indent: 30px;
-}
-
-section#corpo_principal {
+section#tela_login_corpo_principal {
     display: block;
     width: 530px;
+    margin-bottom: 40px;
     float: left;
     padding: 10px;
 }
 
+section#corpo_principal p {
+    text-indent: 0px;
+    font-size: 12pt;
+    text-align: justify;
+}
+
 aside#lateral {
-    display: block;
-    width: 340px;
-    float: right;
-    margin-left: 10px;
+    height: 730px;
+    width: 350px;
     margin-bottom: 40px;
+    display: block;
+    float: right;
+
 }
 
 /* LOGIN */
-div#login {
-    margin-bottom: 5px;
-}
-
-div#login_circle {
+div#login_circle_container {
     height: 40px;
     width: 40px;
     background-color: #FFFFFF;
@@ -89,11 +184,22 @@ div#login_circle {
     box-shadow: 0px 0px 2px black;
     position: relative;
     display: block;
-    top: -5px;
     z-index: 1;
 }
 
-div#login img#login_icone {
+div#login_circle {
+    height: 39px;
+    width: 38px;
+    background-color: #FFFFFF;
+    border-radius: 35px;
+    position: relative;
+    display: block;
+    top: -67px;
+    left: 2px;
+    z-index: 3;
+}
+
+img#login_icone {
     width: 60%;
     height: 60%;
     position: relative;
@@ -109,9 +215,10 @@ div#login_rectangle {
     background-color: #FFFFFF;
     border: 1px solid #0B4900;
     box-shadow: 0px 0px 2px black;
+    border-radius: 7px;
     position: relative;
     display: block;
-    top: 30px;
+    top: -33px;
     left: 15px;
     z-index: 1;
 }
@@ -131,15 +238,16 @@ div#login_container {
 }
 
 div#login_container_corpo {
-    width: 230px;
+    width: 280px;
+    height: 200px;
     color: #0B4900;
     padding: 25px 15px 15px 15px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 40px;
     background-color: #E6E7E8;
-    border-radius: 15px;
     position: relative;
-    top: -30px;
+    top: -90px;
     z-index: 0;
 }
 
@@ -150,12 +258,12 @@ div#divisao_login {
     margin: 7px auto 7px auto;
 }
 
-div#login label {
+div#login_container_corpo label {
     font-size: 12pt;
     color: #0B4900;
 }
 
-div#login input[type=text], input[type=password] {
+div#login_container_corpo input[type=text], input[type=password] {
     width: 100%;
     height: 25px;
     font-size: 10pt;
@@ -201,26 +309,37 @@ a {
 
 /* NOTICIAS */
 div#noticias {
-    margin-top: 5px;
-    color: black;
+    position: relative;
+    top: -100px;
 }
 
 div#noticias_header {
     height: 35px;
 }
 
-div#noticias_header_circle {
-    width: 40px;
+div#noticias_header_circle_container {
     height: 40px;
+    width: 40px;
     background-color: #FFFFFF;
+    border-radius: 40px;
     border: 1px solid #0B4900;
     box-shadow: 0px 0px 2px black;
-    border-radius: 40px;
     position: relative;
-    left: 306px;
-    margin: 0px;
-    top: -27px;
+    left: 308px;
+    display: block;
     z-index: 1;
+}
+
+div#noticias_header_circle {
+    height: 39px;
+    width: 39px;
+    background-color: #FFFFFF;
+    border-radius: 35px;
+    position: relative;
+    left: 309px;
+    margin: 0px;
+    top: -67px;
+    z-index: 3;
 }
 
 div#noticias_header_circle img#news_icone {
@@ -238,15 +357,15 @@ div#noticias_header_rectangle {
     background-color: #FFFFFF;
     border: 1px solid #0B4900;
     box-shadow: 0px 0px 2px black;
-    border-radius: 10px;
+    border-radius: 7px;
     margin: 0px;
     position: relative;
-    top: 5px;
+    left: 1px;
+    top: -33px;
     z-index: 1;
 }
 
 div#noticias_header_rectangle h1 {
-    margin: 0px;
     color: #0B4900;
     font-size: 18pt;
     font-weight: normal;
@@ -256,14 +375,14 @@ div#noticias_header_rectangle h1 {
 }
 
 div#noticias_corpo {
-    width: 300px;
+    width: 290px;
     height: 400px;
     overflow-y: scroll;
     background-color: #E6E7E8;
-    border-bottom-left-radius: 25px;
     box-shadow: 0px 0px 2px black;
     margin: -3px auto 20px auto;
     padding: 5px 10px 0px 10px;
+    color: black;
 }
 
 div#noticias_corpo::-webkit-scrollbar {
@@ -317,65 +436,43 @@ div#noticias_corpo p {
     margin-bottom: 20px;
 }
 
+div#noticias_footer {
+    height: 0;
+    width: 270px;
+    border-top: 20px solid #E6E7E8;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: -20px;
+}
+
 
 /* Rodape */
-footer#rodape {
+footer#tela_login_rodape {
     clear: both;
+    position: relative;
+    top: -20px;
 }
 
-div#footer_left_greater_rectangle {
-    width: 300px;
-    height: 50px;
-    margin: -30px 200px 5px 150px;
-    transform: skewX(-45deg);
+div#tela_login_footer_left_small_rectangle {
     background-color: #ffffff;
     position: absolute;
+    height: 0;
+    width: 480px;
+    left: -10px;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
 }
 
-div#footer_left_greater_rectangle p {
-    text-align: center;
-    color: black;
-    margin: auto 0px auto 0px;
-    transform: skewX(45deg);
-}
-
-div#footer_right_greater_rectangle {
-    width: 300px;
-    height: 50px;
-    margin: -30px 200px 5px 440px;
-    transform: skewX(45deg);
-    background-color: #E6E7E8;
+div#tela_login_footer_right_small_rectangle {
     position: absolute;
-}
-
-div#footer_right_greater_rectangle img#ufpe_logo {
-    transform: skewX(-45deg);
-    width: 35px;
-    height: 40px;
-    margin: 5px 20px 5px 50px;
-}
-
-div#footer_right_greater_rectangle img#lika_logo {
-    transform: skewX(-45deg);
-    width: 50px;
-    height: 40px;
-    margin: 5px 20px 5px 20px;
-}
-
-div#footer_left_small_rectangle {
-    width: 500px;
-    height: 20px;
-    margin: 0px 200px 5px -20px;
-    transform: skewX(45deg);
-    background-color: #ffffff;
-    position: absolute;
-}
-
-div#footer_right_small_rectangle {
-    width: 500px;
-    height: 20px;
-    margin: 0px 200px 5px 420px;
-    background-color: #E6E7E8;
-    transform: skewX(45deg);
-    position: absolute;
+    height: 0;
+    width: 450px;
+    right: -10px;
+    border-bottom: 20px solid #0B4900;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
 }

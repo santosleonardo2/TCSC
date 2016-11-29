@@ -7,25 +7,38 @@
     </head>
 
     <body>
-        <header id="cabecalho">
-            <h1>Atenção Básica - Saúde da Criança</h1>
-            <h2>Atualização em Caderneta de Saúde da Criança</h2>
-            <div id="header_left_rectangle"></div>
-            <div id="header_right_rectangle"></div>
-        </header>
+        <div id="tela_login_interface">
+            <header id="tela_login_cabecalho">
+                <div id="tela_login_header_left_small_rectangle"></div>
+                <div id="tela_login_header_right_small_rectangle"></div>
+                <div id="tela_login_header_right_greater_rectangle">
+                    <p>Copyright &copy; 2016 - <a href="http://www.lika-ufpe.org/" target="_blank">LIKA</a>
+                        <br/>Fone: (81) XXXX-XXXX</p>
+                </div>
+                <div id="tela_login_header_left_greater_rectangle">
+                    <a href="https://www.ufpe.br/" target="_blank"><img id="ufpe_logo" src="_imagens/ufpe_logo.png"/></a>
+                    <a href="http://www.lika-ufpe.org/" target="_blank"><img id="lika_logo" src="_imagens/lika_logo.png"/></a>
+                    <img id="ideias_logo" src="_imagens/ideias_logo.png"/>
+                </div>
 
-        <section id="corpo_principal">
-            <h2>Olá cursista,</h2>
-            <p>Bem vind@ ao curso de atualização em Caderneta de Saúde da Criança!</p>
-            <p>A Caderneta de Saúde da Criança (CSC) é um direito da criança e, quando efetivamente incorporada na rotina das eSF, pode se constituir em um instrumento de avaliação da qualidade da atenção prestada pela equipe de saúde.</p>
+                <h1>Atenção Básica - Saúde da Criança</h1>
+                <h2>Atualização em Caderneta de Saúde da Criança</h2>
+                <div id="tela_login_header_left_rectangle"></div>
+                <div id="tela_login_header_right_rectangle"></div>
+            </header>
 
-            <p>PRONT@ PARA INICIAR?</p>
-            <p>Conto com a participação de tod@s!</p>
-        </section>
+            <section id="tela_login_corpo_principal">
+                <p>Olá cursista,</p>
+                <p>Bem vind@ ao curso de atualização em Caderneta de Saúde da Criança!</p>
+                <p>A Caderneta de Saúde da Criança (CSC) é um direito da criança e, quando efetivamente incorporada na rotina das eSF, pode se constituir em um instrumento de avaliação da qualidade da atenção prestada pela equipe de saúde.</p>
 
-        <aside id="lateral">
-            <div id="login">
+                <p>PRONT@ PARA INICIAR?</p>
+                <p>Conto com a participação de tod@s!</p>
+            </section>
+
+            <aside id="lateral">
                 <div id="login_header">
+                    <div id="login_circle_container"></div>
                     <div id="login_rectangle">
                         <h2>Login</h2>
                     </div>
@@ -37,47 +50,41 @@
                     <div id="login_container_corpo">
                         <label><b>Nome do Usuário:</b></label>
                         <input type="text" placeholder="Insira Nome do Usuário" name="nome_usuario" required>
-
+                        <br/>
                         <label><b>Senha:</b></label>
                         <input type="password" placeholder="Insira Senha" name="senha" required>
 
                         <div id="divisao_login"></div>
-                        <a href="estudo_de_casos.html" target="_self"><button id="login_button" type="submit">Login</button></a>
+                        <a href="espaco_do_cursista.html" target="_self"><button id="login_button" type="submit">Login</button></a>
                         <a href="inscricao.html" target="_self"><br/><button id="register_button" type="submit">Registrar</button></a>
                     </div>
                 </div>
-            </div>
 
-            <div id="noticias">
-                <div id="noticias_header">
-                    <div id="noticias_header_rectangle">
-                        <h1>Notícias</h1>
+                <div id="noticias">
+                    <div id="noticias_header">
+                        <div id="noticias_header_circle_container"></div>
+                        <div id="noticias_header_rectangle">
+                            <h1>Notícias</h1>
+                        </div>
+                        <div id="noticias_header_circle">
+                            <img id="news_icone" src="_imagens/news_icone_azul.png">
+                        </div>
                     </div>
-                    <div id="noticias_header_circle">
-                        <img id="news_icone" src="_imagens/news_icone_azul.png">
+                    <div id="noticias_corpo">
+                        <h2>Notícia 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt tortor vel auctor faucibus. Quisque blandit id sapien at consectetur. Ut porttitor lectus risus, sit amet ornare orci dapibus a. Aenean commodo, eros at ultrices ullamcorper, lorem mauris porta odio, eget eleifend nisi urna vitae erat. Mauris condimentum, tellus eget condimentum tempus, erat ipsum varius ex, vitae sollicitudin ex metus sit amet justo. Nunc vestibulum viverra sapien, vel laoreet libero pharetra sed. Proin posuere malesuada rutrum. Suspendisse porta sem sed felis elementum, ut malesuada risus rhoncus. Morbi nisi mauris, vulputate eu magna eu, venenatis placerat dolor. Quisque luctus vulputate eros et iaculis.</p>
+
+                        <h2>Notícia 2</h2>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec vel lorem eu orci euismod vehicula ut eu lacus. Aliquam auctor in enim at imperdiet. Morbi pellentesque orci vitae dictum blandit. In commodo risus tristique, tincidunt nisl id, feugiat nulla. Maecenas tristique nulla sed urna condimentum, nec cursus tortor scelerisque. Maecenas eleifend hendrerit suscipit. Curabitur at tellus eget justo egestas eleifend. Cras maximus turpis at enim tempus iaculis. Vivamus interdum convallis odio nec interdum. In ac tincidunt tortor, in condimentum velit. Morbi lorem massa, efficitur eu tristique aliquet, auctor rutrum tortor. Nam ultrices augue est, nec vestibulum quam aliquam maximus.</p>
                     </div>
+                    <div id="noticias_footer"></div>
                 </div>
-                <div id="noticias_corpo">
-                    <h2>Notícia 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt tortor vel auctor faucibus. Quisque blandit id sapien at consectetur. Ut porttitor lectus risus, sit amet ornare orci dapibus a. Aenean commodo, eros at ultrices ullamcorper, lorem mauris porta odio, eget eleifend nisi urna vitae erat. Mauris condimentum, tellus eget condimentum tempus, erat ipsum varius ex, vitae sollicitudin ex metus sit amet justo. Nunc vestibulum viverra sapien, vel laoreet libero pharetra sed. Proin posuere malesuada rutrum. Suspendisse porta sem sed felis elementum, ut malesuada risus rhoncus. Morbi nisi mauris, vulputate eu magna eu, venenatis placerat dolor. Quisque luctus vulputate eros et iaculis.</p>
+            </aside>
 
-                    <h2>Notícia 2</h2>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec vel lorem eu orci euismod vehicula ut eu lacus. Aliquam auctor in enim at imperdiet. Morbi pellentesque orci vitae dictum blandit. In commodo risus tristique, tincidunt nisl id, feugiat nulla. Maecenas tristique nulla sed urna condimentum, nec cursus tortor scelerisque. Maecenas eleifend hendrerit suscipit. Curabitur at tellus eget justo egestas eleifend. Cras maximus turpis at enim tempus iaculis. Vivamus interdum convallis odio nec interdum. In ac tincidunt tortor, in condimentum velit. Morbi lorem massa, efficitur eu tristique aliquet, auctor rutrum tortor. Nam ultrices augue est, nec vestibulum quam aliquam maximus.</p>
-                </div>
-            </div>
-        </aside>
-
-        <footer id="rodape">
-            <div id="footer_left_small_rectangle"></div>
-            <div id="footer_right_small_rectangle"></div>
-            <div id="footer_left_greater_rectangle">
-                <p>Copyright &copy; 2016 - <a href="http://www.lika-ufpe.org/" target="_blank">LIKA</a>
-                    <br/>Fone: (81) XXXX-XXXX</p>
-            </div>
-            <div id="footer_right_greater_rectangle">
-                <a href="https://www.ufpe.br/" target="_blank"><img id="ufpe_logo" src="_imagens/ufpe_logo.png"/></a>
-                <a href="http://www.lika-ufpe.org/" target="_blank"><img id="lika_logo" src="_imagens/lika_logo.png"></a>
-            </div>
-        </footer>
+            <footer id="tela_login_rodape">
+                <div id="tela_login_footer_left_small_rectangle"></div>
+                <div id="tela_login_footer_right_small_rectangle"></div>
+            </footer>
+        </div>
     </body>
 </html>

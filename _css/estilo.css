@@ -4,12 +4,92 @@
     src: url("../_fonts/BalsamiqSansRegular.ttf");
 }
 
+div#header_left_greater_rectangle {
+    width: 300px;
+    height: 50px;
+    transform: skewX(45deg);
+    background-color: #0B4900;
+    top: -40px;
+    left: 160px;
+    position: relative;
+}
+
+div#header_left_greater_rectangle p {
+    font-size: 9pt;
+    text-align: center;
+    color: white;
+    margin: auto 0px auto 0px;
+    transform: skewX(-45deg);
+    position: relative;
+    top: 10px;
+}
+
+div#header_right_greater_rectangle {
+    width: 300px;
+    height: 50px;
+    transform: skewX(-45deg);
+    background-color: #FFFFFF;
+    top: -90px;
+    left: 450px;
+    position: relative;
+}
+
+div#header_right_greater_rectangle img#ufpe_logo {
+    transform: skewX(45deg);
+    position: relative;
+    top: 0px;
+    margin: auto 10px auto 40px;
+    display: inline-block;
+}
+
+div#header_right_greater_rectangle img#lika_logo {
+    transform: skewX(45deg);
+    position: relative;
+    top: -5px;
+    margin: auto 10px auto 10px;
+    display: inline-block;
+}
+
+div#header_right_greater_rectangle img#ideias_logo {
+    transform: skewX(45deg);
+    position: relative;
+    top: -5px;
+    margin: auto 10px auto 5px;
+    display: inline-block;
+}
+
+div#header_left_small_rectangle {
+    background-color: #ffffff;
+    position: relative;
+    left: -10px;
+    height: 0;
+    width: 490px;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+div#header_right_small_rectangle {
+    position: relative;
+    top: -20px;
+    left: 455px;
+    height: 0;
+    width: 435px;
+    border-bottom: 20px solid #0B4900;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+}
+
+
+
+/* Cabeçalho */
 header#cabecalho {
-    margin-bottom: 30px;
+    height: 140px;
+    margin-bottom: 80px;
 }
 
 header#cabecalho img {
-    top: 20px;
+    top: -80px;
     display: block;
     margin: 10px auto 10px auto;
     position: relative;
@@ -17,84 +97,99 @@ header#cabecalho img {
 
 header#cabecalho h1 {
     text-align: center;
+    font-weight: normal;
     font-family: Balsamiq, sans-serif;
     font-size: 28pt;
-    text-shadow: 1px 1px 2px rgba(0,0,0,.6);
     padding: 0px;
+    position: relative;
+    top: -90px;
 }
 
 div#header_left_top_rectangle {
-    width: 500px;
-    height: 20px;
-    margin: 0px 200px 0px -20px;
+    height: 0;
+    width: 470px;
+    position: relative;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
     top: 0px;
-    transform: skewX(45deg);
-    background-color: #00AA18;
-    position: absolute;
+    left: -50px;
 }
 
 div#header_right_top_rectangle {
-    width: 500px;
-    height: 20px;
-    margin: 0px 200px 0px 420px;
-    top: 0px;
-    background-color: #0B4900;
-    transform: skewX(45deg);
-    position: absolute;
+    height: 0;
+    width: 450px;
+    position: relative;
+    border-bottom: 20px solid #0B4900;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+    top: -60px;
+    left: 440px;
 }
 
 div#header_left_big_rectangle {
-    position: absolute;
-    width: 300px;
-    height: 40px;
-    margin: 0px 200px 0px -30px;
-    top: 80px;
-    transform: skewX(45deg);
-    background-color: #D0D2D3;
+    position: relative;
+    border-bottom: 40px solid #D0D2D3;
+    border-left: 0px solid transparent;
+    border-right: 45px solid transparent;
+    height: 0;
+    width: 250px;
+    top: -156px;
+    left: -10px;
 }
 
 div#header_right_big_rectangle {
-    position: absolute;
-    width: 300px;
-    height: 40px;
-    margin: 0px 200px 0px 630px;
-    top: 80px;
-    transform: skewX(45deg);
-    background-color: #D0D2D3;
+    position: relative;
+    border-top: 40px solid #D0D2D3;
+    border-left: 45px solid transparent;
+    border-right: 0px solid transparent;
+    height: 0;
+    width: 250px;
+    top: -196px;
+    left: 615px;
 }
 
 div#header_left_bottom_rectangle {
-    position: absolute;
-    width: 250px;
-    height: 20px;
-    margin: 0px 200px 0px -20px;
-    top: 70px;
-    transform: skewX(45deg);
-    background-color: #00AA18;
+    position: relative;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 22px solid transparent;
+    height: 0;
+    width: 200px;
+    top: -246px;
+    left: -10px;
+    opacity: .8;
+
 }
 
 div#header_right_bottom_rectangle {
-    position: absolute;
-    width: 250px;
-    height: 20px;
-    margin: 0px 200px 0px 670px;
-    top: 110px;
-    background-color: #0B4900;
-    transform: skewX(45deg);
+    position: relative;
+    border-top: 20px solid #0B4900;
+    border-left: 22px solid transparent;
+    border-right: 0px solid transparent;
+    height: 0;
+    width: 200px;
+    top: -226px;
+    left: 690px;
+    opacity: .9;
 }
 
 body {
-    background-image: url("../_imagens/background_grid.png");
-    background-color: white;
+    background-color: #58595B;
 }
 
 div#interface {
-    color: black;
-    font-family: Balsamiq, sans-serif;
-    font-size: 11pt;
+    background-image: url("../_imagens/background_grid_black.png");
     width: 900px;
-    padding: 10px;
-    margin: -20px auto 10px auto;
+    font-family: Balsamiq, sans-serif;
+    color: black;
+    background-color: #FFFFFF;
+    font-size: 11pt;
+    box-shadow: 0px 0px 10px black;
+    padding: 0px 10px 0px 10px;
+    margin: 0px auto 10px auto;
+    top: -10px;
+    position: relative;
 }
 
 p {
@@ -106,7 +201,7 @@ section#corpo_principal {
     display: block;
     width: 540px;
     float: left;
-    margin-bottom: 45px;
+    margin-bottom: 0px;
 }
 
 table#tabela_dados_usuario {
@@ -116,7 +211,15 @@ table#tabela_dados_usuario {
 }
 
 table#tabela_dados_usuario td {
-    padding: 10px 10px 10px 0px;
+padding: 10px 10px 10px 0px;
+}
+
+table#tabela_dados_usuario caption {
+    font-family: Balsamiq, sans-serif;
+    font-size: 14pt;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.6);
+    padding-bottom: 10px;
 }
 
 /*
@@ -125,27 +228,49 @@ table#tabela_dados_usuario label {
 }
 */
 
-table#tabela_dados_usuario caption {
-    font-family: Balsamiq, sans-serif;
-    font-size: 14pt;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,.6);
-    padding-bottom: 10px;
-}
-
 aside#lateral_cadastro_online {
     display: block;
+    position: relative;
     float: right;
     width: 330px;
     height: 200px;
     padding: 5px;
     background-color: rgba(0, 170, 24, .9);
+    border-bottom-left-radius: 20px;
+    top: 20px;
     z-index: 0;
 }
 
+div#lateral_cadastro_online_detail {
+    display: block;
+    position: relative;
+    float: right;
+    width: 330px;
+    height: 200px;
+    padding: 5px;
+    background-color: rgba(11, 73, 0, .9);
+    border-bottom-left-radius: 20px;
+    top: -5px;
+    left: 5px;
+    z-index: 1;
+}
+
+div#lateral_cadastro_online_detail_triangle {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-bottom: 120px solid rgba(0, 170, 24, .9);
+    border-left: 120px solid transparent;
+    z-index: 0;
+    bottom: -85px;
+    left: 215px;
+}
+
 table#tabela_cadastro_online {
+    position: relative;
     border-spacing: 0px;
-    margin: -15px auto 0px auto;
+    margin: 0px auto 0px auto;
+    top: -162px;
 }
 
 table#tabela_cadastro_online td {
@@ -157,42 +282,22 @@ table#tabela_cadastro_online td {
 table#tabela_cadastro_online caption {
     position: relative;
     font-family: Balsamiq, sans-serif;
-    font-size: 12pt;
-    text-shadow: 1px 1px 2px rgba(0,0,0,.6);
-    margin: 2px 0px 0px 20px;
+    font-size: 14pt;
+    margin: 1px auto 0px auto;
     text-align: left;
-    top: -10px;
+    padding-bottom: 15px;
 }
 
 div#register_rectangle {
     position: relative;
     height: 25px;
-    width: 350px;
-    transform: skewX(45deg);
-    margin: -5px 0px 0px 7px;
-    background-color: #D0D2D3;
-}
-
-div#transparent_left_bottom_triangle {
-    position: relative;
-    display: block;
-    width: 0;
-    height: 0;
-    border-bottom: 45px solid white;
-    border-right: 45px solid transparent;
-    top: -34px;
-    left: -6px;
-}
-
-div#red_left_bottom_triangle {
-    position: relative;
-    display: block;
-    width: 0;
-    height: 0;
-    border-bottom: 25px solid #C10000;
-    border-right: 25px solid transparent;
-    top: -65px;
-    left: 0px;
+    width: 336px;
+    margin: -5px 0px 0px 0px;
+    background-color: #FFFFFF;
+    border: 2px solid #0B4900;
+    border-radius: 20px;
+    left: -5px;
+    top: -135px;
 }
 
 div#transparent_right_bottom_triangle {
@@ -202,29 +307,32 @@ div#transparent_right_bottom_triangle {
     height: 0;
     border-bottom: 45px solid white;
     border-left: 45px solid transparent;
-    top: -104px;
-    left: 290px;
+    top: -186px;
+    left: 292px;
 }
 
-div#red_right_bottom_triangle {
+div#blue_right_bottom_triangle {
     position: relative;
     display: block;
     width: 0;
     height: 0;
-    border-bottom: 25px solid #C10000;
+    border-bottom: 25px solid #4085EB;
     border-left: 25px solid transparent;
-    top: -135px;
+    top: -218px;
     left: 305px;
 }
 
 button#registrar {
+    position: relative;
     display: block;
-    background-color: #C10000;
+    background-color: #4085EB;
     font-size: 10pt;
     font-weight: bold;
     color: white;
     border-color: white;
+    border-radius: 7px;
     width: 240px;
+    top: -150px;
     margin: 15px auto 15px auto;
     padding: 5px 20px;
 }
@@ -239,67 +347,125 @@ footer#rodape {
     clear: both;
 }
 
-div#footer_left_greater_rectangle {
-    width: 300px;
-    height: 50px;
-    margin: -30px 200px 5px 150px;
-    transform: skewX(-45deg);
-    background-color: #0B4900;
-    position: absolute;
-}
-
-div#footer_right_greater_rectangle {
-    width: 300px;
-    height: 50px;
-    margin: -30px 200px 5px 440px;
-    transform: skewX(45deg);
-    background-color: #E8E8E8;
-    position: absolute;
-}
-
-div#footer_right_greater_rectangle img#ufpe_logo {
-    transform: skewX(-45deg);
-    width: 35px;
-    height: 40px;
-    margin: 5px 20px 5px 50px;
-}
-
-div#footer_right_greater_rectangle img#lika_logo {
-    transform: skewX(-45deg);
-    width: 50px;
-    height: 40px;
-    margin: 5px 20px 5px 20px;
-}
-
 div#footer_left_small_rectangle {
-    width: 500px;
-    height: 20px;
-    margin: 0px 200px 5px -20px;
-    transform: skewX(45deg);
-    background-color: #00AA18;
-    position: absolute;
+    background-color: #ffffff;
+    position: relative;
+    height: 0;
+    width: 480px;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+    left: -10px;
+    bottom: -20px;
 }
 
 div#footer_right_small_rectangle {
-    width: 500px;
-    height: 20px;
-    margin: 0px 200px 5px 420px;
-    background-color: #0B4900;
-    transform: skewX(45deg);
-    position: absolute;
+    position: relative;
+    height: 0;
+    width: 450px;
+    right: 0px;
+    border-bottom: 20px solid #0B4900;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+    left: 440px;
+    bottom: 0px;
 }
+
+
+
+
+
+
+
+/* Espaço do Cursista */
+div#espaco_cursista_direcionadores figure {
+    display: inline-block;
+    margin: 30px 0px 0px 40px;
+    padding: 0px;
+}
+
+div#espaco_cursista_direcionadores img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#espaco_cursista_direcionadores figcaption {
+    text-align: center;
+}
+
+
+div#login_container_corpo {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0px 0px 2px black;
+}
+
+div#login_container_corpo::-webkit-scrollbar {
+    width: 15px;
+    border: 1px solid #0B4900;
+    box-shadow: 0px 0px 2px black;
+} /* this targets the default scrollbar (compulsory) */
+
+div#login_container_corpo::-webkit-scrollbar-track {
+    background-color: #58595B;
+}
+
+div#login_container_corpo::-webkit-scrollbar-track-piece {
+    background-color: #58595B;
+    border-radius: 10px;
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+div#login_container_corpo::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+} /* this will style the thumb, ignoring the track */
+
+div#login_container_corpo::-webkit-scrollbar-button {
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+div#login_container_corpo::-webkit-scrollbar-corner {
+    background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+
+div#leituras_link_containers {
+    background-color: #F9F9F9;
+    position: relative;
+    width: 120%;
+    left: -20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 15px 0px 15px 0px;
+}
+
+div#leituras_link_containers h2 {
+    font-size: 12pt;
+    text-indent: 20px;
+    color: #58595B;
+}
+
+div#leituras_link_containers a {
+    font-size: 10pt;
+    margin-left: 20px;
+}
+
+
+
+
+
+
 
 
 
 /* ESTUDO DE CASOS */
 section#corpo_principal_estudo_de_casos {
     width: 550px;
-    height: 250px;
-    margin: 30px auto 45px auto;
+    margin: 50px auto 0px auto;
 }
 
 table#tabela_estudo_de_casos {
-    border-spacing: 0px;
+    border-spacing: 0px 35px;
 }
 
 table#tabela_estudo_de_casos td {
@@ -314,6 +480,8 @@ table#tabela_estudo_de_casos caption {
     text-shadow: 1px 1px 2px rgba(0,0,0,.6);
     margin: 2px 0px 0px 20px;
     text-align: left;
+    position: relative;
+    z-index: 2;
 }
 
 div#estudo_de_casos_circle {
@@ -324,7 +492,7 @@ div#estudo_de_casos_circle {
     width: 50px;
     position: relative;
     left: -40px;
-    top: -293px;
+    top: -450px;
     z-index: 1;
 }
 
@@ -338,12 +506,11 @@ div#estudo_de_casos_rectangle {
     position: relative;
     background-color: #FFFFFF;
     border: 2px solid #0B4900;
-    height: 30px;
-    width: 550px;
-    margin: 0px;
-    top: -215px;
+    border-radius: 7px;
+    height: 25px;
+    width: 600px;
+    top: -380px;
     left: -15px;
-    transform: skewX(45deg);
     z-index: 1;
 }
 
@@ -351,11 +518,47 @@ div#estudo_de_casos_vertical_rectangle {
     position: relative;
     background-color: #FFFFFF;
     border: 2px solid #0B4900;
-    height: 30px;
-    width: 220px;
+    border-radius: 7px;
+    height: 25px;
+    width: 360px;
     margin: 0px;
-    top: -140px;
-    left: -125px;
-    transform: rotate(90deg) skewX(-45deg);
+    top: -230px;
+    left: -195px;
+    transform: rotate(90deg);
     z-index: 0;
+}
+
+div#avaliacao_container {
+    background-color: #D0D2D3;
+    border-radius: 15px;
+    height: 100px;
+    position: relative;
+}
+
+div#avaliacao_img {
+    display: inline-block;
+}
+
+div#avaliacao_texto {
+    display: inline-block;
+}
+
+div#avaliacao_img img {
+    position: relative;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 10px;
+}
+
+div#avaliacao_texto h2 {
+    color: #58595B;
+    position: relative;
+    left: 25px;
+}
+
+div#avaliacao_texto p {
+    color: #58595B;
+    position: relative;
+    left: 25px;
 }
