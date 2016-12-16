@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Balsamiq;
+    src: url("../_fonts/BalsamiqSansRegular.ttf");
+}
+
+/* ESTUDO DE CASOS */
+section#corpo_principal_estudo_de_casos {
+    width: 550px;
+    margin: 50px auto 0px auto;
+}
+
+table#tabela_estudo_de_casos {
+    border-spacing: 0px 35px;
+}
+
+table#tabela_estudo_de_casos td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table#tabela_estudo_de_casos caption {
+    font-family: Balsamiq, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.6);
+    margin: 2px 0px 0px 20px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+div#estudo_de_casos_circle {
+    background-color: #FFFFFF;
+    border: 2px solid #0B4900;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: -40px;
+    top: -450px;
+    z-index: 1;
+}
+
+div#estudo_de_casos_circle img {
+    width: auto;
+    height: auto;
+    margin: 12px 0px 0px 8.5px;
+}
+
+div#estudo_de_casos_rectangle {
+    position: relative;
+    background-color: #FFFFFF;
+    border: 2px solid #0B4900;
+    border-radius: 7px;
+    height: 25px;
+    width: 600px;
+    top: -380px;
+    left: -15px;
+    z-index: 1;
+}
+
+div#estudo_de_casos_vertical_rectangle {
+    position: relative;
+    background-color: #FFFFFF;
+    border: 2px solid #0B4900;
+    border-radius: 7px;
+    height: 25px;
+    width: 360px;
+    margin: 0px;
+    top: -230px;
+    left: -195px;
+    transform: rotate(90deg);
+    z-index: 0;
+}
+
+div#avaliacao_container {
+    background-color: #D0D2D3;
+    border-radius: 15px;
+    height: 100px;
+    position: relative;
+}
+
+div#avaliacao_img {
+    display: inline-block;
+}
+
+div#avaliacao_texto {
+    display: inline-block;
+}
+
+div#avaliacao_img img {
+    position: relative;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 10px;
+}
+
+div#avaliacao_texto h2 {
+    color: #58595B;
+    position: relative;
+    left: 25px;
+}
+
+div#avaliacao_texto p {
+    color: #58595B;
+    position: relative;
+    left: 25px;
+}

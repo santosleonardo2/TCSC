@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Balsamiq;
+    src: url("../_fonts/BalsamiqSansRegular.ttf");
+}
+
+/* Espaço do Cursista */
+div#espaco_cursista_direcionadores figure {
+    display: inline-block;
+    margin: 30px 0px 0px 30px;
+    padding: 0px;
+    text-align: center;
+}
+
+div#espaco_cursista_direcionadores img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#espaco_cursista_direcionadores figcaption {
+    text-align: center;
+}
+
+
+div#login_container_corpo {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0px 0px 2px black;
+}
+
+div#login_container_corpo::-webkit-scrollbar {
+    width: 15px;
+    border: 1px solid #0B4900;
+    box-shadow: 0px 0px 2px black;
+} /* this targets the default scrollbar (compulsory) */
+
+div#login_container_corpo::-webkit-scrollbar-track {
+    background-color: #58595B;
+}
+
+div#login_container_corpo::-webkit-scrollbar-track-piece {
+    background-color: #58595B;
+    border-radius: 10px;
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+div#login_container_corpo::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+} /* this will style the thumb, ignoring the track */
+
+div#login_container_corpo::-webkit-scrollbar-button {
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+div#login_container_corpo::-webkit-scrollbar-corner {
+    background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+
+div#leituras_link_containers {
+    background-color: #F9F9F9;
+    position: relative;
+    width: 120%;
+    left: -20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 0px 0px 30px 0px;
+}
+
+div#leituras_link_containers h2 {
+    font-size: 12pt;
+    text-indent: 20px;
+    color: #58595B;
+}
+
+div#leituras_link_containers a {
+    font-size: 10pt;
+    margin-left: 20px;
+}
