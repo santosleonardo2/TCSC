@@ -149,6 +149,7 @@ div#tela_login_interface {
     padding: 0px 10px 0px 5px;
     position: relative;
     display: block;
+    box-shadow: 0px 0px 10px black;
 }
 
 section#tela_login_corpo_principal {

@@ -70,10 +70,16 @@ div#leituras_link_containers {
 div#leituras_link_containers h2 {
     font-size: 12pt;
     text-indent: 20px;
+    text-align: justify;
     color: #58595B;
+    padding: 0px 25px 0px 10px;
 }
 
 div#leituras_link_containers a {
     font-size: 10pt;
     margin-left: 20px;
+}
+
+div#noticias_footer {
+
 }

@@ -8,6 +8,8 @@
         <link rel="stylesheet" type="text/css" href="_css/estilo_espaco_cursista.css">
     </head>
 
+    <script src="_javascript/funcoesGerais.js"></script>
+
     <body>
     <div id="interface">
         <header id="cabecalho">
@@ -38,16 +40,16 @@
 
             <div id="espaco_cursista_direcionadores">
                 <figure>
-                    <img src="_imagens/apresentacao_icone.png">
-                    <figcaption>Apresentação</figcaption>
+                    <img id="direcionador_apresentacao" src="_imagens/apresentacao_icone.png" onmouseover="mudaIconeCor('direcionador_apresentacao', 'apresentacao_icone', true)" onmouseout="mudaIconeCor('direcionador_apresentacao', 'apresentacao_icone', false)">
+                    <figcaption id="direcionador_apresentacao_texto">Apresentação</figcaption>
                 </figure>
                 <figure>
-                    <img src="_imagens/guia_icone.png">
-                    <figcaption>Guia</figcaption>
+                    <img id="direcionador_guia" src="_imagens/guia_icone.png" onmouseover="mudaIconeCor('direcionador_guia', 'guia_icone', true)" onmouseout="mudaIconeCor('direcionador_guia', 'guia_icone', false)">
+                    <figcaption id="direcionador_guia_texto">Guia</figcaption>
                 </figure>
                 <figure>
-                    <a href="situacoes_clinicas.html" target="_self"><img src="_imagens/situacoes_clinicas_icone.png"></a>
-                    <figcaption>Situações Clínicas</figcaption>
+                    <img id="direcionador_situacoes_clinicas" src="_imagens/situacoes_clinicas_icone.png" onmouseover="mudaIconeCor('direcionador_situacoes_clinicas', 'situacoes_clinicas_icone', true)" onmouseout="mudaIconeCor('direcionador_situacoes_clinicas', 'situacoes_clinicas_icone', false)" onclick="goToSituacoesClinicas()">
+                    <figcaption id="direcionador_situacoes_clinicas_texto">Situações Clínicas</figcaption>
                 </figure>
             </div>
         </section>
@@ -65,21 +67,65 @@
             <div id="login_container">
                 <div id="login_container_corpo">
                     <div id="leituras_link_containers">
-                        <h2>Leitura 1</h2>
-                        <a href="http://www.google.com" target="_blank">www.google.com</a>
-                        <br/><a href="http://www.google.com" target="_blank">www.google.com</a>
+                        <h2>Orientações para coleta e análise de dados antropométricos</h2>
+                        <a href="http://189.28.128.100/dab/docs/portaldab/publicacoes/orientacoes_coleta_analise_dados_antropometricos.pdf" target="_blank">Orientações Gerais</a>
+                        <br/><a href="http://dab.saude.gov.br/portaldab/ape_vigilancia_alimentar.php?conteudo=curvas_de_crescimento" target="_blank">Curvas de Crescimento</a>
                     </div>
 
                     <div id="leituras_link_containers">
-                        <h2>Leitura 2</h2>
-                        <a href="http://www.google.com" target="_blank">www.google.com</a>
-                        <br/><a href="http://www.google.com" target="_blank">www.google.com</a>
-                        <br/><a href="http://www.google.com" target="_blank">www.google.com</a>
+                        <h2>Manual de Normas e Procedimentos para Vacinação</h2>
+                        <a href="http://www.saude.pr.gov.br/arquivos/File/-01VACINA/manual_procedimentos_2014.pdf" target="_blank">Manual</a>
                     </div>
 
                     <div id="leituras_link_containers">
-                        <h2>Leitura 3</h2>
-                        <a href="http://www.google.com">www.google.com</a>
+                        <h2>Caderno de Atenção Básica - Crescimento e Desenvolvimento da Criança</h2>
+                        <a href="http://189.28.128.100/dab/docs/publicacoes/cadernos_ab/caderno_33.pdf">Crescimento e Desenvolvimento</a>
+                    </div>
+
+                    <div id="leituras_link_containers">
+                        <h2>Concordância Entre Caderneta de Saúde da Criança e o Manual para Vigilância do Desenvolvimento Infantil</h2>
+                        <a href="http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0103-05822012000400004">Caderneta de Saúde e Vigilância Infantil</a>
+                    </div>
+
+                    <div id="leituras_link_containers">
+                        <h2>Manual para Vigilância do Desenvolvimento Infantil no Contexto da AIDPI</h2>
+                        <a href="http://www.bvsde.paho.org/bvsacd/cd61/vigilancia.pdf">AIDPI</a>
+                    </div>
+
+                    <div id="leituras_link_containers">
+                        <h2>Manual para a Utilização da Caderneta de Saúde da Criança (2005)</h2>
+                        <a href="http://bvsms.saude.gov.br/bvs/publicacoes/manual%200902.pdf">Manual</a>
+                    </div>
+
+                    <div id="leituras_link_containers">
+                        <h2>Agenda de Compromissos para a Saúde Integral da Criança e Redução da Mortalidade Infantil</h2>
+                        <a href="http://bvsms.saude.gov.br/bvs/publicacoes/agenda_compro_crianca.pdf">Agenda</a>
+                    </div>
+
+                    <div id="leituras_link_containers">
+                        <h2>Caderneta de Saúde da Criança Versão (2008)</h2>
+                        <a href="http://agendaprimeirainfancia.org.br/arquivos/caderneta_saude_crianca_5ed.pdf">Caderneta Antíga</a>
+                    </div>
+
+                    <div id="leituras_link_containers">
+                        <h2>Caderneta de Saúde da Criança Versão Atual (2013)</h2>
+                        <a href="http://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_crianca_menino.pdf">Caderneta Atual para Menino</a>
+                        <br/><a href="http://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_crianca_menina.pdf">Caderneta Atual para Menina</a>
+                    </div>
+
+                    <div id="leituras_link_containers">
+                        <h2>Guia Alimentar para Crianças menores de dois anos</h2>
+                        <a href="http://www.opas.org.br/wp-content/uploads/2015/09/Guia-alimentar-criancas-2-anos.pdf">Guia Alimentar</a>
+                    </div>
+
+                    <div id="leituras_link_containers">
+                        <h2>Método Canguru – Manual Técnico</h2>
+                        <a href="http://www.redeblh.fiocruz.br/media/mtcanguri%202ed.pdf">Manual Técnico</a>
+                    </div>
+
+                    <div id="leituras_link_containers">
+                        <h2>Características dos primeiros casos de microcefalia possivelmente relacionados ao vírus Zika notificados na Região Metropolitana de Recife, Pernambuco</h2>
+                        <a href="http://www.scielo.br/pdf/ress/2016nahead/2237-9622-ress-S1679_49742016000400003.pdf">Notícia</a>
                     </div>
                 </div>
             </div>
@@ -95,11 +141,26 @@
                     </div>
                 </div>
                 <div id="noticias_corpo">
-                    <h2>Pergunta 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt tortor vel auctor faucibus. Quisque blandit id sapien at consectetur. Ut porttitor lectus risus, sit amet ornare orci dapibus a. Aenean commodo, eros at ultrices ullamcorper, lorem mauris porta odio, eget eleifend nisi urna vitae erat. Mauris condimentum, tellus eget condimentum tempus, erat ipsum varius ex, vitae sollicitudin ex metus sit amet justo. Nunc vestibulum viverra sapien, vel laoreet libero pharetra sed. Proin posuere malesuada rutrum. Suspendisse porta sem sed felis elementum, ut malesuada risus rhoncus. Morbi nisi mauris, vulputate eu magna eu, venenatis placerat dolor. Quisque luctus vulputate eros et iaculis.</p>
+                    <h2>Não estou conseguindo receber a declaração de conclusão de curso. O que está havendo?</h2>
+                    <p>A declaração de conclusão de curso é disponibilizada apenas para enfermeiros e médicos que atenderam plenamente os requisitos descritos no tópico “Apresentação de Curso”, item “certificação”.</p>
 
-                    <h2>Pergunta 2</h2>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec vel lorem eu orci euismod vehicula ut eu lacus. Aliquam auctor in enim at imperdiet. Morbi pellentesque orci vitae dictum blandit. In commodo risus tristique, tincidunt nisl id, feugiat nulla. Maecenas tristique nulla sed urna condimentum, nec cursus tortor scelerisque. Maecenas eleifend hendrerit suscipit. Curabitur at tellus eget justo egestas eleifend. Cras maximus turpis at enim tempus iaculis. Vivamus interdum convallis odio nec interdum. In ac tincidunt tortor, in condimentum velit. Morbi lorem massa, efficitur eu tristique aliquet, auctor rutrum tortor. Nam ultrices augue est, nec vestibulum quam aliquam maximus.</p>
+                    <h2>Atingi os requisitos para receber a Declaração de conclusão de curso, mas essa ainda não chegou. O que aconteceu?</h2>
+                    <p>O link para acesso à declaração é enviado por e-mail.Recomendamos que você verifique qual foi o e-mail que cadastrou no ato da inscrição como também, as caixas spam, lixo eletrônico ou quarentena do seu e-mail.</p>
+
+                    <h2>É possível enviar minha declaração de conclusão de curso por e-mail?</h2>
+                    <p>Não. O que você receberá por e-mail é o link para ter acesso à declaração. Verifique o seu e-mail, lembrando que você deve acessar o e-mail que cadastrou no ato de inscrição do curso. Recomendamos, ainda, que você verifique as caixas spam, lixo eletrônico ou quarentena do seu e-mail.</p>
+
+                    <h2>Quanto tempo tenho para concluir meus estudos?</h2>
+                    <p>Durante o período de realização do curso, você pode planejar sua rotina de estudos da forma que achar mais conveniente, ou seja, não existe um número de dias específicos, mas carga horária mínima de 12horas a cumprir. Você deve atentar para a data de encerramento do curso, após esta data não será mais possível participar.</p>
+
+                    <h2>É necessário estar na Unidade Básica de Saúde ou Secretaria Municipal de Saúde para acessar o curso?</h2>
+                    <p>Não. Você pode acessar o curso de qualquer mídia eletrônicas conectada à internet. É imprescindível estar inscrito no curso.</p>
+
+                    <h2>Posso acessar o curso a noite, nos finais de semana e feriados?</h2>
+                    <p>Sim. O curso fica disponível todos os dias da semana, inclusive nos feriados, 24 horas por dia.</p>
+
+                    <h2>Qual melhor navegador para visualizar o curso?</h2>
+                    <p>Google Chrome. Contudo, o mesmo pode ser visto nos navegadores padrões mais comuns (ou seja, Firefox, Safari, Opera e Explorer)</p>
                 </div>
                 <div id="noticias_footer"></div>
             </div>

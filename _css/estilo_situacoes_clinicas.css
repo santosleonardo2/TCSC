@@ -10,13 +10,21 @@ section#corpo_principal_estudo_de_casos {
     margin: 50px auto 0px auto;
 }
 
+div#estudo_de_casos {
+    height: 450px;
+}
+
 table#tabela_estudo_de_casos {
     border-spacing: 0px 35px;
+    background-color: rgba(0, 160, 0, .7);
 }
 
 table#tabela_estudo_de_casos td {
+    position: relative;
     border: 1px solid black;
     padding: 10px;
+    background-color: #FFFFFF;
+    z-index: 1;
 }
 
 table#tabela_estudo_de_casos caption {
@@ -36,9 +44,9 @@ div#estudo_de_casos_circle {
     border-radius: 50px;
     height: 50px;
     width: 50px;
-    position: relative;
     left: -40px;
     top: -450px;
+    position: relative;
     z-index: 1;
 }
 
@@ -54,7 +62,7 @@ div#estudo_de_casos_rectangle {
     border: 2px solid #0B4900;
     border-radius: 7px;
     height: 25px;
-    width: 600px;
+    width: 575px;
     top: -380px;
     left: -15px;
     z-index: 1;
@@ -66,13 +74,81 @@ div#estudo_de_casos_vertical_rectangle {
     border: 2px solid #0B4900;
     border-radius: 7px;
     height: 25px;
-    width: 360px;
+    width: 400px;
     margin: 0px;
     top: -230px;
-    left: -195px;
+    left: -215px;
     transform: rotate(90deg);
+    z-index: 1;
+}
+
+div#estudo_de_casos_bottom_triangle_white {
+    position: relative;
+    top: -147px;
+    right: -515px;
+    width: 0;
+    height: 0;
+    border-bottom: 35px solid #FFFFFF;
+    border-left: 35px solid transparent;
+}
+
+div#estudo_de_casos_bottom_triangle_colored {
+    position: relative;
+    top: -173px;
+    right: -524px;
+    width: 0;
+    height: 0;
+    border-bottom: 23px solid #0031FF;
+    border-left: 23px solid transparent;
+}
+
+div#estudo_de_casos_vertical_trapezoid {
+    position: relative;
+    top: -470px;
+    left: -115px;
+    border-bottom: 25px solid rgba(0, 170, 24, .4);
+    border-right: 25px solid transparent;
+    transform: rotate(90deg);
+    height: 0;
+    width: 230px;
     z-index: 0;
 }
+
+div#estudo_de_casos_greater_horizontal_trapezoid {
+    border-bottom: 50px solid rgba(0, 170, 24, .4);
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 450px;
+    top: -530px;
+    position: relative;
+    z-index: 0;
+}
+
+div#estudo_de_casos_horizontal_trapezoid {
+    border-top: 30px solid rgba(0, 170, 24, .4);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    height: 0;
+    width: 350px;
+    top: -500px;
+    left: 140px;
+    position: relative;
+    z-index: 0;
+}
+
+div#estudo_de_casos_smaller_horizontal_trapezoid {
+    border-bottom: 15px solid rgba(0, 170, 24, .4);
+    border-right: 20px solid transparent;
+    height: 0;
+    width: 530px;
+    top: -605px;
+    position: relative;
+    z-index: 0;
+}
+
+
+
+
 
 div#avaliacao_container {
     background-color: #D0D2D3;

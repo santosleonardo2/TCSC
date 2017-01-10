@@ -6,6 +6,8 @@
         <link rel="stylesheet" type="text/css" href="_css/estilo_tela_login.css">
     </head>
 
+    <script src="_javascript/funcoesGerais.js"></script>
+
     <body>
         <div id="tela_login_interface">
             <header id="tela_login_cabecalho">
@@ -29,11 +31,10 @@
 
             <section id="tela_login_corpo_principal">
                 <p>Olá cursista,</p>
-                <p>Bem vind@ ao curso de atualização em Caderneta de Saúde da Criança!</p>
-                <p>A Caderneta de Saúde da Criança (CSC) é um direito da criança e, quando efetivamente incorporada na rotina das eSF, pode se constituir em um instrumento de avaliação da qualidade da atenção prestada pela equipe de saúde.</p>
-
-                <p>PRONT@ PARA INICIAR?</p>
-                <p>Conto com a participação de tod@s!</p>
+                <p>Bem vindo ao curso de atualização em Caderneta de Saúde da Criança!</p>
+                <p>A Caderneta de Saúde da Criança (CSC) é o instrumento essencial de vigilância da saúde infantil em que são anotados dados e eventos relativos à saúde da criança. O registro correto e completo das informações na Caderneta possibilita o diálogo entre a família e os diversos profissionais que atendem a criança. É um direito da criança e um dever do profissional de saúde que acompanha.</p>
+                <p>Este curso é voltado à atualização de enfermeiros e médicos das Equipes de Saúde da Família. Pretende favorecer a adequada utilização da CSC pelos profissionais para que esta cumpra seu papel de instrumento de comunicação, educação, vigilância e promoção da saúde infantil.</p>
+                <p>PRONTO PARA INICIAR?</p>
             </section>
 
             <aside id="lateral">
@@ -49,14 +50,14 @@
                 <div id="login_container">
                     <div id="login_container_corpo">
                         <label><b>Nome do Usuário:</b></label>
-                        <input type="text" placeholder="Insira Nome do Usuário" name="nome_usuario" required>
+                        <input id="nomeUsuario" type="text" placeholder="Insira Nome do Usuário" name="nome_usuario" required>
                         <br/>
                         <label><b>Senha:</b></label>
-                        <input type="password" placeholder="Insira Senha" name="senha" required>
+                        <input id="senhaUsuario" type="password" placeholder="Insira Senha" name="senha_usuario" required>
 
                         <div id="divisao_login"></div>
-                        <a href="espaco_do_cursista.html" target="_self"><button id="login_button" type="submit">Login</button></a>
-                        <a href="inscricao.html" target="_self"><br/><button id="register_button" type="submit">Registrar</button></a>
+                        <button id="login_button" type="submit" onclick="tryLogin('nomeUsuario', 'senhaUsuario')">Login</button>
+                        <br/><button id="register_button" type="submit" onclick="goToRegister()">Registrar</button>
                     </div>
                 </div>
 

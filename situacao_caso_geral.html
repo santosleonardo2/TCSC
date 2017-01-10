@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="_css/estilo_tela_login.css">
 </head>
 
+<script src="_javascript/funcoesGerais.js"></script>
+
 <body>
     <div id="interface">
         <header id="cabecalho">
@@ -35,16 +37,16 @@
         <p id="p_geral">Nunc tincidunt elit ultrices, rutrum ante vitae, posuere velit. Morbi tellus massa, tincidunt eu lorem id, porta interdum massa. Nullam et eros sit amet ex finibus elementum vitae sit amet justo. Morbi nunc ex, lacinia in metus eget, semper aliquam elit. Nulla pretium laoreet sagittis.</p>
         <div id="abas_situacao_clinica">
             <figure>
-                <img src="_imagens/grafico_icone_situacao_clinica.png">
+                <img id="direcionador_desenvolvimento" src="_imagens/grafico_icone_situacao_clinica.png" onmouseover="mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', true)" onmouseout="mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false)">
             </figure>
             <figure>
-                <img src="_imagens/crescimento_icone.png">
+                <img id="direcionador_crescimento" src="_imagens/crescimento_icone.png" onmouseover="mudaIconeCor('direcionador_crescimento', 'crescimento_icone', true)" onmouseout="mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false)">
             </figure>
             <figure>
-                <img src="_imagens/vacinacao_icone.png">
+                <img id="direcionador_vacinacao" src="_imagens/vacinacao_icone.png" onmouseover="mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', true)" onmouseout="mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false)">
             </figure>
             <figure>
-                <img src="_imagens/direcoes_icone.png">
+                <img id="direcionador_info_gerais" src="_imagens/direcoes_icone.png" onmouseover="mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', true)" onmouseout="mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)">
             </figure>
         </div>
 
