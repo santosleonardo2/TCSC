@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Situações Clínicas</title>
-    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/estilo_inscricao.css">
     <link rel="stylesheet" type="text/css" href="_css/estilo_situacoes_clinicas.css">
+    <link rel="stylesheet" type="text/css" href="_css/estilo_geral.css">
 </head>
 
 <body>
@@ -12,17 +13,23 @@
         <header id="cabecalho">
             <div id="header_left_small_rectangle"></div>
             <div id="header_right_small_rectangle"></div>
-            <div id="header_left_greater_rectangle">
-                <p>Copyright &copy; 2016 - LIKA
-                    <br/>Fone: (81) XXXX-XXXX</p>
-            </div>
             <div id="header_right_greater_rectangle">
-                <a href="https://www.ufpe.br/" target="_blank"><img id="ufpe_logo" src="_imagens/ufpe_logo.png"/></a>
-                <a href="http://www.lika-ufpe.org/" target="_blank"><img id="lika_logo" src="_imagens/lika_logo.png"/></a>
-                <img id="ideias_logo" src="_imagens/ideias_logo.png"/>
+                <ul class="header_user_info">
+                    <li id="userNameId">Leonardo Pires dos Santos</li>
+                    <li id="userEmailId">santos.leonardo2@hotmail.com</li>
+                </ul>
+            </div>
+            <div id="header_left_greater_rectangle">
+                <nav>
+                    <a href="espaco_do_cursista.html" target="_self"><img src="_imagens/home.png"></a>
+                    <a href="javascript:history.back()" target="_self"><img src="_imagens/back_arrow.png"></a>
+                    <a><img src="_imagens/configuration.png"></a>
+                    <a><img src="_imagens/contact.png"></a>
+                    <a href="tela_login.html" target="_self"><img src="_imagens/logout.png"></a>
+                </nav>
             </div>
 
-            <img src="_imagens/estudo_de_casos.png">
+            <img src="_imagens/situacao_clinica_icon_header.png">
             <h1>Situações Clínicas</h1>
             <div id="header_left_big_rectangle"></div>
             <div id="header_right_big_rectangle"></div>
@@ -30,41 +37,91 @@
             <div id="header_right_bottom_rectangle"></div>
         </header>
 
-        <p id="p_geral">Agora que você conheceu mais sobre a CSC no contexto da puericultura na atenção básica o que acha de refletir sobre a sua prática?</p>
-        <p id="p_geral">Nesse espaço serão descritas três situações em que serão tratados aspectos conceituais e manejo/preenchimento de dados da Caderneta, diagnóstico do crescimento e desenvolvimento infantil, orientações para o cuidador e para tomada de decisão.</p>
-        <p id="p_geral">Vamos começar?</p>
+        <p class="p_centralizdo">Agora que você conheceu mais sobre a CSC no contexto da puericultura na atenção básica, o que acha de treinar o seu preenchimento em situações práticas?</p>
+        <p class="p_centralizdo">Nesse espaço serão descritas três situações em que serão tratados aspectos conceituais e de manejo/preenchimento de dados da Caderneta, diagnóstico do crescimento e desenvolvimento infantil, orientações para o cuidador e para a tomada de decisão.</p>
+        <p class="p_centralizdo">Vamos começar?</p>
+        <p class="p_observacao" style="text-align: center">Faça inicialmente as 2 primeiras situações clínicas para treinamento e a 3a situação clínica para avaliação.</p>
 
         <section id="corpo_principal_estudo_de_casos">
             <div id="estudo_de_casos">
                 <table id="tabela_estudo_de_casos">
                     <caption>CSC/Estudo de Casos</caption>
                     <tr>
-                        <td><a href="situacao_caso_geral.html" target="_self">Caso 1: Suspendisse dictumullamcorper suscipit. Nulla facilisi.</a></td>
-                        <td><img id="estudo_de_casos_situacao_caso1_icone" src="_imagens/checkmark.png"></td>
-                        <td><img id="estudo_de_casos_avaliacao_caso1_icone" src="_imagens/avaliacao_icone.png"></td>
+                        <td class="coluna_topico_tabela"><a href="situacao_caso_geral.html" target="_self">Caso 1: Avaliação de rotina</a></td>
+                        <td>
+                            <figure class="casos_clinicos_situacao">
+                                <img id="estudo_de_casos_situacao_caso1_icone" src="_imagens/checkmark.png">
+                                <figcaption>Concluido</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure class="casos_clinicos_avaliacao">
+                                <img id="estudo_de_casos_avaliacao_caso1_icone" src="_imagens/avaliacao_icone.png">
+                                <figcaption>96%</figcaption>
+                            </figure>
+                        </td>
                     </tr>
+
                     <tr>
-                        <td><a href="situacao_caso_geral.html" target="_self">Caso 2: Quisque vitae elit sapien.</a></td>
-                        <td><img id="estudo_de_casos_situacao_caso2_icone" src="_imagens/config.png"></td>
-                        <td><img id="estudo_de_casos_avaliacao_caso2_icone" src="_imagens/avaliacao_icone.png"></td>
+                        <td class="coluna_topico_tabela"><a href="situacao_caso_geral.html" target="_self">Caso 2: 1a Consulta de Puericultura - Criança Prematura</a></td>
+                        <td>
+                            <figure class="casos_clinicos_situacao">
+                                <img id="estudo_de_casos_avaliacao_caso2_icone" src="_imagens/avaliacao_icone.png">
+                                <figcaption>Iniciar</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure class="casos_clinicos_avaliacao">
+                                <img id="estudo_de_casos_situacao_caso2_icone" src="_imagens/config.png">
+                                <figcaption>0%</figcaption>
+                            </figure>
+                        </td>
                     </tr>
+
                     <tr>
-                        <td><a href="situacao_caso_geral.html" target="_self">Caso 3: Curabitur sit amet dictum.</a></td>
-                        <td><img id="estudo_de_casos_situacao_caso3_icone" src="_imagens/config.png"></td>
-                        <td><img id="estudo_de_casos_avaliacao_caso3_icone" src="_imagens/avaliacao_icone.png"></td>
+                        <td class="coluna_topico_tabela"><a href="situacao_caso_geral.html" target="_self">Caso 3: Pré-natal com diagnóstico de Zika Vírus</a></td>
+                        <td>
+                            <figure class="casos_clinicos_situacao">
+                                <img id="estudo_de_casos_situacao_caso3_icone" src="_imagens/config.png">
+                                <figcaption>Indisponível</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure class="casos_clinicos_avaliacao">
+                                <img id="estudo_de_casos_avaliacao_caso3_icone" src="_imagens/avaliacao_icone.png">
+                                <figcaption>-</figcaption>
+                            </figure>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="coluna_topico_tabela"><a href="situacao_caso_geral.html" target="_self">Caso 4: Sindrome de Down</a></td>
+                        <td>
+                            <figure class="casos_clinicos_situacao">
+                                <img id="estudo_de_casos_situacao_caso3_icone" src="_imagens/config.png">
+                                <figcaption>Indisponível</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure class="casos_clinicos_avaliacao">
+                                <img id="estudo_de_casos_avaliacao_caso3_icone" src="_imagens/avaliacao_icone.png">
+                                <figcaption>-</figcaption>
+                            </figure>
+                        </td>
                     </tr>
                 </table>
-                <div id="estudo_de_casos_rectangle"></div>
-                <div id="estudo_de_casos_vertical_rectangle"></div>
-                <div id="estudo_de_casos_circle">
-                    <img src="_imagens/estudo_de_casos_icone.png">
-                </div>
-                <div id="estudo_de_casos_bottom_triangle_white"></div>
-                <div id="estudo_de_casos_bottom_triangle_colored"></div>
-                <div id="estudo_de_casos_greater_horizontal_trapezoid"></div>
-                <div id="estudo_de_casos_vertical_trapezoid"></div>
-                <div id="estudo_de_casos_horizontal_trapezoid"></div>
-                <div id="estudo_de_casos_smaller_horizontal_trapezoid"></div>
+
+                <!--<div id="estudo_de_casos_rectangle"></div>-->
+                <!--<div id="estudo_de_casos_vertical_rectangle"></div>-->
+                <!--<div id="estudo_de_casos_circle">-->
+                    <!--<img src="_imagens/estudo_de_casos_icone.png">-->
+                <!--</div>-->
+                <!--<div id="estudo_de_casos_bottom_triangle_white"></div>-->
+                <!--<div id="estudo_de_casos_bottom_triangle_colored"></div>-->
+                <!--<div id="estudo_de_casos_greater_horizontal_trapezoid"></div>-->
+                <!--<div id="estudo_de_casos_vertical_trapezoid"></div>-->
+                <!--<div id="estudo_de_casos_horizontal_trapezoid"></div>-->
+                <!--<div id="estudo_de_casos_smaller_horizontal_trapezoid"></div>-->
             </div>
 
             <div id="avaliacao_container">
@@ -72,7 +129,7 @@
                     <img src="_imagens/avaliacao_icone.png">
                 </div>
                 <div id="avaliacao_texto">
-                    <h2>Avaliação</h2>
+                    <a href="avaliacao_final.html"><h2>Avaliação</h2></a>
                     <p>OBS.: só disponível após completar as três situações clínicas.</p>
                 </div>
             </div>
@@ -81,6 +138,16 @@
         <footer id="rodape">
             <div id="footer_left_small_rectangle"></div>
             <div id="footer_right_small_rectangle"></div>
+            <div id="footer_left_greater_rectangle">
+                <p>Copyright &copy; 2016 - LIKA
+                    <br/>Fone: (81) 2126-8489</p>
+            </div>
+            <div id="footer_right_greater_rectangle">
+                <a href="https://www.ufpe.br/" target="_blank"><img id="ufpe_logo" src="_imagens/ufpe_logo.png"/></a>
+                <a href="http://www.lika-ufpe.org/" target="_blank"><img id="lika_logo" src="_imagens/lika_logo.png"/></a>
+                <img id="ideias_logo" src="_imagens/ideias_logo.png"/>
+                <img id="posca_logo" src="_imagens/posca_logo.png"/>
+            </div>
         </footer>
     </div>
 </body>

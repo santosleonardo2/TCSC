@@ -7,16 +7,12 @@
 /* ESTUDO DE CASOS */
 section#corpo_principal_estudo_de_casos {
     width: 550px;
-    margin: 50px auto 0px auto;
-}
-
-div#estudo_de_casos {
-    height: 450px;
+    margin: 30px auto 0px auto;
 }
 
 table#tabela_estudo_de_casos {
-    border-spacing: 0px 35px;
-    background-color: rgba(0, 160, 0, .7);
+    border-spacing: 0px 20px;
+
 }
 
 table#tabela_estudo_de_casos td {
@@ -27,16 +23,23 @@ table#tabela_estudo_de_casos td {
     z-index: 1;
 }
 
+table#tabela_estudo_de_casos td.coluna_topico_tabela {
+    width: 500px;
+}
+
 table#tabela_estudo_de_casos caption {
     font-family: Balsamiq, sans-serif;
     font-size: 14pt;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0,0,0,.6);
-    margin: 2px 0px 0px 20px;
+    margin: 0px;
+    padding: 0px;
     text-align: left;
     position: relative;
+    top: 8px;
     z-index: 2;
 }
+
 
 div#estudo_de_casos_circle {
     background-color: #FFFFFF;
@@ -149,12 +152,44 @@ div#estudo_de_casos_smaller_horizontal_trapezoid {
 
 
 
+/* Corpo Principal */
+figure.casos_clinicos_situacao {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+figure.casos_clinicos_situacao img {
+}
+
+figure.casos_clinicos_situacao figcaption {
+    font-size: 8pt;
+    text-align: center;
+}
+
+figure.casos_clinicos_avaliacao {
+    margin: 0px auto 0px auto;
+    padding: 0px;
+    text-align: center;
+
+}
+
+figure.casos_clinicos_avaliacao img {
+}
+
+figure.casos_clinicos_avaliacao figcaption {
+    font-size: 8pt;
+    text-align: center;
+}
+
+
 
 div#avaliacao_container {
     background-color: #D0D2D3;
     border-radius: 15px;
     height: 100px;
     position: relative;
+    margin-bottom: 30px;
 }
 
 div#avaliacao_img {

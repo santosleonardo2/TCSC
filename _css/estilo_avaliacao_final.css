@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+ol.lista_avaliacao_final li {
+    margin-top: 20px;
+}
+
+textarea {
+    margin-top: 10px;
+}
+
+section button#salvarAvaliacaoFinalId {
+    position: relative;
+    display: block;
+    background-color: #4085EB;
+    font-size: 10pt;
+    font-weight: bold;
+    color: white;
+    border-color: white;
+    border-radius: 7px;
+    width: 240px;
+    margin: 30px auto 15px auto;
+    padding: 5px 20px;
+}

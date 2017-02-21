@@ -1,0 +1,265 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Balsamiq;
+    src: url("../_fonts/BalsamiqSansRegular.ttf");
+}
+
+/* Topo */
+div#header_midle_greater_rectangle {
+    border-top: 50px solid #00AA18;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 150px;
+    top: -50px;
+    margin: 0px auto 60px auto;
+    position: relative;
+    display: block;
+}
+
+nav#nav_header_midle_greater_rectangle {
+    transform: skewX(45deg);
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    left: -10px;
+}
+
+
+/* Cabeçalho */
+header#inscricao_cabecalho {
+    height: 140px;
+    margin-bottom: 80px;
+}
+
+header#inscricao_cabecalho img {
+    position: relative;
+    top: -90px;
+    display: block;
+    margin: 10px auto 10px auto;
+}
+
+header#inscricao_cabecalho h1 {
+    text-align: center;
+    font-weight: normal;
+    font-family: Balsamiq, sans-serif;
+    font-size: 28pt;
+    padding: 0px;
+    position: relative;
+    top: -96px;
+}
+
+div#inscricao_header_left_big_rectangle {
+    position: relative;
+    border-bottom: 40px solid #D0D2D3;
+    border-left: 0px solid transparent;
+    border-right: 45px solid transparent;
+    height: 0;
+    width: 250px;
+    top: -165px;
+    left: -10px;
+}
+
+div#inscricao_header_right_big_rectangle {
+    position: relative;
+    border-top: 40px solid #D0D2D3;
+    border-left: 45px solid transparent;
+    border-right: 0px solid transparent;
+    height: 0;
+    width: 250px;
+    top: -205px;
+    left: 615px;
+}
+
+div#inscricao_header_left_bottom_rectangle {
+    position: relative;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 22px solid transparent;
+    height: 0;
+    width: 200px;
+    top: -254px;
+    left: -10px;
+    opacity: .8;
+
+}
+
+div#inscricao_header_right_bottom_rectangle {
+    position: relative;
+    border-top: 20px solid #0B4900;
+    border-left: 22px solid transparent;
+    border-right: 0px solid transparent;
+    height: 0;
+    width: 200px;
+    top: -236px;
+    left: 690px;
+    opacity: .9;
+}
+
+
+
+
+/* Corpo Principal */
+section#corpo_principal {
+    position: relative;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabela_dados_usuario {
+    border-spacing: 0px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#tabela_dados_usuario td {
+padding: 10px 10px 10px 0px;
+}
+
+table caption {
+    font-family: Balsamiq, sans-serif;
+    font-size: 14pt;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.6);
+    padding-bottom: 10px;
+}
+
+/*
+table#tabela_dados_usuario label {
+    font-weight: bold;
+}
+*/
+
+aside#lateral_cadastro_online {
+    visibility: hidden;
+    display: block;
+    position: relative;
+    float: right;
+    width: 330px;
+    height: 200px;
+    padding: 5px;
+    background-color: rgba(0, 170, 24, .9);
+    border-bottom-left-radius: 20px;
+    top: 20px;
+    z-index: 0;
+}
+
+div#lateral_cadastro_online_detail {
+    display: block;
+    position: relative;
+    float: right;
+    width: 330px;
+    height: 200px;
+    padding: 5px;
+    background-color: rgba(11, 73, 0, .9);
+    border-bottom-left-radius: 20px;
+    top: -5px;
+    left: 5px;
+    z-index: 1;
+}
+
+div#lateral_cadastro_online_detail_triangle {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-bottom: 120px solid rgba(0, 170, 24, .9);
+    border-left: 120px solid transparent;
+    z-index: 0;
+    bottom: -85px;
+    left: 215px;
+}
+
+table#tabela_cadastro_online {
+    position: relative;
+    border-spacing: 0px;
+    margin: 0px auto 0px auto;
+    top: -162px;
+}
+
+table#tabela_cadastro_online td {
+    padding: 3px;
+    color: white;
+    font-size: 11pt;
+}
+
+table#tabela_dados_usuario caption {
+    position: relative;
+    font-family: Balsamiq, sans-serif;
+    font-size: 14pt;
+    margin: 1px auto 0px auto;
+    padding-bottom: 15px;
+}
+
+form#formulario_inscricao h1 {
+    position: relative;
+    font-family: Balsamiq, sans-serif;
+    font-size: 14pt;
+    margin: 1px auto 0px auto;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+div#register_rectangle {
+    position: relative;
+    height: 25px;
+    width: 336px;
+    margin: -5px 0px 0px 0px;
+    background-color: #FFFFFF;
+    border: 2px solid #0B4900;
+    border-radius: 20px;
+    left: -5px;
+    top: -135px;
+}
+
+div#transparent_right_bottom_triangle {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 45px solid white;
+    border-left: 45px solid transparent;
+    top: -186px;
+    left: 292px;
+}
+
+div#blue_right_bottom_triangle {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid #4085EB;
+    border-left: 25px solid transparent;
+    top: -218px;
+    left: 305px;
+}
+
+button#registrar {
+    position: relative;
+    display: block;
+    background-color: #4085EB;
+    font-size: 10pt;
+    font-weight: bold;
+    color: white;
+    border-color: white;
+    border-radius: 7px;
+    width: 240px;
+    top: -150px;
+    margin: 15px auto 15px auto;
+    padding: 5px 20px;
+}
+
+button#continuar {
+    position: relative;
+    display: block;
+    background-color: #4085EB;
+    font-size: 10pt;
+    font-weight: bold;
+    color: white;
+    border-color: white;
+    border-radius: 7px;
+    width: 240px;
+    margin: 15px auto 15px auto;
+    padding: 5px 20px;
+}

@@ -1,6 +1,8 @@
 /**
  * Created by Leonardo on 1/9/2017.
  */
+
+/* TELA INICIAL DE LOGIN */
 function tryLogin(nomeUsuarioId, senhaUsuarioId) {
     var nomeUsuario = document.getElementById(nomeUsuarioId).value;
     var senhaUsuario = document.getElementById(senhaUsuarioId).value;
@@ -14,6 +16,87 @@ function tryLogin(nomeUsuarioId, senhaUsuarioId) {
 function goToRegister() {
     window.location = "inscricao.html";
 }
+
+
+/* TELA DE INSCRIÇÃO */
+function displayOnOff(id, isVisible) {
+    if (isVisible == true) {
+        document.getElementById(id).style.visibility = 'visible';
+    } else {
+        document.getElementById(id).style.visibility = 'hidden';
+    }
+}
+
+function checkform(formId) {
+    var possuiEspacosVazios = false;
+    var form = document.getElementById(formId);
+    var inputs = form.getElementsByTagName('input');
+    var inputSexo = form.sexo_usuario;
+
+    // if(((inputSexo[0].type == 'radio') && (inputSexo[0].checked == true)) || ((inputSexo[1].type == 'radio') && (inputSexo[1].checked == true))) {
+    //     //Sexo não está vazio
+    // } else {
+    //     possuiEspacosVazios = true
+    // }
+
+    if (possuiEspacosVazios == true) {
+        alert("Preencha todos os campos obrigatórios!");
+    } else {
+        validarCadastro(inputs);
+    }
+}
+
+function validarCadastro(inputs) {
+    var validCPF = false;
+    var validEmail = false;
+    var senha = "";
+    var senhaConfirmacao = "";
+    for (var i = 0; i < inputs.length; i++) {
+        switch (inputs[i].id) {
+            case "cpfId":
+                validCPF = validateCPF(inputs[i]);
+                break;
+
+            case "loginId":
+                validEmail = validateEmail(inputs[i]);
+                break;
+
+            case "senhaId":
+                senha = inputs[i].value;
+                break;
+
+            case "confirmacaoSenhaId":
+                senhaConfirmacao = inputs[i].value;
+                break;
+
+            default:
+                break;
+        }
+    }
+    if (validCPF == false) {
+        alert("CPF inválido!");
+    } else {
+        if (validEmail == false) {
+            alert("Email inválido!");
+        } else {
+            if (senha.localeCompare(senhaConfirmacao) != 0) {
+                alert("Senhas diferentes!");
+            } else {
+                window.location = "espaco_do_cursista.html";
+            }
+        }
+    }
+}
+
+function validateEmail(email) {
+    return true
+}
+
+function validateCPF(cof) {
+    return true;
+}
+
+
 
 function goToSituacoesClinicas() {
     window.location = "situacoes_clinicas.html";
@@ -29,56 +112,22 @@ function mudaIconeCor(id, nomeIcone, isMouseOver) {
     }
 }
 
-function mostrarCadastroLoginSenha(id, isVisible) {
-    if (isVisible == true) {
-        document.getElementById(id).style.visibility = 'visible';
-    } else {
-        document.getElementById(id).style.visibility = 'hidden';
-    }
+
+
+/* Espaço do Cursista */
+function goToApresentacaoCurso() {
+    window.location = "apresentacao_curso.html";
 }
 
-function checkform(formId, tipo) {
-    var possuiEspacosVazios = false;
-    var form = document.getElementById(formId);
-    var inputs = form.getElementsByTagName('input');
-    for (var i = 0; i < inputs.length; i++) {
-        if(inputs[i].hasAttribute("required")){
-            if((inputs[i].value == "") || ((inputs[i].type == 'radio') && (inputs[i].checked == false))){
-                possuiEspacosVazios = true;
-            }
-        }
-    }
-    if (possuiEspacosVazios == true) {
-        alert("Preencha todos os campos obrigatórios!");
-    } else {
-        if (tipo == 1) {
-            mostrarCadastroLoginSenha("lateral_cadastro_online", true);
-        } else if (tipo == 2) {
-            validarCadastro(inputs);
-        }
-    }
+function goToGuiaCursista() {
+    window.location = "guia_do_cursista.html";
 }
 
-function validarCadastro(inputs) {
-    var senha = "";
-    var senhaConfirmacao = "";
-    for (var i = 0; i < inputs.length; i++) {
-        switch (inputs[i].name) {
-            case "senha":
-                senha = inputs[i].value;
-                break;
 
-            case "senhaConfirmacao":
-                senhaConfirmacao = inputs[i].value;
-                break;
 
-            default:
-                break;
-        }
-    }
-    if (senha.localeCompare(senhaConfirmacao) == 0) {
-        window.location = "espaco_do_cursista.html";
-    } else {
-        alert("Senhas diferentes!");
-    }
+/* Avaliação Final */
+function salvarAvaliacaoFinal() {
+    var p2Text = document.getElementById("p2_avaliacao_final_id").value;
+    alert("Dados Salvos!!!");
+    window.location = "espaco_do_cursista.html";
 }

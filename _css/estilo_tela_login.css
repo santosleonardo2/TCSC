@@ -7,29 +7,36 @@
 div#tela_login_header_left_greater_rectangle {
     width: 300px;
     height: 50px;
-    margin: 0px 200px 5px 150px;
+    margin: 0px auto 5px 170px;
     transform: skewX(45deg);
     background-color: #ffffff;
     top: 10px;
     position: absolute;
+    display: inline-block;
 }
 
-div#tela_login_header_left_greater_rectangle img#ufpe_logo {
+img#ufpe_logo {
     transform: skewX(-45deg);
     position: relative;
-    margin: auto 5px auto 40px;
+    margin: auto 5px auto 30px;
 }
 
-div#tela_login_header_left_greater_rectangle img#lika_logo {
+img#lika_logo {
     transform: skewX(-45deg);
     position: relative;
-    margin: auto 10px auto 5px;
+    margin: auto 5px auto -10px;
 }
 
-div#tela_login_header_left_greater_rectangle img#ideias_logo {
+img#ideias_logo {
     transform: skewX(-45deg);
     position: relative;
-    margin: auto 10px auto 5px;
+    margin: auto 15px auto 5px;
+}
+
+img#posca_logo {
+    transform: skew(-45deg);
+    position: relative;
+    margin: auto 10px auto  5px;
 }
 
 div#tela_login_header_right_greater_rectangle p {
@@ -45,11 +52,12 @@ div#tela_login_header_right_greater_rectangle p {
 div#tela_login_header_right_greater_rectangle {
     width: 300px;
     height: 50px;
-    margin: 0px 200px 5px 440px;
+    margin: 0px auto 5px 460px;
     transform: skewX(-45deg);
     background-color: #E6E7E8;
     top: 10px;
     position: absolute;
+    display: inline-block;
 }
 
 div#tela_login_header_left_small_rectangle {
@@ -229,7 +237,7 @@ div#login_rectangle h2 {
     font-size: 18pt;
     font-weight: normal;
     position: relative;
-    left: 45px;
+    left: 40px;
     margin-top: -5px;
 }
 
@@ -283,7 +291,7 @@ button#login_button {
     height: 27px;
     color: white;
     font-size: 10pt;
-    background-color: #4085EB;
+    background-color: #0031FF;
     border-radius: 7px;
     padding: 5px 5px;
     margin: 0px auto -10px auto;
@@ -308,7 +316,7 @@ a {
 }
 
 
-/* NOTICIAS */
+/* FAQ */
 div#noticias {
     position: relative;
     top: -100px;
@@ -417,6 +425,7 @@ div#noticias_corpo::-webkit-scrollbar-corner {
 div#noticias_corpo h2 {
     width: 101%;
     font-size: 11pt;
+    font-family: Balsamiq;
     text-align: left;
     text-transform: uppercase;
     color: #58595B;
@@ -433,6 +442,7 @@ div#noticias_corpo h2 {
 div#noticias_corpo p {
     font-size: 10pt;
     text-align: justify;
+    font-family: Balsamiq;
     margin-top: 5px;
     margin-bottom: 20px;
 }
@@ -462,7 +472,7 @@ div#tela_login_footer_left_small_rectangle {
     position: absolute;
     height: 0;
     width: 480px;
-    left: -10px;
+    left: -5px;
     border-bottom: 20px solid #00AA18;
     border-left: 0px solid transparent;
     border-right: 20px solid transparent;

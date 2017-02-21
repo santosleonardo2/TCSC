@@ -1,0 +1,358 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Balsamiq;
+    src: url("../_fonts/BalsamiqSansRegular.ttf");
+}
+
+/* Topo */
+div#header_left_small_rectangle {
+    background-color: #ffffff;
+    position: relative;
+    left: -10px;
+    height: 0;
+    width: 490px;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+div#header_right_small_rectangle {
+    position: relative;
+    top: -20px;
+    left: 455px;
+    height: 0;
+    width: 435px;
+    border-bottom: 20px solid #0B4900;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+}
+
+div#header_left_greater_rectangle {
+    width: 300px;
+    height: 50px;
+    transform: skewX(45deg);
+    background-color: #0B4900;
+    top: -90px;
+    left: 160px;
+    position: relative;
+}
+
+div#header_right_greater_rectangle {
+    width: 300px;
+    height: 50px;
+    transform: skewX(-45deg);
+    background-color: #00AA18;
+    top: -40px;
+    left: 440px;
+    position: relative;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    transform: skewX(-45deg);
+    top: 75px;
+    padding: 0px 5px 0px 5px;
+    left: -33px;
+}
+
+label#userName {
+    color: white;
+    text-align: left;
+    font-size: 8pt;
+}
+
+label#userEmail {
+    color: white;
+    text-align: left;
+    font-size: 8pt;
+}
+
+ul.header_user_info {
+    position: relative;
+    transform: skewX(45deg);
+    margin: 0px auto 0px auto;
+    left: 35px;
+    top: 10px;
+}
+
+ul.header_user_info li {
+    color: white;
+    text-align: left;
+    font-size: 8pt;
+    padding-right: 10px;
+}
+
+li#userNameId {
+    list-style-image: url('../_imagens/profile.png');
+}
+
+li#userEmailId {
+    list-style-image: url('../_imagens/email_icone.png');
+}
+
+
+
+
+
+
+/* Cabeçalho */
+header#cabecalho {
+    height: 140px;
+    margin-bottom: 80px;
+}
+
+header#cabecalho img {
+    top: -75px;
+    display: block;
+    margin: 10px auto 10px auto;
+    position: relative;
+}
+
+header#cabecalho h1 {
+    text-align: center;
+    font-weight: normal;
+    font-family: Balsamiq, sans-serif;
+    font-size: 28pt;
+    padding: 0px;
+    position: relative;
+    top: -85px;
+}
+
+div#header_left_top_rectangle {
+    height: 0;
+    width: 470px;
+    position: relative;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+    top: -80px;
+    left: -50px;
+}
+
+div#header_right_top_rectangle {
+    height: 0;
+    width: 450px;
+    position: relative;
+    border-bottom: 20px solid #0B4900;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+    top: 0px;
+    left: 440px;
+}
+
+div#header_left_big_rectangle {
+    position: relative;
+    border-bottom: 40px solid #D0D2D3;
+    border-left: 0px solid transparent;
+    border-right: 45px solid transparent;
+    height: 0;
+    width: 250px;
+    top: -152px;
+    left: -10px;
+}
+
+div#header_right_big_rectangle {
+    position: relative;
+    border-top: 40px solid #D0D2D3;
+    border-left: 45px solid transparent;
+    border-right: 0px solid transparent;
+    height: 0;
+    width: 250px;
+    top: -192px;
+    left: 615px;
+}
+
+div#header_left_bottom_rectangle {
+    position: relative;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 22px solid transparent;
+    height: 0;
+    width: 200px;
+    top: -242px;
+    left: -10px;
+    opacity: .8;
+
+}
+
+div#header_right_bottom_rectangle {
+    position: relative;
+    border-top: 20px solid #0B4900;
+    border-left: 22px solid transparent;
+    border-right: 0px solid transparent;
+    height: 0;
+    width: 200px;
+    top: -223px;
+    left: 690px;
+    opacity: .9;
+}
+
+
+
+
+
+/* Corpo Principal */
+body {
+    background-color: #58595B;
+}
+
+div#interface {
+    background-image: url("../_imagens/background_grid_black.png");
+    width: 900px;
+    font-family: Balsamiq, sans-serif;
+    color: black;
+    background-color: #FFFFFF;
+    font-size: 11pt;
+    box-shadow: 0px 0px 10px black;
+    padding: 0px 10px 0px 10px;
+    margin: 0px auto 10px auto;
+    top: -10px;
+    position: relative;
+}
+
+p.p_centralizdo {
+    text-align: center;
+    font-size: 12pt;
+}
+
+p.p_observacao {
+    font-size: 10pt;
+    text-align: left;
+    font-style: italic;
+}
+
+p.texto_geral {
+    font-size: 10pt;
+    text-align: left;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.email {
+    color: #0031FF;
+    text-decoration: underline;
+}
+
+section#corpo_geral {
+    display: block;
+    position: relative;
+    margin: 0px auto 0px auto;
+    padding-right: 45px;
+    padding-left: 45px;
+}
+
+section h3 {
+    margin: 40px 0px 0px 0px;
+    padding: 0px;
+}
+
+ul {
+    margin-top: 0px;
+    font-size: 10pt;
+}
+
+
+
+
+/* Aside */
+
+
+
+
+
+
+/* Rodapé */
+footer#rodape {
+    clear: both;
+    height: 60px;
+}
+
+div#footer_left_small_rectangle {
+    background-color: #ffffff;
+    position: relative;
+    height: 0;
+    width: 480px;
+    border-bottom: 20px solid #00AA18;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+    left: -10px;
+    bottom: -40px;
+}
+
+div#footer_right_small_rectangle {
+    position: relative;
+    height: 0;
+    width: 450px;
+    right: 0px;
+    border-bottom: 20px solid #0B4900;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+    left: 440px;
+    bottom: -20px;
+}
+
+div#footer_left_greater_rectangle p {
+    font-size: 9pt;
+    text-align: center;
+    color: black;
+    margin: auto 0px auto 0px;
+    transform: skewX(45deg);
+    position: relative;
+    top: 10px;
+}
+
+div#footer_left_greater_rectangle {
+    width: 300px;
+    height: 50px;
+    transform: skewX(-45deg);
+    background-color: #FFFFFF;
+    top: -30px;
+    left: 180px;
+    position: relative;
+}
+
+div#footer_right_greater_rectangle {
+    width: 300px;
+    height: 50px;
+    transform: skewX(45deg);
+    background-color: #F1F1F2;
+    top: -80px;
+    left: 430px;
+    position: relative;
+}
+
+img#ufpe_logo {
+    transform: skewX(-45deg);
+    position: relative;
+    top: 0px;
+    margin: auto 5px auto 30px;
+    display: inline-block;
+}
+
+img#lika_logo {
+    transform: skewX(-45deg);
+    position: relative;
+    top: -5px;
+    margin: auto 5px auto -10px;
+    display: inline-block;
+}
+
+img#ideias_logo {
+    transform: skewX(-45deg);
+    position: relative;
+    top: -5px;
+    margin: auto 15px auto 5px;
+    display: inline-block;
+}
+
+img#posca_logo {
+    transform: skewX(-45deg);
+    position: relative;
+    top: -5px;
+    margin: auto 10px auto 5px;
+    display: inline-block;
+}

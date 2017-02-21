@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Espaço do Cursista</title>
-        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="_css/estilo_geral.css">
         <link rel="stylesheet" type="text/css" href="_css/estilo_tela_login.css">
         <link rel="stylesheet" type="text/css" href="_css/estilo_espaco_cursista.css">
     </head>
@@ -15,14 +15,20 @@
         <header id="cabecalho">
             <div id="header_left_small_rectangle"></div>
             <div id="header_right_small_rectangle"></div>
-            <div id="header_left_greater_rectangle">
-                <p>Copyright &copy; 2016 - LIKA
-                    <br/>Fone: (81) XXXX-XXXX</p>
-            </div>
             <div id="header_right_greater_rectangle">
-                <a href="https://www.ufpe.br/" target="_blank"><img id="ufpe_logo" src="_imagens/ufpe_logo.png"/></a>
-                <a href="http://www.lika-ufpe.org/" target="_blank"><img id="lika_logo" src="_imagens/lika_logo.png"/></a>
-                <img id="ideias_logo" src="_imagens/ideias_logo.png"/>
+                <ul class="header_user_info">
+                    <li id="userNameId">Leonardo Pires dos Santos</li>
+                    <li id="userEmailId">santos.leonardo2@hotmail.com</li>
+                </ul>
+            </div>
+            <div id="header_left_greater_rectangle">
+                <nav>
+                    <a href="espaco_do_cursista.html" target="_self"><img src="_imagens/home.png"></a>
+                    <a href="javascript:history.back()" target="_self"><img src="_imagens/back_arrow.png"></a>
+                    <a><img src="_imagens/configuration.png"></a>
+                    <a><img src="_imagens/contact.png"></a>
+                    <a href="tela_login.html" target="_self"><img src="_imagens/logout.png"></a>
+                </nav>
             </div>
 
             <img src="_imagens/espaco_cursista_icon.png">
@@ -34,17 +40,18 @@
         </header>
 
         <section id="tela_login_corpo_principal">
-            <p>Bem vindo Cursista!</p>
-            <p>Ecolha dentre uma das opções abaixo para obter mais informações e referências sobre a Caderneta da Saúde da Criança.</p>
-            <p>Para poder começar o curso, acesse o link de “Situações Clínicas”.</p>
+            <p>Bem vindo NOME DO CURSISTA !</p>
+            <p>Este é seu espaço de trabalho. Para conhecer melhor o curso e sua estrutura, acesse o ícone "APRESENTAÇÃO". Informações a respeito de funcionalidades e navegação, você encontrará no ícone "GUIA".</p>
+            <p>Para iniciar o seu treinamento no preenchimento da Caderneta de Saúde da Criança (CSC), selecione o ícone "SITUAÇÕES CLÍNICAS". Veja Avaliação e Certificado também neste ícone.</p>
+
 
             <div id="espaco_cursista_direcionadores">
                 <figure>
-                    <img id="direcionador_apresentacao" src="_imagens/apresentacao_icone.png" onmouseover="mudaIconeCor('direcionador_apresentacao', 'apresentacao_icone', true)" onmouseout="mudaIconeCor('direcionador_apresentacao', 'apresentacao_icone', false)">
+                    <img id="direcionador_apresentacao" src="_imagens/apresentacao_icone.png" onmouseover="mudaIconeCor('direcionador_apresentacao', 'apresentacao_icone', true)" onmouseout="mudaIconeCor('direcionador_apresentacao', 'apresentacao_icone', false)" onclick="goToApresentacaoCurso()">
                     <figcaption id="direcionador_apresentacao_texto">Apresentação</figcaption>
                 </figure>
                 <figure>
-                    <img id="direcionador_guia" src="_imagens/guia_icone.png" onmouseover="mudaIconeCor('direcionador_guia', 'guia_icone', true)" onmouseout="mudaIconeCor('direcionador_guia', 'guia_icone', false)">
+                    <img id="direcionador_guia" src="_imagens/guia_icone.png" onmouseover="mudaIconeCor('direcionador_guia', 'guia_icone', true)" onmouseout="mudaIconeCor('direcionador_guia', 'guia_icone', false)" onclick="goToGuiaCursista()">
                     <figcaption id="direcionador_guia_texto">Guia</figcaption>
                 </figure>
                 <figure>
@@ -134,33 +141,24 @@
                 <div id="noticias_header">
                     <div id="noticias_header_circle_container"></div>
                     <div id="noticias_header_rectangle">
-                        <h1>FAQ</h1>
+                        <h1>Notícias</h1>
                     </div>
                     <div id="noticias_header_circle">
-                        <img id="news_icone" src="_imagens/faq_icone.png">
+                        <img id="news_icone" src="_imagens/leituras_icone.png">
                     </div>
                 </div>
                 <div id="noticias_corpo">
-                    <h2>Não estou conseguindo receber a declaração de conclusão de curso. O que está havendo?</h2>
-                    <p>A declaração de conclusão de curso é disponibilizada apenas para enfermeiros e médicos que atenderam plenamente os requisitos descritos no tópico “Apresentação de Curso”, item “certificação”.</p>
+                    <h2>??????????</h2>
+                    <p> ?????????????????</p>
 
-                    <h2>Atingi os requisitos para receber a Declaração de conclusão de curso, mas essa ainda não chegou. O que aconteceu?</h2>
-                    <p>O link para acesso à declaração é enviado por e-mail.Recomendamos que você verifique qual foi o e-mail que cadastrou no ato da inscrição como também, as caixas spam, lixo eletrônico ou quarentena do seu e-mail.</p>
+                    <h2>Etiam neque</h2>
+                    <p>Nunc posuere. Nullam lectus justo, vulputate eget, mollis sed, tempor sed, magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam neque. Curabitur ligula sapien, pulvinar a, vestibulum quis, facilisis vel, sapien. Nullam eget nisl. Donec vitae arcu.</p>
 
-                    <h2>É possível enviar minha declaração de conclusão de curso por e-mail?</h2>
-                    <p>Não. O que você receberá por e-mail é o link para ter acesso à declaração. Verifique o seu e-mail, lembrando que você deve acessar o e-mail que cadastrou no ato de inscrição do curso. Recomendamos, ainda, que você verifique as caixas spam, lixo eletrônico ou quarentena do seu e-mail.</p>
+                    <h2>velit turpis volutpat ante</h2>
+                    <p>In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam id dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris dictum facilisis augue. Fusce tellus. Pellentesque arcu. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu, urna. Nullam at arcu a est sollicitudin euismod. Praesent dapibus.</p>
 
-                    <h2>Quanto tempo tenho para concluir meus estudos?</h2>
-                    <p>Durante o período de realização do curso, você pode planejar sua rotina de estudos da forma que achar mais conveniente, ou seja, não existe um número de dias específicos, mas carga horária mínima de 12horas a cumprir. Você deve atentar para a data de encerramento do curso, após esta data não será mais possível participar.</p>
-
-                    <h2>É necessário estar na Unidade Básica de Saúde ou Secretaria Municipal de Saúde para acessar o curso?</h2>
-                    <p>Não. Você pode acessar o curso de qualquer mídia eletrônicas conectada à internet. É imprescindível estar inscrito no curso.</p>
-
-                    <h2>Posso acessar o curso a noite, nos finais de semana e feriados?</h2>
-                    <p>Sim. O curso fica disponível todos os dias da semana, inclusive nos feriados, 24 horas por dia.</p>
-
-                    <h2>Qual melhor navegador para visualizar o curso?</h2>
-                    <p>Google Chrome. Contudo, o mesmo pode ser visto nos navegadores padrões mais comuns (ou seja, Firefox, Safari, Opera e Explorer)</p>
+                    <h2>Morbi leo mi, nonummy eget, tristique non, rhoncus non, leo.</h2>
+                    <p>Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Nam sed tellus id magna elementum tincidunt.</p>
                 </div>
                 <div id="noticias_footer"></div>
             </div>
@@ -169,6 +167,16 @@
         <footer id="rodape">
             <div id="footer_left_small_rectangle"></div>
             <div id="footer_right_small_rectangle"></div>
+            <div id="footer_left_greater_rectangle">
+                <p>Copyright &copy; 2016 - LIKA
+                    <br/>Fone: (81) 2126-8489</p>
+            </div>
+            <div id="footer_right_greater_rectangle">
+                <a href="https://www.ufpe.br/" target="_blank"><img id="ufpe_logo" src="_imagens/ufpe_logo.png"/></a>
+                <a href="http://www.lika-ufpe.org/" target="_blank"><img id="lika_logo" src="_imagens/lika_logo.png"/></a>
+                <img id="ideias_logo" src="_imagens/ideias_logo.png"/>
+                <img id="posca_logo" src="_imagens/posca_logo.png"/>
+            </div>
         </footer>
     </div>
     </body>

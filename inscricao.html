@@ -3,37 +3,35 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Inscrição</title>
-        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="_css/estilo_inscricao.css">
+        <link rel="stylesheet" type="text/css" href="_css/estilo_geral.css">
     </head>
 
     <script src="_javascript/funcoesGerais.js"></script>
 
     <body>
         <div id="interface">
-            <header id="cabecalho">
+            <header id="inscricao_cabecalho">
                 <div id="header_left_small_rectangle"></div>
                 <div id="header_right_small_rectangle"></div>
-                <div id="header_left_greater_rectangle">
-                    <p>Copyright &copy; 2016 - LIKA
-                        <br/>Fone: (81) XXXX-XXXX</p>
-                </div>
-                <div id="header_right_greater_rectangle">
-                    <a href="https://www.ufpe.br/" target="_blank"><img id="ufpe_logo" src="_imagens/ufpe_logo.png"/></a>
-                    <a href="http://www.lika-ufpe.org/" target="_blank"><img id="lika_logo" src="_imagens/lika_logo.png"/></a>
-                    <img id="ideias_logo" src="_imagens/ideias_logo.png"/>
+                <div id="header_midle_greater_rectangle">
+                    <nav id="nav_header_midle_greater_rectangle">
+                        <a href="javascript:history.back()"><img id="backArrowId" src="_imagens/back_arrow.png"></a>
+                        <a><img id="contactId" src="_imagens/contact.png"></a>
+                    </nav>
                 </div>
 
                 <img src="_imagens/inscrição_icone.png">
                 <h1>Inscrição</h1>
-                <div id="header_left_big_rectangle"></div>
-                <div id="header_right_big_rectangle"></div>
-                <div id="header_left_bottom_rectangle"></div>
-                <div id="header_right_bottom_rectangle"></div>
+                <div id="inscricao_header_left_big_rectangle"></div>
+                <div id="inscricao_header_right_big_rectangle"></div>
+                <div id="inscricao_header_left_bottom_rectangle"></div>
+                <div id="inscricao_header_right_bottom_rectangle"></div>
             </header>
-            <p>Olá!!!</p>
-            <p>Gostaríamos de conhecer um pouco sobre você.</p>
-            <p>Para sua inscrição serão feitas algumas perguntas sobre sua formação e o uso da Caderneta de Saúde da Criança.</p>
-            <p>Vamos lá?</p>
+            <p class="p_centralizdo">Olá!!!</p>
+            <p class="p_centralizdo">Gostaríamos de conhecer um pouco sobre você.</p>
+            <p class="p_centralizdo">Para sua inscrição serão feitas algumas perguntas sobre sua formação e o uso da Caderneta de Saúde da Criança.</p>
+            <p class="p_centralizdo">Vamos lá?</p>
 
             <section id="corpo_principal">
                 <form id="formulario_inscricao">
@@ -41,47 +39,54 @@
                         <caption>IDENTIFICAÇÃO DO PARTICIPANTE</caption>
                         <tr>
                             <td><label>*Nome Completo:</label></td>
-                            <td><input type="text" placeholder="Insira nome completo" name="nome_completo" required></td>
+                            <td><input type="text" placeholder="Insira nome completo" name="nome_completo"></td>
                         </tr>
                         <tr>
                             <td><label>*Idade:</label></td>
-                            <td><input type="number" placeholder="Insira idade" name="idade_usuario" required></td>
+                            <td><input type="number" placeholder="Insira idade" name="idade_usuario"></td>
                         </tr>
                         <tr>
                             <td><label>*Sexo:</label></td>
-                            <td><input type="radio" name="sexo_usuario"required>Masculino</td>
+                            <td><input type="radio" name="sexo_usuario">Masculino</td>
                             <td><input type="radio" name="sexo_usuario">Feminino</td>
                         </tr>
                         <tr>
                             <td><label>*CPF:</label></td>
-                            <td><input type="text" placeholder="Insira CPF" name="cpf_usuario" required></td>
+                            <td><input id="cpfId" type="text" placeholder="Insira CPF" name="cpf_usuario"></td>
                         </tr>
-
-                        <tr>
-                            <td><label>*Formação:</label></td>
-                            <td><input type="radio" name="formacao_usuario"required>Enfermagem</td>
-                            <td><input type="radio" name="formacao_usuario">Medicina</td>
-                        </tr>
-                        <tr>
-                            <td><label>*Maior Titulação:</label></td>
-                            <td><input type="radio" name="titulacao_usuario" required>Graduação</td>
-                            <td><input type="radio" name="titulacao_usuario">Especialização</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2"><label>Qual?</label></td>
-                            <td><input type="radio" name="titulacao_usuario_def" value="Mestrado">Mestrado</td>
-                            <td><input type="text" name="titulacao_area" placeholder="Área do mestrado"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="radio" name="titulacao_usuario_def" value="Doutorado">Doutorado</td>
-                            <td><input type="text" name="titulacao_area" placeholder="Área do doutorado"></td>
-                        </tr>
-
                         <tr>
                             <td><label>Local de Trabalho:</label></td>
                             <td><input type="text" placeholder="Insira local de trabalho" name="local_trabalho"></td>
                         </tr>
+
+                        <tr><td></td></tr>
+
+                        <tr>
+                            <td><label>*Formação:</label></td>
+                            <td><input type="radio" name="formacao_usuario">Enfermagem</td>
+                            <td><input type="radio" name="formacao_usuario">Medicina</td>
+                            <td><input type="radio" name="formacao_usuario">Outro</td>
+                        </tr>
+
+                        <tr><td></td></tr>
+
+                        <tr>
+                            <td><label>*Maior Titulação:</label></td>
+                            <td><input type="radio" name="titulacao_usuario">Graduação</td>
+                            <td><input type="radio" name="titulacao_usuario">Especialização</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="radio" name="titulacao_usuario">Mestrado</td>
+                            <td><input type="radio" name="titulacao_usuario">Doutorado</td>
+                            <td><input type="radio" name="titulacao_usuario">Pós-Doutorado</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="text" name="titulacao_usuario_qual" placeholder="Nome da titulação"></td>
+                        </tr>
                     </table>
+
 
                     <br/><label>Você realiza consultas de puericultura?</label>
                     <br/><input type="radio" name="frequencia_consultas">Sim
@@ -90,48 +95,43 @@
                     <br/><label>Você utiliza a Caderneta de Saúde da Criança nos seus atendimentos?</label>
                     <br/><input type="radio" name="frequencia_uso_caderneta">Sim
                     <input type="radio" name="frequencia_uso_caderneta" >Não
+
+                    <br/><br/><br/>
+                    <h1>Cadastro de Acesso</h1>
+                    <table id="tabela_cadastro_acesso">
+                        <tr>
+                            <td>*Email:</td>
+                            <td><input id="loginId" type="text" name="login" placeholder="Insira email"></td>
+                        </tr>
+                        <tr>
+                            <td>*Senha: </td>
+                            <td><input id="senhaId" type="password" name="senha_usuario" placeholder="Insira senha"></td>
+                        </tr>
+                        <tr>
+                            <td>*Confirmar Senha: </td>
+                            <td><input id="confirmacaoSenhaId" type="password" name="confirmacao_senha_usuario" placeholder="Insira senha novamente"></td>
+                        </tr>
+                    </table>
                 </form>
 
-                <p id="p_observacao">Obs.: Campos com caracter * são obrigatórios antes de avançar no cadastro.</p>
-                <button id="continuar" type="submit" onclick="checkform('formulario_inscricao', 1)">Continuar</button>
+                <p style="font-size: 10pt; font-style: italic">Obs.: Campos com caracter * são obrigatórios antes de avançar no cadastro.</p>
+                <button id="continuar" type="submit" onclick="checkform('formulario_inscricao')">Cadastrar</button>
+
             </section>
-
-            <aside id="lateral_cadastro_online">
-                <div id="lateral_cadastro_online_detail">
-                    <div id="lateral_cadastro_online_detail_triangle"></div>
-                    <form id="formulario_login">
-                        <table id="tabela_cadastro_online">
-                            <div id="register_rectangle">
-                                <caption>Cadastrar Senha de Acesso</caption>
-                            </div>
-                            <tr>
-                                <td><label>Nome Usuário:</label></td>
-                                <td><input type="text" placeholder="Insira nome de usuário" name="login_usuario" required></td>
-                            </tr>
-                            <tr>
-                                <td><label>Email:</label></td>
-                                <td><input type="text" placeholder="Insira email" name="email" required></td>
-                            </tr>
-                            <tr>
-                                <td><label>Senha:</label></td>
-                                <td><input type="password" placeholder="Insira Senha" name="senha" required></td>
-                            </tr>
-                            <tr>
-                                <td><label>Confirmação Senha:</label></td>
-                                <td><input type="password" placeholder="Confirmação de senha" name="senhaConfirmacao" required></td>
-                            </tr>
-                        </table>
-                    </form>
-                    <button id="registrar" type="submit" onclick="checkform('formulario_login', 2)">Inscrever-se</button>
-
-                    <div id="transparent_right_bottom_triangle"></div>
-                    <div id="blue_right_bottom_triangle"></div>
-                </div>
-            </aside>
 
             <footer id="rodape">
                 <div id="footer_left_small_rectangle"></div>
                 <div id="footer_right_small_rectangle"></div>
+                <div id="footer_left_greater_rectangle">
+                    <p>Copyright &copy; 2016 - LIKA
+                        <br/>Fone: (81) 2126-8489</p>
+                </div>
+                <div id="footer_right_greater_rectangle">
+                    <a href="https://www.ufpe.br/" target="_blank"><img id="ufpe_logo" src="_imagens/ufpe_logo.png"/></a>
+                    <a href="http://www.lika-ufpe.org/" target="_blank"><img id="lika_logo" src="_imagens/lika_logo.png"/></a>
+                    <img id="ideias_logo" src="_imagens/ideias_logo.png"/>
+                    <img id="posca_logo" src="_imagens/posca_logo.png"/>
+                </div>
             </footer>
         </div>
     </body>
