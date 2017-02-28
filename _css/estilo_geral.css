@@ -213,17 +213,17 @@ div#interface {
 
 p.p_centralizdo {
     text-align: center;
-    font-size: 12pt;
+    font-size: 11pt;
 }
 
 p.p_observacao {
-    font-size: 10pt;
+    font-size: 11pt;
     text-align: left;
     font-style: italic;
 }
 
 p.texto_geral {
-    font-size: 10pt;
+    font-size: 11pt;
     text-align: left;
     margin: 0px;
 }
@@ -255,6 +255,11 @@ ul {
     font-size: 10pt;
 }
 
+section#corpo_geral img#divisorResumoId {
+    position: relative;
+    display: block;
+    margin: 10px auto 0px auto;
+}
 
 
 

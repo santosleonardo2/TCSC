@@ -152,7 +152,7 @@ div#estudo_de_casos_smaller_horizontal_trapezoid {
 
 
 
-/* Corpo Principal */
+
 figure.casos_clinicos_situacao {
     margin: 0px;
     padding: 0px;
@@ -188,34 +188,31 @@ div#avaliacao_container {
     background-color: #D0D2D3;
     border-radius: 15px;
     height: 100px;
+    width: 550px;
     position: relative;
+    display: inline-block;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
-div#avaliacao_img {
-    display: inline-block;
+div#avaliacao_container img {
+    display: block;
+    vertical-align: middle;
+    float: left;
+    margin: 30px 0px auto 20px;
 }
 
-div#avaliacao_texto {
-    display: inline-block;
-}
-
-div#avaliacao_img img {
+div#avaliacao_container_texto {
     position: relative;
     display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-    left: 10px;
+    vertical-align: middle;
+    float: right;
+    margin: 28px 10px auto 0px;
+    left: -45px;
 }
 
-div#avaliacao_texto h2 {
-    color: #58595B;
-    position: relative;
-    left: 25px;
-}
-
-div#avaliacao_texto p {
-    color: #58595B;
-    position: relative;
-    left: 25px;
+div#avaliacao_container h2 {
+    font-family: Balsamiq;
+    margin: 0px;
+    padding: 0px;
 }

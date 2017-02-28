@@ -34,82 +34,83 @@
             <p class="p_centralizdo">Vamos lá?</p>
 
             <section id="corpo_principal">
-                <form id="formulario_inscricao">
+                <form id="formulario_inscricao" method="post">
                     <table id="tabela_dados_usuario">
                         <caption>IDENTIFICAÇÃO DO PARTICIPANTE</caption>
                         <tr>
-                            <td><label>*Nome Completo:</label></td>
-                            <td><input type="text" placeholder="Insira nome completo" name="nome_completo"></td>
+                            <td><label for="nomeCompletoId">*Nome Completo:</label></td>
+                            <td colspan="3"><input id="nomeCompletoId" type="text" placeholder="Insira nome completo" name="nome_completo" min="0" max="150"></td>
                         </tr>
                         <tr>
-                            <td><label>*Idade:</label></td>
-                            <td><input type="number" placeholder="Insira idade" name="idade_usuario"></td>
+                            <td><label for="idadeId">*Idade:</label></td>
+                            <td colspan="3"><input id="idadeId" type="number" placeholder="Insira idade" name="idade_usuario"></td>
                         </tr>
                         <tr>
                             <td><label>*Sexo:</label></td>
-                            <td><input type="radio" name="sexo_usuario">Masculino</td>
-                            <td><input type="radio" name="sexo_usuario">Feminino</td>
+                            <td><input id="sexoMasculinoId" type="radio" name="sexo_usuario"><label for="sexoMasculinoId">Masculino</label></td>
+                            <td><input id="sexoFemininoId" type="radio" name="sexo_usuario"><label for="sexoFemininoId">Feminino</label></td>
                         </tr>
                         <tr>
-                            <td><label>*CPF:</label></td>
-                            <td><input id="cpfId" type="text" placeholder="Insira CPF" name="cpf_usuario"></td>
+                            <td><label for="cpfId">*CPF:</label></td>
+                            <td colspan="3"><input id="cpfId" type="text" placeholder="Insira CPF" name="cpf_usuario"></td>
                         </tr>
                         <tr>
-                            <td><label>Local de Trabalho:</label></td>
-                            <td><input type="text" placeholder="Insira local de trabalho" name="local_trabalho"></td>
+                            <td><label for="localTrabalhoId">Local de Trabalho:</label></td>
+                            <td colspan="3"><input id="localTrabalhoId" type="text" placeholder="Insira local de trabalho" name="local_trabalho"></td>
                         </tr>
 
                         <tr><td></td></tr>
 
                         <tr>
                             <td><label>*Formação:</label></td>
-                            <td><input type="radio" name="formacao_usuario">Enfermagem</td>
-                            <td><input type="radio" name="formacao_usuario">Medicina</td>
-                            <td><input type="radio" name="formacao_usuario">Outro</td>
+                            <td><input id="formacaoEnfermagemId" type="radio" name="formacao_usuario"><label for="formacaoEnfermagemId">Enfermagem</label></td>
+                            <td><input id="formacaoMedicinaId" type="radio" name="formacao_usuario"><label for="formacaoMedicinaId">Medicina</label></td>
+                            <td><input id="formacaoOutroId" type="radio" name="formacao_usuario"><label for="formacaoOutroId">Outro</label></td>
+                            <td><input type="text" name="formacao_usuario" placeholder="Qual?" style="width: 100px"></td>
                         </tr>
 
                         <tr><td></td></tr>
 
                         <tr>
                             <td><label>*Maior Titulação:</label></td>
-                            <td><input type="radio" name="titulacao_usuario">Graduação</td>
-                            <td><input type="radio" name="titulacao_usuario">Especialização</td>
+                            <td><input id="titulacaoGraduacaoId" type="radio" name="titulacao_usuario"><label for="titulacaoGraduacaoId">Graduação</label></td>
+                            <td colspan="2"><input id="titulacaoEspecializacaoId" type="radio" name="titulacao_usuario"><label for="titulacaoEspecializacaoId">Especialização</label></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><input type="radio" name="titulacao_usuario">Mestrado</td>
-                            <td><input type="radio" name="titulacao_usuario">Doutorado</td>
-                            <td><input type="radio" name="titulacao_usuario">Pós-Doutorado</td>
+                            <td><input id="titulacaoMestradoId" type="radio" name="titulacao_usuario"><label for="titulacaoMestradoId">Mestrado</label></td>
+                            <td><input id="titulacaoDoutoradoId" type="radio" name="titulacao_usuario"><label for="titulacaoDoutoradoId">Doutorado</label></td>
+                            <td colspan="2"><input id="titulacaoPosDoutoradoId" type="radio" name="titulacao_usuario"><label for="titulacaoPosDoutoradoId">Pós-Doutorado</label></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><input type="text" name="titulacao_usuario_qual" placeholder="Nome da titulação"></td>
+                            <td colspan="3"><input type="text" name="titulacao_usuario_qual" placeholder="Área da titulação"></td>
                         </tr>
                     </table>
 
 
                     <br/><label>Você realiza consultas de puericultura?</label>
-                    <br/><input type="radio" name="frequencia_consultas">Sim
-                    <input type="radio" name="frequencia_consultas">Não
+                    <br/><input id="puericulturaSimId" type="radio" name="frequencia_consultas"><label for="puericulturaSimId">Sim</label>
+                    <input id="puericulturaNaoId" type="radio" name="frequencia_consultas"><label for="puericulturaNaoId">Não</label>
                     <br/>
                     <br/><label>Você utiliza a Caderneta de Saúde da Criança nos seus atendimentos?</label>
-                    <br/><input type="radio" name="frequencia_uso_caderneta">Sim
-                    <input type="radio" name="frequencia_uso_caderneta" >Não
+                    <br/><input id="utilizaCadernetaId" type="radio" name="frequencia_uso_caderneta"><label for="utilizaCadernetaId">Sim</label>
+                    <input id="naoUtilizaCadernetaId" type="radio" name="frequencia_uso_caderneta" ><label for="naoUtilizaCadernetaId">Não</label>
 
                     <br/><br/><br/>
                     <h1>Cadastro de Acesso</h1>
                     <table id="tabela_cadastro_acesso">
                         <tr>
-                            <td>*Email:</td>
-                            <td><input id="loginId" type="text" name="login" placeholder="Insira email"></td>
+                            <td><label for="loginId">*Email:</label></td>
+                            <td colspan="2"><input id="loginId" type="email" name="login" placeholder="Insira email"></td>
                         </tr>
                         <tr>
-                            <td>*Senha: </td>
-                            <td><input id="senhaId" type="password" name="senha_usuario" placeholder="Insira senha"></td>
+                            <td><label for="senhaId">*Senha:</label></td>
+                            <td colspan="2"><input id="senhaId" type="password" name="senha_usuario" placeholder="Insira senha" minlength="6" maxlength="16"></td>
                         </tr>
                         <tr>
-                            <td>*Confirmar Senha: </td>
-                            <td><input id="confirmacaoSenhaId" type="password" name="confirmacao_senha_usuario" placeholder="Insira senha novamente"></td>
+                            <td><label for="confirmacaoSenhaId">*Confirmar Senha:</label></td>
+                            <td colspan="2"><input id="confirmacaoSenhaId" type="password" name="confirmacao_senha_usuario" placeholder="Insira senha novamente" minlength="6" maxlength="16"></td>
                         </tr>
                     </table>
                 </form>

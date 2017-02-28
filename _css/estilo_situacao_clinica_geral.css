@@ -16,6 +16,10 @@ div#abas_situacao_clinica figure {
     text-align: center;
 }
 
+div#abas_situacao_clinica figcaption {
+    text-transform: uppercase;
+}
+
 div#container_superior {
     position: relative;
     display: block;

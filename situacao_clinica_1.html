@@ -1,10 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8"/>
     <title>Situação Clínica 1</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo_situacao_clinica_geral.css">
+    <link rel="stylesheet" type="text/css" href="_css/estilo_geral.css">
 </head>
-<body>
 
+<script src="_javascript/funcoesGerais.js"></script>
+
+<body>
+<div id="interface">
+    <header id="cabecalho">
+        <div id="header_left_small_rectangle"></div>
+        <div id="header_right_small_rectangle"></div>
+        <div id="header_right_greater_rectangle">
+            <ul class="header_user_info">
+                <li id="userNameId">Leonardo Pires dos Santos</li>
+                <li id="userEmailId">santos.leonardo2@hotmail.com</li>
+            </ul>
+        </div>
+        <div id="header_left_greater_rectangle">
+            <nav>
+                <a href="espaco_do_cursista.html" target="_self"><img src="_imagens/home.png"></a>
+                <a href="javascript:history.back()" target="_self"><img src="_imagens/back_arrow.png"></a>
+                <a><img src="_imagens/configuration.png"></a>
+                <a><img src="_imagens/contact.png"></a>
+                <a href="tela_login.html" target="_self"><img src="_imagens/logout.png"></a>
+            </nav>
+        </div>
+
+        <img src="_imagens/situacao_clinica_icone_principal.png">
+        <h1>Avaliação de Rotina</h1>
+        <div id="header_left_big_rectangle"></div>
+        <div id="header_right_big_rectangle"></div>
+        <div id="header_left_bottom_rectangle"></div>
+        <div id="header_right_bottom_rectangle"></div>
+    </header>
+
+    <p class="p_centralizdo">Resumo do caso</p>
+    <p class="p_centralizdo">Arthur, 5 meses de vida, aleitamento materno exclusivo segue para a quinta consulta de puericultura na mesma USF onde sua mãe fez o pré-natal. Ele é o caçula de uma família com três filhos. A mãe é dona de casa e se dedica em tempo integral às crianças. O profissional que o acompanha os recebe, faz os cumprimentos habituais; observa o comportamento da criança e da mãe atento ao relacionamento estabelecido entre eles. Em seguida, verifica o prontuário do lactente, os dados da consulta anterior e conversa com mãe e filho para obter informações relativas aos focos de atenção que serão avaliados durante a consulta. Arthur não tem histórico de internações ou de doenças respiratórias. Solicita a Caderneta de Saúde da Criança e realiza exame físico da criança. Na avaliação do desenvolvimento o profissional observa que Arthur “conversa” muito, é “super” simpático, sorrir para todos, mas que não levanta a cabeça quando colocado de bruços e não segura objetos mesmo que por poucos segundos.</p>
+    <iframe src="formulario_dados_recem_nascido.html" style="display: block; margin: auto; width: 750px; height: 400px; border: none"></iframe>
+
+    <div id="abas_situacao_clinica">
+        <figure>
+            <img id="direcionador_desenvolvimento" src="_imagens/grafico_icone_situacao_clinica.png" onmouseover="mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', true)" onmouseout="mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false)">
+            <figcaption id="direcionador_desenvolvimento_texto">Desenvolvimento</figcaption>
+            <img id="direcionador_desenvolvimento_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+        </figure>
+        <figure>
+            <img id="direcionador_crescimento" src="_imagens/crescimento_icone.png" onmouseover="mudaIconeCor('direcionador_crescimento', 'crescimento_icone', true)" onmouseout="mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false)">
+            <figcaption id="direcionador_crescimento_texto">Crescimento</figcaption>
+            <img id="direcionador_crescimento_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+        </figure>
+        <figure>
+            <img id="direcionador_vacinacao" src="_imagens/vacinacao_icone.png" onmouseover="mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', true)" onmouseout="mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false)">
+            <figcaption id="direcionador_vacinacao_texto">Imunização</figcaption>
+            <img id="direcionador_vacinacao_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+        </figure>
+        <figure>
+            <img id="direcionador_info_gerais" src="_imagens/direcoes_icone.png" onmouseover="mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', true)" onmouseout="mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)">
+            <figcaption id="direcionador_info_gerais_texto">Orientações</figcaption>
+            <img id="direcionador_info_gerais_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+        </figure>
+    </div>
+
+    <section id="tela_login_corpo_principal">
+        <p>Integer lobortis est efficitur ligula venenatis molestie. Integer eu efficitur mi.</p>
+        <p>In hac habitasse platea dictumst. Aenean sagittis velit leo, id tristique purus ornare et. Aenean at elit sit amet ipsum ultrices auctor vitae a neque.</p>
+        <p>Nunc nec ligula sit amet ex imperdiet vehicula sodales eget purus. Morbi fringilla, nisi in pellentesque blandit, erat neque imperdiet ex, et aliquam odio mauris sit amet sem. Fusce non est hendrerit, fringilla magna vel, rutrum nisi.</p>
+
+        <p>1- Nullam eget mattis lorem.</p>
+        <p>2- Proin fermentum faucibus purus, sed pretium arcu commodo in.</p>
+        <p>3- Donec nec ipsum vitae augue porta tincidunt vitae vitae elit.</p>
+        <p>4- Nunc turpis diam, maximus id cursus et, viverra in metus.</p>
+        <p>5- Vivamus et suscipit velit.</p>
+
+        <p>Integer lobortis est efficitur ligula venenatis molestie. Integer eu efficitur mi.</p>
+        <p>In hac habitasse platea dictumst. Aenean sagittis velit leo, id tristique purus ornare et. Aenean at elit sit amet ipsum ultrices auctor vitae a neque.</p>
+
+        <p>Nunc nec ligula sit amet ex imperdiet vehicula sodales eget purus. Morbi fringilla, nisi in pellentesque blandit, erat neque imperdiet ex, et aliquam odio mauris sit amet sem. Fusce non est hendrerit, fringilla magna vel, rutrum nisi.</p>
+
+        <p>Links Úteis:
+            <br/>facial.jpg	vacinas2.jpg</p>
+    </section>
+
+    <footer id="rodape">
+        <div id="footer_left_small_rectangle"></div>
+        <div id="footer_right_small_rectangle"></div>
+    </footer>
+</div>
 </body>
 </html>

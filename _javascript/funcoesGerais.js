@@ -106,9 +106,11 @@ function mudaIconeCor(id, nomeIcone, isMouseOver) {
     if (isMouseOver == true) {
         document.getElementById(id).src = "_imagens/"+nomeIcone+"_colorido.png";
         document.getElementById(id+"_texto").style.color = "#00AA18";
+        displayOnOff(id+"_divisor", true);
     } else {
         document.getElementById(id).src = "_imagens/"+nomeIcone+".png";
         document.getElementById(id+"_texto").style.color = "#000000";
+        displayOnOff(id+"_divisor", false);
     }
 }
 
