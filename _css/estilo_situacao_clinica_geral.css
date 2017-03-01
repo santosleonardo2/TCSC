@@ -52,3 +52,19 @@ div#imagens_container figure {
     margin: 20px 5px 0px 5px;
     text-align: center;
 }
+
+iframe#formularioDadosRecemNascido {
+    width: 80%;
+    height: 460px;
+    overflow-y: scroll;
+    display: block;
+    margin: auto;
+    border: none;
+}
+
+iframe#abaDesenvolvimentoCaso1Id {
+    display: block;
+    border: none;
+    margin: auto;
+    width: 100%;
+}

@@ -214,18 +214,23 @@ div#interface {
 p.p_centralizdo {
     text-align: center;
     font-size: 11pt;
+    font-family: Balsamiq, sans-serif;
 }
 
 p.p_observacao {
-    font-size: 11pt;
+    font-size: 10pt;
     text-align: left;
     font-style: italic;
+    font-family: Balsamiq, sans-serif;
+    margin: 2px 0px 0px 0px;
+    padding: 0px;
 }
 
 p.texto_geral {
     font-size: 11pt;
     text-align: left;
     margin: 0px;
+    font-family: Balsamiq, sans-serif;
 }
 
 a {

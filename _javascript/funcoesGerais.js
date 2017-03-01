@@ -127,6 +127,17 @@ function goToGuiaCursista() {
 
 
 
+
+/* Casos Clinicos*/
+function resizeIframe(iframeID)
+{
+    var iframe = window.parent.document.getElementById(iframeID);
+    iframe.height = iframe.contentWindow.document.body.scrollHeight;
+}
+
+
+
+
 /* Avaliação Final */
 function salvarAvaliacaoFinal() {
     var p2Text = document.getElementById("p2_avaliacao_final_id").value;

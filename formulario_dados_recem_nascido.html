@@ -7,51 +7,88 @@
             margin-bottom: 30px;
         }
 
-        legend {
+        legend.dadosRecemNascidoTopico {
             font-weight: bold;
             font-size: 14pt;
-            color: black;
+            color: blue;
         }
     </style>
 </head>
 
 <body>
     <form id="dadosRecemNascidoFormId" method="post">
-        <fieldset><legend>Nascimento</legend>
-            <p>Nascido às ___________ h, do dia _______/ _______/ ________</p>
-            <p>Maternidade/Cidade, UF: _________________________________________</p>
-            <p>Peso ao nascer: ____________ g Comprimento ao nascer: __________ cm</p>
-            <p>Perímetro cefálico: ________ cm Sexo: ( ) Masculino ( ) Feminino</p>
-            <p>Apgar: 1º min: __________ 5º min: ___________</p>
-            <p>Idade gestacional (IG): __________ semanas ________ dias</p>
-            <p>Método de avaliação da IG: ( ) DUM ( ) Ultrassom ( ) Exame do RN</p>
-            <p>Tipagem sanguínea do RN: ____________ Mãe: __________</p>
-            <fieldset><legend>Profissional que assistiu ao recém-nascido (RN)</legend>
-                ( ) Pediatra ( ) Enfermeiro ( ) Parteira ( ) Outro _________________
-            </fieldset>
-            <p>Aleitamento materno na primeira hora de vida: ( ) Sim ( ) Não</p>
+        <fieldset><legend class="dadosRecemNascidoTopico">Nascimento</legend>
+            <p>Nascido às <input type="time" name="nascimentoHora" id="nascimentoHoraId">, do dia <input type="date" name="nascimentoDia" id="nascimentoDiaId"></p>
+            <p>Maternidade/Cidade, <input type="text" name="maternidadeCidade" id="maternidadeCidadeId" placeholder="Maternidade/Cidade"> UF:
+                <select name="uf" id="ufId">
+                    <optgroup label="Centro-oeste">
+                        <option value="DF">Distrito Federal</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                    </optgroup>
+                    <optgroup label="Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahiia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PA">Paraíiba</option>
+                        <option value="PE" selected="selected">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="SE">Sergipe</option>
+                    </optgroup>
+                    <optgroup label="Norte">
+                        <option value="AC">Acre</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="PA">Pará</option>
+                    </optgroup>
+                    <optgroup label="Sudeste">
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                </select></p>
+            <p>Peso ao nascer: <input type="number" name="peso" id="pesoId" min="0" max="20000" size="5"> g Comprimento ao nascer: <input type="number" name="comprimento" id="comprimentoId" min="0" max="99999" size="5"> cm</p>
+            <p>Perímetro cefálico: <input type="number" name="perimetroCefalico" id="perimetroCefalicoId" min="0" max="99999" size="5"> cm Sexo: <input type="radio" name="sexo" id="sexoMasculinoId"><label for="sexoMasculinoId">Masculino</label> <input type="radio" name="sexo" id="sexoFemininoId"><label for="sexoFemininoId">Feminino</label></p>
+            <p>Apgar: 1º min: <input type="text" name="apgar1" id="apgar1Id" size="10"> 5º min: <input type="text" name="apgar5" id="apgar5Id" size="10"></p>
+            <p>Idade gestacional (IG): <input type="number" name="idadeGestacionalSemanas" id="idadeGestacionalSemanasId" min="0" max="60" size="2"> semanas <input type="number" name="idadeGestacionalDias" id="idadeGestacionalDiasId" min="0" max="7" size="1"> dias</p>
+            <p>Método de avaliação da IG: <input type="radio" name="metodoAvaliacaoIG" id="metodoAvaliacaoIGDUMId"><label for="metodoAvaliacaoIGDUMId">DUM</label> <input type="radio" name="metodoAvaliacaoIG" id="metodoAvaliacaoIGUltrassomId"><label for="metodoAvaliacaoIGUltrassomId">Ultrassom</label> <input type="radio" name="metodoAvaliacaoIG" id="metodoAvaliacaoIGExameRNId"><label for="metodoAvaliacaoIGExameRNId">Exame do RN</label></p>
+            <p>Tipagem sanguínea do RN: <input type="text" name="tipagemSanguinea" id="tipagemSanguineaId" size="3"> Mãe: <input type="text" name="tipagemSanguineaMae" id="tipagemSanguineaMaeId" size="3"></p>
+            <p>Profissional que assistiu ao recém-nascido (RN)
+                <br/><input type="radio" name="profissionalAssistiuNascimento" id="profissionalAssistiuNascimentoPediatraId"><label for="profissionalAssistiuNascimentoPediatraId">Pediatra</label> <input type="radio" name="profissionalAssistiuNascimento" id="profissionalAssistiuNascimentoEnfermeiroId"><label for="profissionalAssistiuNascimentoEnfermeiroId">Enfermeiro</label> <input type="radio" name="profissionalAssistiuNascimento" id="profissionalAssistiuNascimentoParteiraId"><label for="profissionalAssistiuNascimentoParteiraId">Parteira</label> <input type="radio" name="profissionalAssistiuNascimento" id="profissionalAssistiuNascimentoOutroId"><label for="profissionalAssistiuNascimentoOutroId">Outro</label> <input type="text" name="profissionalAssistiuNascimentoOutroTexto" id="profissionalAssistiuNascimentoOutroTextoId" placeholder="Qual?"></p>
+            <p>Aleitamento materno na primeira hora de vida: <input type="radio" name="leiteMaternoPrimeiraHora" id="leiteMaternoPrimeiraHoraSimId"><label for="leiteMaternoPrimeiraHoraSimId">Sim</label> <input type="radio" name="leiteMaternoPrimeiraHora" id="leiteMaternoPrimeiraHoraNaoId"><label for="leiteMaternoPrimeiraHoraNaoId">Não</label></p>
         </fieldset>
 
-        <fieldset><legend>Exames/Triagem neonatal</legend>
-            <p>Manobra de Ortolani: ( ) Negativo ( ) Positivo</p>
-            <p>Conduta: ____________________________________________________________</p>
-            <p>Teste do reflexo vermelho: ( ) Normal ( ) Alterado</p>
-            <p>Conduta: ____________________________________________________________</p>
-            <p>Teste do Pezinho1 ( ) Não ( ) Sim Data: ____/ ____/ ______</p>
-            <fieldset><legend>Resultados</legend>
-                <p>Fenilcetonúria: ( ) Normal ( ) Alterado</p>
-                <p>Hipotireodismo: ( ) Normal ( ) Alterado</p>
-                <p>Anemia falciforme: ( ) Normal ( ) Alterado</p>
-                <p>Outros: _____________________________________________________________</p>
-            </fieldset>
-            <p>Triagem auditiva2 ( ) Não ( ) Sim Data: ____/ ____/ ______</p>
-            <p>Testes realizados: ( ) PEATE3 ( ) EOA4</p>
-            <p>Resultado: OD _______ OE ________ (normal/alterado)</p>
-            <p>Conduta: ____________________________________________________________</p>
-            <p>Reteste:5 ( ) Não ( ) Sim Data: ___/___/___</p>
-            <p>( ) PEATE ( ) EOA</p>
-            <p>Resultado: OD ________ OE ________ (normal/alterado)</p>
-            <p>Conduta: _________________________________________</p>
+        <fieldset><legend class="dadosRecemNascidoTopico">Exames/Triagem neonatal</legend>
+            <p><span style="font-weight: bold;">Manobra de Ortolani:</span> <input type="radio" name="manobraOrtolani" id="manobraOrtolaniNegativoId"><label for="manobraOrtolaniNegativoId">Negativo</label> <input type="radio" name="manobraOrtolani" id="manobraOrtolaniPositivaId"><label for="manobraOrtolaniPositivaId">Positivo</label></p>
+            <p>Conduta: <input type="text" name="condutaManobraOrtolani" id="condutaManobraOrtolaniId"></p>
+
+            <p><span style="font-weight: bold;">Teste do reflexo vermelho:</span> <input type="radio" name="testeReflexoVermelho" id="testeReflexoVermelhoNormalId"><label for="testeReflexoVermelhoNormalId">Normal</label> <input type="radio" name="testeReflexoVermelho" id="testeReflexoVermelhoAlteradoId"><label for="testeReflexoVermelhoAlteradoId">Alterado</label></p>
+            <p>Conduta: <input type="text" name="condutaTesteReflexoVermelho" id="condutaTesteReflexoVermelhoId"></p>
+
+            <p><span style="font-weight: bold;">Teste do Pezinho<sup>1</sup></span> <input type="radio" name="testePezinho" id="testePezinhoSimId"><label for="testePezinhoSimId">Sim</label> <input type="radio" name="testePezinho" id="testePezinhoNaoId"><label for="testePezinhoNaoId">Não</label> Data: <input type="date" name="testePezinihoData" id="testePezinhoDataId"></p>
+            <p>Resultados:</p>
+                <p>Fenilcetonúria: <input type="radio" name="fenilcetonúria" id="fenilcetonúriaNormalId"><label for="fenilcetonúriaNormalId">Normal</label> <input type="radio" name="fenilcetonúria" id="fenilcetonúriaAlteradoId"><label for="fenilcetonúriaAlteradoId">Alterado</label></p>
+                <p>Hipotireodismo: <input type="radio" name="hipotireodismo" id="hipotireodismoNormalId"><label for="hipotireodismoNormalId">Normal</label> <input type="radio" name="hipotireodismo" id="hipotireodismoAlteradoId"><label for="hipotireodismoAlteradoId">Alterado</label></p>
+                <p>Anemia falciforme: <input type="radio" name="anemiaFalciforme" id="anemiaFalciformeNormalId"><label for="anemiaFalciformeNormalId">Normal</label> <input type="radio" name="anemiaFalciforme" id="anemiaFalciformeAlteradoId"><label for="anemiaFalciformeAlteradoId">Alterado</label></p>
+                <p>Outros: <input type="text" name="testePezinhoOutros" id="testePezinhoOutrosId"></p>
+
+            <p><span style="font-weight: bold;">Triagem auditiva<sup>2</sup></span> <input type="radio" name="triagemAuditiva" id="triagemAuditivaSimId"><label for="triagemAuditivaSimId">Sim</label> <input type="radio" name="triagemAuditiva" id="triagemAuditivaNaoId"><label for="triagemAuditivaNaoId">Não</label> Data: <input type="date" name="triagemAuditivaData" id="triagemAuditivaData"></p>
+            <p>Testes realizados: <input type="radio" name="triagemAuditivaTestesRealizados" id="triagemAuditivaTestesRealizadosPEATEId"><label for="triagemAuditivaTestesRealizadosPEATEId">PEATE<sup>3</sup></label> <input type="radio" name="triagemAuditivaTestesRealizados" id="triagemAuditivaTestesRealizadosEOAId"><label for="triagemAuditivaTestesRealizadosEOAId">EOA<sup>4</sup></label></p>
+            <p>Resultado: OD <input type="text" name="triagemAuditivaResultadosOD" id="triagemAuditivaResultadosODId" placeholder="normal/alterado"> OE <input type="text" name="triagemAuditivaResultadosOE" id="triagemAuditivaResultadosOEID" placeholder="normal/alterado"> (normal/alterado)</p>
+            <p>Conduta: <input type="text" name="triagemAuditivaTestesRealizadosConduta" id="triagemAuditivaTestesRealizadosCondutaId"></p>
+            <p>Reteste:<sup>5</sup> <input type="radio" name="triagemAuditivaReTeste" id="triagemAuditivaReTesteSimId"><label for="triagemAuditivaReTesteSimId">Sim</label> <input type="radio" name="triagemAuditivaReTeste" id="triagemAuditivaReTesteNaoId"><label for="triagemAuditivaReTesteNaoId">Não</label> Data: <input type="date" name="triagemAuditivaReTestesData" id="triagemAuditivaReTestesDataId"></p>
+            <p><input type="radio" name="triagemAuditivaReTestes2" id="triagemAuditivaReTestesPEATEId"><label for="triagemAuditivaReTestesPEATEId">PEATE<sup>3</sup></label> <input type="radio" name="triagemAuditivaReTestes2" id="triagemAuditivaReTestesEOAId"><label for="triagemAuditivaReTestesEOAId">EOA<sup>4</sup></label></p>
+            <p>Resultado: OD <input type="text" name="triagemAuditivaReTestesResultados" id="triagemAuditivaReTestesResultadosODId" placeholder="normal/alterado"> OE <input type="text" name="triagemAuditivaReTestesResultados" id="triagemAuditivaReTestesResultadosOEID" placeholder="normal/alterado"> (normal/alterado)</p>
+            <p>Conduta: <input type="text" name="triagemAuditivaReTestesConduta" id="triagemAuditivaReTestesCondutaId"></p>
 
             <ol>
                 <li>Idealmente realizado entre o 3º e 7º dia de vida.</li>
@@ -62,13 +99,13 @@
                     até 30 dias após o teste.</li>
             </ol>
 
-            <p>Outros exames: _____________________________________________________</p>
+            <p><span style="font-weight: bold;">Outros exames:</span> <input type="text" name="outrosExames" id="outrosExames"></p>
         </fieldset>
 
-        <fieldset><legend>Dados na alta</legend>
-            <p>Data: ___/___/___ Peso __________</p>
+        <fieldset><legend class="dadosRecemNascidoTopico">Dados na alta</legend>
+            <p>Data: <input type="date" name="altaData" id="altaDataId"> Peso <input type="number" min="0" max="99999" size="5"> g</p>
             <fieldset><legend>Alimentação:</legend>
-                <p>( ) leite materno ( ) leite materno e outro leite ( ) outro leite ______________</p>
+                <p><input type="radio" name="altaAlimentacao" id="altaAlimentacaoLeiteMaternoId"><label for="altaAlimentacaoLeiteMaternoId">Leite materno</label> <input type="radio" name="altaAlimentacao" id="altaAlimentacaoLeiteMaternoEOutroId"><label for="altaAlimentacaoLeiteMaternoEOutroId">Leite materno e outro leite</label> <input type="radio" name="altaAlimentacao" id="altaAlimentacaoOutroLeiteId"><label for="altaAlimentacaoOutroLeiteId">Outro leite</label> <input type="text" name="altaAlimentacaoOutroLeiteTexto" id="altaAlimentacaoOutroLeiteTextoId" placeholder="Qual?"></p>
             </fieldset>
         </fieldset>
     </form>
