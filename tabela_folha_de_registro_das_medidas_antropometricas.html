@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="_css/estilo_situacao_clinica_geral.css">
+        <style>
+            table#tabelaFolhaDeRegistroDasMedidasAntropometricasId {
+                margin: 0px auto 0px auto;
+                border-spacing: 0px;
+                border: none;
+            }
+
+            table#tabelaFolhaDeRegistroDasMedidasAntropometricasId caption {
+                font-family: Balsamiq, sans-serif;
+                font-weight: bold;
+                font-size: 16pt;
+                margin: 10px;
+            }
+
+            table#tabelaFolhaDeRegistroDasMedidasAntropometricasId th {
+                font-weight: normal;
+                text-align: center;
+                font-style: italic;
+                font-size: 10pt;
+                padding-top: 5px;
+            }
+
+            table#tabelaFolhaDeRegistroDasMedidasAntropometricasId tr {
+                border: 1px solid black;
+            }
+
+            table#tabelaFolhaDeRegistroDasMedidasAntropometricasId td {
+                border: 1px solid black;
+                padding: 5px;;
+                text-align: center;
+            }
+
+            table#tabelaFolhaDeRegistroDasMedidasAntropometricasId input[type=text] {
+                max-lines: 1;
+                width: 100px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table id="tabelaFolhaDeRegistroDasMedidasAntropometricasId">
+            <caption>FOLHA DE REGISTRO DAS MEDIDAS ANTROPOMÉTRICAS</caption>
+
+            <tr>
+                <th colspan="6">Registre os dados de crescimento (idade, peso, comprimento, perímetro cefálico e massa corporal) da consulta atual.</th>
+            </tr>
+
+            <tr>
+                <td class="topicosColunasMasculinas">Data</td>
+                <td class="topicosColunasMasculinas">Idade</td>
+                <td class="topicosColunasMasculinas">Peso (g)</td>
+                <td class="topicosColunasMasculinas">Estatura (cm)</td>
+                <td class="topicosColunasMasculinas">Perímetro cefálico (cm)</td>
+                <td class="topicosColunasMasculinas">Índice de massa corporal (IMC)</td>
+            </tr>
+
+            <tr>
+                <td>21/03/2016</td>
+                <td>10 dias</td>
+                <td>3.810</td>
+                <td>51</td>
+                <td>35,8</td>
+                <td>15</td>
+            </tr>
+
+            <tr>
+                <td>13/04/2016</td>
+                <td>1 mês e 2 dias</td>
+                <td>4.900</td>
+                <td>54</td>
+                <td>36,8</td>
+                <td>17</td>
+            </tr>
+
+            <tr>
+                <td>16/05/2016</td>
+                <td>2 meses e 5 dias</td>
+                <td>6.050</td>
+                <td>57</td>
+                <td>38,7</td>
+                <td>19</td>
+            </tr>
+
+            <tr>
+                <td>13/06/2016</td>
+                <td>3 meses e 2 dias</td>
+                <td>6.690</td>
+                <td>61</td>
+                <td>40,9</td>
+                <td>18</td>
+            </tr>
+
+            <tr>
+                <td>12/07/2016</td>
+                <td>4 meses e 1 dia</td>
+                <td>7124</td>
+                <td>63</td>
+                <td>42,0</td>
+                <td>18</td>
+            </tr>
+
+            <tr>
+                <td>15/08/2016<br/><span style="color: red; font-size: 10pt">Consulta ATUAL</span></td>
+                <td><input type="text" name="idadeFolhaMedidasAntropometricasCaso1" id="idadeFolhaMedidasAntropometricasCaso1Id" placeholder="Idade"></td>
+                <td><input type="text" name="pesoFolhaMedidasAntropometricasCaso1" id="pesoFolhaMedidasAntropometricasCaso1Id" placeholder="Peso"></td>
+                <td><input type="text" name="estaturaFolhaMedidasAntropometricasCaso1" id="estaturaFolhaMedidasAntropometricasCaso1Id" placeholder="Estatura"></td>
+                <td><input type="text" name="perimetroCefalicoFolhaMedidasAntropometricasCaso1" id="perimetroCefalicoFolhaMedidasAntropometricasCaso1Id" placeholder="Perímetro cefálico"></td>
+                <td><input type="text" name="imcFolhaMedidasAntropometricasCaso1" id="imcFolhaMedidasAntropometricasCaso1Id" placeholder="IMC"></td>
+            </tr>
+        </table>
+    </body>
+</html>

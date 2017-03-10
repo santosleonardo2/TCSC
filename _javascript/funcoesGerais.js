@@ -129,10 +129,21 @@ function goToGuiaCursista() {
 
 
 /* Casos Clinicos*/
-function resizeIframe(iframeID)
-{
+function resizeIframe(iframeID) {
     var iframe = window.parent.document.getElementById(iframeID);
     iframe.height = iframe.contentWindow.document.body.scrollHeight;
+}
+
+function mudarParaAbaDesenvolvimento(abaDesenvolvimentoId, abaCrescimentoId) {
+    displayOnOff(abaCrescimentoId, false);
+    displayOnOff(abaDesenvolvimentoId, true);
+    resizeIframe(abaDesenvolvimentoId);
+}
+
+function mudarParaAbaCrescimento(abaDesenvolvimentoId, abaCrescimentoId) {
+    displayOnOff(abaDesenvolvimentoId, false);
+    displayOnOff(abaCrescimentoId, true);
+    resizeIframe(abaCrescimentoId);
 }
 
 

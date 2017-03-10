@@ -3,12 +3,13 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="_css/estilo_geral.css">
+        <link rel="stylesheet" type="text/css" href="_css/estilo_situacao_clinica_geral.css">
         <style>
             iframe#iframeTabelaInstrumentoVigilanciaDesenvolvimentoId {
                 display: block;
                 border: none;
                 width: 100%;
-                height: 2050px;
+                height: 2060px;
                 margin: 0px auto 0px auto;
                 padding: 0px;
             }
@@ -16,19 +17,68 @@
             article {
                 margin-top: 20px;
             }
+
+            img#atencaoImgGrandeId {
+                display: block;
+                float: left;
+                margin: 10px;
+            }
+
+            div#cc1_d_nota_container {
+                display: block;
+                background-image: url('_imagens/background_nota_pequeno.png');
+                width: 260px;
+                height: 100px;
+                margin: 20px auto 20px auto;
+                border: 2px solid #00AA18;
+                border-radius: 10px;
+            }
+
+            img#cc1_d_nota_divisao {
+                display: block;
+                margin: 0px auto 0px auto;
+            }
         </style>
     </head>
 
     <body style="background-color: white" onload="resizeIframe('iframeTabelaInstrumentoVigilanciaDesenvolvimentoId')">
             <p class="p_centralizdo">Registre os achados na CSC e Avalie o Desenvolvimento da criança. Os dados das consultas anteriores de Arthur estão registrados na tabela.</p>
 
-            <p class="texto_geral">O acompanhamento do desenvolvimento da criança na atenção básica tem como objetivo promover, proteger e detectar precocemente alterações passíveis de modificação que possam repercutir na aquisição de etapas subsequentes da criança.</p>
-            <p class="texto_geral">Para a avaliação do desenvolvimento, a Caderneta disponibiliza, nas páginas 44 e 45, respectivamente, um instrumento de Vigilância do Desenvolvimento da criança de zero a três anos de idade.</p>
+            <p>O acompanhamento do desenvolvimento da criança na atenção básica tem como objetivo promover, proteger e detectar precocemente alterações passíveis de modificação que possam repercutir na aquisição de etapas subsequentes da criança.</p>
+            <p>Para a avaliação do desenvolvimento, a Caderneta disponibiliza, nas páginas 44 e 45, respectivamente, um instrumento de Vigilância do Desenvolvimento da criança de zero a três anos de idade.</p>
 
             <article id="situacao1DesenvolvimentoQ1">
-                <p class="texto_geral">QUESTÃO 1: Ao ouvir os relatos da mãe de Arthur durante essa consulta e, analisando o quadro de Vigilância do Desenvolvimento da criança constante na CSC, o que você percebeu? Registre na respectiva tabela da CSC.</p>
+                <p>QUESTÃO 1: Ao ouvir os relatos da mãe de Arthur durante essa consulta e, analisando o quadro de Vigilância do Desenvolvimento da criança constante na CSC, o que você percebeu? Registre na respectiva tabela da CSC.</p>
 
                 <iframe src="tabela_instrumento_de_vigilancia_do_desenvolvimento.html" id="iframeTabelaInstrumentoVigilanciaDesenvolvimentoId"></iframe>
+                <script>
+
+                </script>
+
+                <img src="_imagens/atencao_grande.png" id="atencaoImgGrandeId">
+                <br/><p>Percebe-se a presença de sinais de alerta para o desenvolvimento, visto que ainda não há registro de aquisições esperadas para a sua idade, tais como: levantar a cabeça, quando colocado de prono e segurar objetos mesmo que por poucos segundos, ambas esperadas até o final do 4° mês.</p>
+
+                <p style="margin-top: 30px">O que Orientar?</p>
+                <p>Neste caso, como você orientará os pais quanto à estimulação da criança?</p>
+                <p>Você pode orientar a família a ler o item "Estimulando o desenvolvimento da criança com afeto" nas páginas 18-21 da CSC.</p>
+
+                <p style="margin-top: 10px">Condutas</p>
+                <p>Na presença de atraso nos Marcos de Desenvolvimento, avaliar:</p>
+                <ul>
+                    <li>A relação afetiva da criança com a mãe ou com quem cuida dela;</li>
+                    <li>As oportunidades de estimulação: verificar o local onde a criança permanece a maior parte do tempo, brinquedos adequados para a idade;</li>
+                    <li>Encaminhar para um serviço de maior complexidade e manter o acompanhamento com a eSF;</li>
+                    <li>Curva do perímetro cefálico fora dos parâmetros normais (abaixo do P 10 ou acima do P 90) deverá ser encaminhada para avaliação especializada.</li>
+                </ul>
+
+                <div id="cc1_d_nota_container">
+                    <p class="p_observacao" style="padding: 10px 5px 10px 5px;">NOTA: A CSC é bem completa e seu manuseio pela família, deve ser estimulado pelos profissionais de saúde que acompanham a criança.</p>
+                    <img src="_imagens/divisao_nota.png" id="cc1_d_nota_divisao">
+                </div>
+
+                <button class="salvarAvancar"
+                    <label>Avançar / Salvar</label>
+                </button>
             </article>
     </body>
 </html>

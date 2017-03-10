@@ -53,6 +53,11 @@ div#imagens_container figure {
     text-align: center;
 }
 
+
+
+
+
+/* IFRAMES */
 iframe#formularioDadosRecemNascido {
     width: 80%;
     height: 460px;
@@ -67,4 +72,51 @@ iframe#abaDesenvolvimentoCaso1Id {
     border: none;
     margin: auto;
     width: 100%;
+}
+
+iframe#abaCrescimentoCaso1Id {
+    display: block;
+    border: none;
+    margin: auto;
+    width: 100%;
+}
+
+
+
+
+
+/* Tables */
+th.tabelaNotaObservacaoClass {
+font-weight: normal;
+text-align: left;
+font-style: italic;
+font-size: 10pt;
+padding-top: 5px;
+}
+
+tr.topicosColunasMasculinas {
+    background-color: #0058A6;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+
+/* Buttons */
+button.salvarAvancar {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Balsamiq, sans-serif;
+    font-size: 12pt;
+    color: #0B4900;
+    background-color: white;
+    border: 2px solid #0B4900;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }

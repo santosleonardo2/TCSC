@@ -81,6 +81,7 @@ ul.header_user_info li {
     text-align: left;
     font-size: 8pt;
     padding-right: 10px;
+    font-family: Balsamiq, sans-serif;
 }
 
 li#userNameId {
@@ -147,7 +148,7 @@ div#header_left_big_rectangle {
     border-left: 0px solid transparent;
     border-right: 45px solid transparent;
     height: 0;
-    width: 250px;
+    width: 200px;
     top: -152px;
     left: -10px;
 }
@@ -158,9 +159,9 @@ div#header_right_big_rectangle {
     border-left: 45px solid transparent;
     border-right: 0px solid transparent;
     height: 0;
-    width: 250px;
+    width: 200px;
     top: -192px;
-    left: 615px;
+    left: 665px;
 }
 
 div#header_left_bottom_rectangle {
@@ -169,7 +170,7 @@ div#header_left_bottom_rectangle {
     border-left: 0px solid transparent;
     border-right: 22px solid transparent;
     height: 0;
-    width: 200px;
+    width: 150px;
     top: -242px;
     left: -10px;
     opacity: .8;
@@ -182,9 +183,9 @@ div#header_right_bottom_rectangle {
     border-left: 22px solid transparent;
     border-right: 0px solid transparent;
     height: 0;
-    width: 200px;
+    width: 150px;
     top: -223px;
-    left: 690px;
+    left: 740px;
     opacity: .9;
 }
 
@@ -226,7 +227,7 @@ p.p_observacao {
     padding: 0px;
 }
 
-p.texto_geral {
+p {
     font-size: 11pt;
     text-align: left;
     margin: 0px;
