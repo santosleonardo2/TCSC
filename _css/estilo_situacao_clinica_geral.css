@@ -58,15 +58,6 @@ div#imagens_container figure {
 
 
 /* IFRAMES */
-iframe#formularioDadosRecemNascido {
-    width: 80%;
-    height: 460px;
-    overflow-y: scroll;
-    display: block;
-    margin: auto;
-    border: none;
-}
-
 iframe#abaDesenvolvimentoCaso1Id {
     display: block;
     border: none;
