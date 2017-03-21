@@ -92,6 +92,10 @@ li#userEmailId {
     list-style-image: url('../_imagens/email_icone.png');
 }
 
+li.checkBullet {
+    list-style-image: url("../_imagens/check.png");
+}
+
 
 
 
@@ -266,6 +270,33 @@ section#corpo_geral img#divisorResumoId {
     display: block;
     margin: 10px auto 0px auto;
 }
+
+/* Buttons */
+button.botaoSalvarContinuar {
+    display: block;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: Balsamiq, sans-serif;
+    font-size: 12pt;
+    color: #0B4900;
+    background-color: white;
+    border: 2px solid #0B4900;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+label.botaoLabel {
+    border-right: 2px solid #0B4900;
+    padding: 3px;
+    border-radius: 13px
+}
+
+label.botaoLabelImg {
+    display: inline-block;
+    margin: auto;
+    padding-right: 3px
+}
+
 
 
 

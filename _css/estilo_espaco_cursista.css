@@ -5,24 +5,28 @@
 }
 
 /* Espaço do Cursista */
-div#espaco_cursista_direcionadores {
+table#espaco_cursista_direcionadores {
     width: 100%;
-    margin: 30px auto 0px auto;
+    display: inline-block;
 }
 
-div#espaco_cursista_direcionadores figure {
-    display: inline-block;
-    margin: 0px auto 0px 50px;
+table#espaco_cursista_direcionadores tr {
+}
+
+table#espaco_cursista_direcionadores td {
+}
+
+table#espaco_cursista_direcionadores figure {
     padding: 0px;
     text-align: center;
 }
 
-div#espaco_cursista_direcionadores img {
+table#espaco_cursista_direcionadores img {
     margin-left: auto;
     margin-right: auto;
 }
 
-div#espaco_cursista_direcionadores figcaption {
+table#espaco_cursista_direcionadores figcaption {
     text-align: center;
 }
 

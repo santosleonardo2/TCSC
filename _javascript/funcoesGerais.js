@@ -125,6 +125,10 @@ function goToGuiaCursista() {
     window.location = "guia_do_cursista.html";
 }
 
+function goToCadernetaDaCrianca() {
+    window.location = "caderneta_saude_da_crianca.html";
+}
+
 
 
 

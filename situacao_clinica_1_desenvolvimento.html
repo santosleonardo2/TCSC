@@ -17,27 +17,6 @@
             article {
                 margin-top: 20px;
             }
-
-            img#atencaoImgGrandeId {
-                display: block;
-                float: left;
-                margin: 10px;
-            }
-
-            div#cc1_d_nota_container {
-                display: block;
-                background-image: url('_imagens/background_nota_pequeno.png');
-                width: 260px;
-                height: 100px;
-                margin: 20px auto 20px auto;
-                border: 2px solid #00AA18;
-                border-radius: 10px;
-            }
-
-            img#cc1_d_nota_divisao {
-                display: block;
-                margin: 0px auto 0px auto;
-            }
         </style>
     </head>
 
@@ -55,7 +34,7 @@
 
                 </script>
 
-                <img src="_imagens/atencao_grande.png" id="atencaoImgGrandeId">
+                <img src="_imagens/atencao_grande.png" class="atencaoImgGrandeId">
                 <br/><p>Percebe-se a presença de sinais de alerta para o desenvolvimento, visto que ainda não há registro de aquisições esperadas para a sua idade, tais como: levantar a cabeça, quando colocado de prono e segurar objetos mesmo que por poucos segundos, ambas esperadas até o final do 4° mês.</p>
 
                 <p style="margin-top: 30px">O que Orientar?</p>
@@ -71,13 +50,19 @@
                     <li>Curva do perímetro cefálico fora dos parâmetros normais (abaixo do P 10 ou acima do P 90) deverá ser encaminhada para avaliação especializada.</li>
                 </ul>
 
-                <div id="cc1_d_nota_container">
+                <div class="cc_d_nota_container" style="width: 260px; height: 100px">
                     <p class="p_observacao" style="padding: 10px 5px 10px 5px;">NOTA: A CSC é bem completa e seu manuseio pela família, deve ser estimulado pelos profissionais de saúde que acompanham a criança.</p>
-                    <img src="_imagens/divisao_nota.png" id="cc1_d_nota_divisao">
+                    <img src="_imagens/divisao_nota.png" class="cc_d_nota_divisao">
                 </div>
 
-                <button class="salvarAvancar"
-                    <label>Avançar / Salvar</label>
+                <br/><br/>
+                <button class="botaoSalvarContinuar" style="margin: 0px auto 0px auto;">
+                    <label class="botaoLabel">Salvar</label>
+                    <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
+                </button>
+                <button class="botaoSalvarContinuar" style="margin: 20px auto 0px auto">
+                    <label class="botaoLabel">Continuar</label>
+                    <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
                 </button>
             </article>
     </body>

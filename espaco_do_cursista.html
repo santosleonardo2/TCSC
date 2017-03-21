@@ -45,20 +45,40 @@
             <p>Para iniciar o seu treinamento no preenchimento da Caderneta de Saúde da Criança (CSC), selecione o ícone "SITUAÇÕES CLÍNICAS". Veja Avaliação e Certificado também neste ícone.</p>
 
 
-            <div id="espaco_cursista_direcionadores">
-                <figure>
-                    <img id="direcionador_apresentacao" src="_imagens/apresentacao_icone.png" onmouseover="mudaIconeCor('direcionador_apresentacao', 'apresentacao_icone', true)" onmouseout="mudaIconeCor('direcionador_apresentacao', 'apresentacao_icone', false)" onclick="goToApresentacaoCurso()">
-                    <figcaption id="direcionador_apresentacao_texto">Apresentação</figcaption>
-                </figure>
-                <figure>
-                    <img id="direcionador_guia" src="_imagens/guia_icone.png" onmouseover="mudaIconeCor('direcionador_guia', 'guia_icone', true)" onmouseout="mudaIconeCor('direcionador_guia', 'guia_icone', false)" onclick="goToGuiaCursista()">
-                    <figcaption id="direcionador_guia_texto">Guia</figcaption>
-                </figure>
-                <figure>
-                    <img id="direcionador_situacoes_clinicas" src="_imagens/situacoes_clinicas_icone.png" onmouseover="mudaIconeCor('direcionador_situacoes_clinicas', 'situacoes_clinicas_icone', true)" onmouseout="mudaIconeCor('direcionador_situacoes_clinicas', 'situacoes_clinicas_icone', false)" onclick="goToSituacoesClinicas()">
-                    <figcaption id="direcionador_situacoes_clinicas_texto">Situações Clínicas</figcaption>
-                </figure>
-            </div>
+            <table id="espaco_cursista_direcionadores">
+                <tr>
+                    <td>
+                        <figure>
+                            <img id="direcionador_apresentacao" src="_imagens/apresentacao_icone.png" onmouseover="mudaIconeCor('direcionador_apresentacao', 'apresentacao_icone', true)" onmouseout="mudaIconeCor('direcionador_apresentacao', 'apresentacao_icone', false)" onclick="goToApresentacaoCurso()">
+                            <figcaption id="direcionador_apresentacao_texto">Apresentação</figcaption>
+                        </figure>
+                    </td>
+
+                    <td>
+                        <figure>
+                            <img id="direcionador_guia" src="_imagens/guia_icone.png" onmouseover="mudaIconeCor('direcionador_guia', 'guia_icone', true)" onmouseout="mudaIconeCor('direcionador_guia', 'guia_icone', false)" onclick="goToGuiaCursista()">
+                            <figcaption id="direcionador_guia_texto">Guia</figcaption>
+                        </figure>
+                    </td>
+
+                    <td>
+                        <figure>
+                            <img id="direcionador_caderneta_crianca" src="_imagens/caderneta_icone.png" onmouseover="mudaIconeCor('direcionador_caderneta_crianca', 'caderneta_icone', true)" onmouseout="mudaIconeCor('direcionador_caderneta_crianca', 'caderneta_icone', false)" onclick="goToCadernetaDaCrianca()">
+                            <figcaption id="direcionador_caderneta_crianca_texto">Caderneta da Criança</figcaption>
+                        </figure>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <figure>
+                            <img id="direcionador_situacoes_clinicas" src="_imagens/situacoes_clinicas_icone.png" onmouseover="mudaIconeCor('direcionador_situacoes_clinicas', 'situacoes_clinicas_icone', true)" onmouseout="mudaIconeCor('direcionador_situacoes_clinicas', 'situacoes_clinicas_icone', false)" onclick="goToSituacoesClinicas()">
+                            <figcaption id="direcionador_situacoes_clinicas_texto">Situações Clínicas</figcaption>
+                        </figure>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
         </section>
 
         <aside id="lateral">
