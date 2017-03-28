@@ -271,9 +271,10 @@ section#corpo_geral img#divisorResumoId {
     margin: 10px auto 0px auto;
 }
 
+
 /* Buttons */
 button.botaoSalvarContinuar {
-    display: block;
+    display: inline-block;
     text-transform: uppercase;
     font-weight: normal;
     font-family: Balsamiq, sans-serif;
@@ -285,13 +286,7 @@ button.botaoSalvarContinuar {
     padding: 3px;
 }
 
-label.botaoLabel {
-    border-right: 2px solid #0B4900;
-    padding: 3px;
-    border-radius: 13px
-}
-
-label.botaoLabelImg {
+img.botaoLabelImg {
     display: inline-block;
     margin: auto;
     padding-right: 3px
