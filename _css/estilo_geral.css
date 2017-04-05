@@ -292,6 +292,15 @@ img.botaoLabelImg {
     padding-right: 3px
 }
 
+div.observacaoGeral {
+    display: block;
+    background-image: url('../_imagens/background_nota_pequeno.png');
+    background-color: chocolate;
+    margin: 20px auto 20px auto;
+    border: 2px solid #00AA18;
+    border-radius: 10px;
+}
+
 
 
 
