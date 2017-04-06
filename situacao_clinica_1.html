@@ -39,42 +39,71 @@
             </header>
 
             <p class="p_centralizdo">Arthur, 5 meses de vida, aleitamento materno exclusivo segue para a quinta consulta de puericultura na mesma USF onde sua mãe fez o pré-natal. Ele é o caçula de uma família com três filhos. A mãe é dona de casa e se dedica em tempo integral às crianças. O profissional que o acompanha os recebe, faz os cumprimentos habituais; observa o comportamento da criança e da mãe atento ao relacionamento estabelecido entre eles. Em seguida, verifica o prontuário do lactente, os dados da consulta anterior e conversa com mãe e filho para obter informações relativas aos focos de atenção que serão avaliados durante a consulta. Arthur não tem histórico de internações ou de doenças respiratórias. Solicita a Caderneta de Saúde da Criança e realiza exame físico da criança. Na avaliação do desenvolvimento o profissional observa que Arthur “conversa” muito, é “super” simpático, sorrir para todos, mas que não levanta a cabeça quando colocado de bruços e não segura objetos mesmo que por poucos segundos.</p>
-            <img src="_imagens/dados_recem_nascido_S1.PNG" id="situacaoClinica1DadosRecemNascidoId">
+            <img src="_imagens/dados_recem_nascido_S1.PNG" id="situacaoClinica1DadosRecemNascidoId" usemap="dados_recem_nascido_S1_map">
+            <map name="dados_recem_nascido_S1_map">
+                <area shape="circle" coords="338,283,12" id="alert_sc1_teste_reflexo_vermelho" onclick="openModal('modal_sc1_teste_reflexo_vermelho', 'alert_sc1_teste_reflexo_vermelho', 'close_sc1_teste_reflexo_vermelho')">
+                <area shape="circle" coords="338,344,12" id="alert_sc1_teste_pezinho" onclick="openModal('modal_sc1_teste_pezinho', 'alert_sc1_teste_pezinho', 'close_sc1_teste_pezinho')">
+            </map>
+
+            <!--POP UP - MODAL TESTE REFLEXO VERMELHO-->
+            <div id="modal_sc1_teste_reflexo_vermelho" class="modal">
+                <div class="modalContent">
+                    <span class="close" id="close_sc1_teste_reflexo_vermelho">&times;</span>
+                    <h2>Teste do Reflexo Vermelho (TRV, também conhecido como Teste do Olhinho)</h2>
+                    <p>O Teste do Olhinho pode detectar a catarata, o glaucoma congênito, e ainda qualquer patologia ocular congênita que cause opacidades de córnea, tumores intraoculares grandes, inflamações intraoculares importantes ou hemorragias intravítreas. Algumas cidades, como Florianópolis e Porto Alegre e estados brasileiros (Ceará, Mato Grosso, Mato Grosso do Sul, Minas Gerais, Paraná, Rio de Janeiro, Santa Catarina, São Paulo) e o Distrito Federal já têm legislação que exige a realização do Teste do Olhinho em todos os recém‐nascidos, antes de sua alta.</p>
+                    <br/>
+                    <a href="http://bvsms.saude.gov.br/bvs/publicacoes/diretrizes_atencao_saude_ocular_infancia.pdf" target="_blank">Diretrizes de Atenção à Saúde Ocular na Infância: detecção e intervenção precoce para a prevenção de deficiências visuais</a>
+                </div>
+            </div>
+
+            <!--POP UP - MODAL TESTE PEZINHO-->
+            <div id="modal_sc1_teste_pezinho" class="modal">
+                <div class="modalContent">
+                    <span class="close" id="close_sc1_teste_pezinho">&times;</span>
+                    <h2>Teste do Pezinho</h2>
+                    <p>O Teste do Pezinho deve ser realizado a partir de 48 horas de vida do bebê até uma semana de seu nascimento. Dentre as patologias triadas estão: Fenilcetonúria, Hipotireoidismo Congênito, Anemia Falciforme e outras Hemoglobinopatias e Fibrose Cística.</p>
+                    <br/>
+                    <p>Saiba mais sobre o teste do pezinho ‐> <a href="http://bvsms.saude.gov.br/bvs/publicacoes/triagem_neonatal.pdf" target="_blank">MANUAL DE NORMAS TÉCNICAS E ROTINAS OPERACIONAIS
+                        DO PROGRAMA NACIONAL DE TRIAGEM NEONATAL</a></p>
+                </div>
+            </div>
+
 
             <div id="abas_situacao_clinica">
-                <figure data-toggle="collapse" data-target="#abaDesenvolvimentoCaso1Id">
-                    <img id="direcionador_desenvolvimento" src="_imagens/grafico_icone_situacao_clinica.png" onmouseover="mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', true)" onmouseout="mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false)">
+                <figure>
+                    <img id="direcionador_desenvolvimento" src="_imagens/grafico_icone_situacao_clinica.png" onmouseover="mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', true)" onmouseout="mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false)" onclick="mudaAba('abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaVacinacaoCaso1Id', 'abaOrientacoesCaso1Id')">
                     <figcaption id="direcionador_desenvolvimento_texto">Desenvolvimento</figcaption>
                     <img id="direcionador_desenvolvimento_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
                 </figure>
                 <figure>
-                    <img id="direcionador_crescimento" src="_imagens/crescimento_icone.png" onmouseover="mudaIconeCor('direcionador_crescimento', 'crescimento_icone', true)" onmouseout="mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false)">
+                    <img id="direcionador_crescimento" src="_imagens/crescimento_icone.png" onmouseover="mudaIconeCor('direcionador_crescimento', 'crescimento_icone', true)" onmouseout="mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false)" onclick="mudaAba('abaCrescimentoCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaVacinacaoCaso1Id', 'abaOrientacoesCaso1Id')">
                     <figcaption id="direcionador_crescimento_texto">Crescimento</figcaption>
                     <img id="direcionador_crescimento_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
                 </figure>
                 <figure>
-                    <img id="direcionador_vacinacao" src="_imagens/vacinacao_icone.png" onmouseover="mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', true)" onmouseout="mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false)">
+                    <img id="direcionador_vacinacao" src="_imagens/vacinacao_icone.png" onmouseover="mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', true)" onmouseout="mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false)" onclick="mudaAba('abaVacinacaoCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaOrientacoesCaso1Id')">
                     <figcaption id="direcionador_vacinacao_texto">Imunização</figcaption>
                     <img id="direcionador_vacinacao_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
                 </figure>
                 <figure>
-                    <img id="direcionador_info_gerais" src="_imagens/direcoes_icone.png" onmouseover="mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', true)" onmouseout="mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)">
+                    <img id="direcionador_info_gerais" src="_imagens/direcoes_icone.png" onmouseover="mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', true)" onmouseout="mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)" onclick="mudaAba('abaOrientacoesCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaVacinacaoCaso1Id')">
                     <figcaption id="direcionador_info_gerais_texto">Orientações</figcaption>
                     <img id="direcionador_info_gerais_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
                 </figure>
             </div>
 
             <section id="tela_login_corpo_principal">
-                <iframe src="situacao_clinica_1_desenvolvimento.html" id="abaDesenvolvimentoCaso1Id" class="collapse"></iframe>
+                <!--ABA DESENVOLVIMENTO-->
+                <iframe src="situacao_clinica_1_desenvolvimento.html" id="abaDesenvolvimentoCaso1Id"></iframe>
 
-                <br/><br/>
-                <iframe src="situacao_clinica_1_crescimento.html" id="abaCrescimentoCaso1Id" style="visibility: visible; height: 2300px"></iframe>
+                <!--ABA CRESCIMENTO-->
+                <iframe src="situacao_clinica_1_crescimento.html" id="abaCrescimentoCaso1Id" style="display: none; height: 2300px"></iframe>
 
-                <br/><br/>
-                <iframe src="situacao_clinica_1_vacinacao.html" id="abaVacinacaoCaso1Id" style="visibility: visible; height: 1630px;"></iframe>
+                <!--ABA IMUNIZAÇÃO-->
+                <iframe src="situacao_clinica_1_vacinacao.html" id="abaVacinacaoCaso1Id" style="display: none; height: 1090px;"></iframe>
 
-                <br/><br/>
-                <iframe src="situacao_clinica_1_orientacoes.html" id="abaOrientacoesCaso1Id" style="visibility: visible; height: 420px"></iframe>
+                <!--ABA ORIENTAÇÕES-->
+                <iframe src="situacao_clinica_1_orientacoes.html" id="abaOrientacoesCaso1Id" style="display: none; height: 420px"></iframe>
             </section>
 
             <footer id="rodape">

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+ol.lista_avaliacao_final li {
+    margin-top: 20px;
+}
+
+textarea {
+    margin-top: 10px;
+}

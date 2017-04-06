@@ -138,24 +138,42 @@ function resizeIframe(iframeID) {
     iframe.height = iframe.contentWindow.document.body.scrollHeight;
 }
 
-function mudarParaAbaDesenvolvimento(abaDesenvolvimentoId, abaCrescimentoId) {
-    displayOnOff(abaCrescimentoId, false);
-    displayOnOff(abaDesenvolvimentoId, true);
-    resizeIframe(abaDesenvolvimentoId);
+function mudaAba(ativaAbaId, desativaAba1Id, desativaAba2Id, desativaAba3Id) {
+    var ativaAba = document.getElementById(ativaAbaId);
+    var desativaAba1 = document.getElementById(desativaAba1Id);
+    var desativaAba2 = document.getElementById(desativaAba2Id);
+    var desativaAba3 = document.getElementById(desativaAba3Id);
+
+    desativaAba1.style.display = "none";
+    desativaAba2.style.display = "none";
+    desativaAba3.style.display = "none";
+    ativaAba.style.display = "block";
 }
 
-function mudarParaAbaCrescimento(abaDesenvolvimentoId, abaCrescimentoId) {
-    displayOnOff(abaDesenvolvimentoId, false);
-    displayOnOff(abaCrescimentoId, true);
-    resizeIframe(abaCrescimentoId);
-}
+function openModal(modalId, alertId, spanId) {
+    // Get the modal
+    var modal = document.getElementById(modalId);
 
+    // Get the button that opens the modal
+    var btn = document.getElementById(alertId);
 
+    // Get the <span> element that closes the modal
+    var span = document.getElementById(spanId);
 
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    };
 
-/* Avaliação Final */
-function salvarAvaliacaoFinal() {
-    var p2Text = document.getElementById("p2_avaliacao_final_id").value;
-    alert("Dados Salvos!!!");
-    window.location = "espaco_do_cursista.html";
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
 }
