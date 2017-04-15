@@ -220,6 +220,10 @@ p.p_centralizdo {
     text-align: center;
     font-size: 11pt;
     font-family: Balsamiq, sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
 }
 
 p.p_observacao {
@@ -232,7 +236,7 @@ p.p_observacao {
 }
 
 p {
-    font-size: 11pt;
+    font-size: 12pt;
     text-align: left;
     margin: 0px;
     font-family: Balsamiq, sans-serif;
@@ -289,7 +293,8 @@ section#corpo_geral img#divisorResumoId {
 
 .modalContent {
     background-color: #fefefe;
-    background-image: url('../_imagens/background_nota_pequeno.png');
+    background-image: url('../_imagens/background_nota_grande.png');
+    background-size: cover;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 2px solid #00AA18;

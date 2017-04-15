@@ -58,7 +58,7 @@
         </style>
     </head>
 
-    <body style="background-color: white" onload="resizeIframe('iframeFolhaRegistroMedidasAntropometricasId')">
+    <body style="background-color: transparent" onload="resizeIframe('iframeFolhaRegistroMedidasAntropometricasId')">
         <p>Na CSC de Arthur, analise as anotações preenchidas nas consultas anteriores. A partir daí, como você registraria a consulta atual?</p>
 
         <iframe src="tabela_folha_de_registro_das_medidas_antropometricas.html" id="iframeFolhaRegistroMedidasAntropometricasId"></iframe>
@@ -68,9 +68,9 @@
 
 
 
-        <button class="abaExpansaoCasoClinicoCrescimento" data-toggle="collapse" data-target="#sc1CrescimentoGrafico1" style="display: block ;margin: 20px auto 20px auto;">
+        <button class="abaExpansaoCasoClinicoCrescimento" data-toggle="collapse" data-target="#sc1CrescimentoGrafico1" style="display: block ;margin: 20px auto 20px auto;" onclick="mudaBotaoExpansao('botaoExpansao1SC1CrescimentoId')">
             Registre no gráfico, dados de Perímetro cefálico x Idade (de zero a dois anos)
-            <img class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 17px">
+            <img id="botaoExpansao1SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 17px">
         </button>
         <div id="sc1CrescimentoGrafico1" class="collapse">
             <img src="_imagens/grafico_perimetro_cefalico_vs_idade.png" usemap="#mapaGraficoDePerimetroCefalicoVsIdade" width="867">
