@@ -70,18 +70,25 @@ h2.perguntaCasoClinico {
 
 /* Tables */
 th.tabelaNotaObservacaoClass {
-font-weight: normal;
-text-align: left;
-font-style: italic;
-font-size: 10pt;
-padding-top: 5px;
+    font-weight: normal;
+    text-align: left;
+    font-style: italic;
+    font-size: 10pt;
+    padding-top: 5px;
 }
 
 tr.topicosColunasMasculinas {
     background-color: #0058A6;
     color: white;
-    font-weight: bold;
     text-align: center;
+}
+
+tr.linhaClaraMasculina {
+    background-color: #ECF5FC;
+}
+
+tr.linhaEscuraMasculina {
+    background-color: #DEEAF6;
 }
 
 
@@ -109,7 +116,7 @@ img.cc_d_nota_divisao {
 
 /* Botões */
 button.abaExpansaoCasoClinicoCrescimento {
-    display: inline-block;
+    display: block;
     text-transform: uppercase;
     font-weight: normal;
     font-family: Balsamiq, sans-serif;
@@ -118,18 +125,19 @@ button.abaExpansaoCasoClinicoCrescimento {
     background-color: white;
     border: 2px solid #0B4900;
     border-radius: 20px;
-    padding: 3px 3px 3px 3px;
+    padding: 0px 3px 3px 3px;
+    margin: 20px auto 20px auto;
     width: 800px;
 }
 
 img.abaExpansaoImg {
     display: inline-block;
     position: relative;
+    top: 3px;
     height: 25px;
     width: 25px;
     border-radius: 13px;
     margin: auto;
     padding: 4px;
-
     background-color: #0031FF;
 }

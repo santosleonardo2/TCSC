@@ -5,12 +5,6 @@
         <link rel="stylesheet" type="text/css" href="_css/estilo_geral.css">
         <link rel="stylesheet" type="text/css" href="_css/estilo_situacao_clinica_geral.css">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-        <script src="_javascript/funcoesGerais.js"></script>
         <style>
             iframe#iframeFolhaRegistroMedidasAntropometricasId {
                 display: block;
@@ -20,42 +14,98 @@
                 margin: 0px auto 0px auto;
                 padding: 0px;
             }
-
-            #photo {
-                width: 850px;
-                height: 750px;
-                position: relative;
-                background-image: url(_imagens/grafico_perimetro_cefalico_vs_idade.png);
-                background-repeat: no-repeat;
-            }
-
-            #photo ul {
-                margin: 0;
-                padding: 0;
-                list-style: none;
-            }
-
-            #photo a {
-                position: absolute;
-                width: 60px;
-                height: 60px;
-                text-indent: -1000em;
-            }
-
-            #photo a:hover {
-                border: 1px solid blue;
-            }
-
-            #photo .apple a {
-                top: 29px;
-                left: 95px;
-            }
-
-            #photo .orange a {
-                top: 131px;
-                left: 152px;
-            }
         </style>
+
+        <script src="_javascript/funcoesGerais.js"></script>
+        <script>
+            //Botões de expansão
+            var botaoExpansao1SC1CrescimentoDisplay = false;
+            var botaoExpansao2SC1CrescimentoDisplay = false;
+            var botaoExpansao3SC1CrescimentoDisplay = false;
+            var botaoExpansao4SC1CrescimentoDisplay = false;
+
+            //Display de cada tópico da aba crescimento
+            var sc1CrescimentoGrafico1Display = true;
+            var sc1CrescimentoGrafico2Display = true;
+            var sc1CrescimentoGrafico3Display = true;
+            var sc1CrescimentoGrafico4Display = true;
+
+            function displayPerimetroCefalicoVsIdadeBlock(id, isVisible) {
+                if (isVisible == true) {
+                    document.getElementById(id).style.display = 'block';
+                } else {
+                    document.getElementById(id).style.display = 'none';
+                }
+                sc1CrescimentoGrafico1Display = !sc1CrescimentoGrafico1Display;
+            }
+
+            function displayPesoVsIdadeBlock(id, isVisible) {
+                if (isVisible == true) {
+                    document.getElementById(id).style.display = 'block';
+                } else {
+                    document.getElementById(id).style.display = 'none';
+                }
+                sc1CrescimentoGrafico2Display = !sc1CrescimentoGrafico2Display;
+            }
+
+            function displayComprimentoVsIdadeBlock(id, isVisible) {
+                if (isVisible == true) {
+                    document.getElementById(id).style.display = 'block';
+                } else {
+                    document.getElementById(id).style.display = 'none';
+                }
+                sc1CrescimentoGrafico3Display = !sc1CrescimentoGrafico3Display;
+            }
+
+            function displayIMCBlock(id, isVisible) {
+                if (isVisible == true) {
+                    document.getElementById(id).style.display = 'block';
+                } else {
+                    document.getElementById(id).style.display = 'none';
+                }
+                sc1CrescimentoGrafico4Display = !sc1CrescimentoGrafico4Display;
+            }
+
+            function mudaBotaoExpansaoPerimetroCefalicoVsIdade(botaoExpansaoId, expanded) {
+                var botao = document.getElementById(botaoExpansaoId);
+                if (expanded == true) {
+                    botao.src = "_imagens/white_cross.png";
+                } else {
+                    botao.src = "_imagens/white_minus.png";
+                }
+                botaoExpansao1SC1CrescimentoDisplay = !botaoExpansao1SC1CrescimentoDisplay;
+            }
+
+            function mudaBotaoExpansaoPesoVsIdade(botaoExpansaoId, expanded) {
+                var botao = document.getElementById(botaoExpansaoId);
+                if (expanded == true) {
+                    botao.src = "_imagens/white_cross.png";
+                } else {
+                    botao.src = "_imagens/white_minus.png";
+                }
+                botaoExpansao2SC1CrescimentoDisplay = !botaoExpansao2SC1CrescimentoDisplay;
+            }
+
+            function mudaBotaoExpansaoComprimentoVsIdade(botaoExpansaoId, expanded) {
+                var botao = document.getElementById(botaoExpansaoId);
+                if (expanded == true) {
+                    botao.src = "_imagens/white_cross.png";
+                } else {
+                    botao.src = "_imagens/white_minus.png";
+                }
+                botaoExpansao3SC1CrescimentoDisplay = !botaoExpansao3SC1CrescimentoDisplay;
+            }
+
+            function mudaBotaoExpansaoIMC(botaoExpansaoId, expanded) {
+                var botao = document.getElementById(botaoExpansaoId);
+                if (expanded == true) {
+                    botao.src = "_imagens/white_cross.png";
+                } else {
+                    botao.src = "_imagens/white_minus.png";
+                }
+                botaoExpansao4SC1CrescimentoDisplay = !botaoExpansao4SC1CrescimentoDisplay;
+            }
+        </script>
     </head>
 
     <body style="background-color: transparent" onload="resizeIframe('iframeFolhaRegistroMedidasAntropometricasId')">
@@ -67,12 +117,12 @@
         <p class="p_centralizdo">Na CSC, os gráficos ajudam a monitorar esses dados e observar se estão adequados para a idade.</p>
 
 
-
-        <button class="abaExpansaoCasoClinicoCrescimento" data-toggle="collapse" data-target="#sc1CrescimentoGrafico1" style="display: block ;margin: 20px auto 20px auto;" onclick="mudaBotaoExpansao('botaoExpansao1SC1CrescimentoId')">
+        <!-- SUB-TÓPICOS ABA CRESCIMENTO -->
+        <button class="abaExpansaoCasoClinicoCrescimento" onclick="displayPerimetroCefalicoVsIdadeBlock('sc1CrescimentoGrafico1', sc1CrescimentoGrafico1Display); mudaBotaoExpansaoPerimetroCefalicoVsIdade('botaoExpansao1SC1CrescimentoId', botaoExpansao1SC1CrescimentoDisplay)">
             Registre no gráfico, dados de Perímetro cefálico x Idade (de zero a dois anos)
             <img id="botaoExpansao1SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 17px">
         </button>
-        <div id="sc1CrescimentoGrafico1" class="collapse">
+        <div id="sc1CrescimentoGrafico1" style="display: none">
             <img src="_imagens/grafico_perimetro_cefalico_vs_idade.png" usemap="#mapaGraficoDePerimetroCefalicoVsIdade" width="867">
             <map name="mapaGraficoDePerimetroCefalicoVsIdade">
                 <!--all the coordenates are multiplied by 70.53% (=867px) which is the scale of the picture in the page-->
@@ -678,17 +728,24 @@
                     <li>O traçado da curva de Perímetro Cefálico está abaixo do esperado para a idade quando os registros de PC estão dentro dos pontos de corte <-2 Escore Z.</li>
                 </ul>
             </ul>
+
+            <img src="_imagens/divisao_resumo.png" style="display: block; margin: 20px auto 0px auto">
         </div>
 
 
-
         <br/>
-        <button class="abaExpansaoCasoClinicoCrescimento" data-toggle="collapse" data-target="#sc1CrescimentoGrafico2" style="display: block ;margin: 20px auto 20px auto;">
+        <button class="abaExpansaoCasoClinicoCrescimento" onclick="displayPesoVsIdadeBlock('sc1CrescimentoGrafico2', sc1CrescimentoGrafico2Display); mudaBotaoExpansaoPesoVsIdade('botaoExpansao2SC1CrescimentoId', botaoExpansao2SC1CrescimentoDisplay)">
             Registre no gráfico de Peso x Idade (de zero a dois anos)
-            <img class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 117px">
+            <img id="botaoExpansao2SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 117px">
         </button>
-        <div id="sc1CrescimentoGrafico2">
+        <div id="sc1CrescimentoGrafico2" style="display: none;">
             <img src="_imagens/grafico_peso_vs_idade.png" style="width: 100%">
+            <br/><br/>
+
+            <img src="_imagens/atencao_grande.png" class="atencaoImgGrandeId">
+            <p>Atenção!</p>
+            <p>Toda vez que a criança é pesada o peso deve ser marcado no Gráfico Peso/Idade (ponto de encontro das  linhas correspondentes ao peso e à idade da criança) e todos os pontos devem ser ligados com um traço, formando, assim, o traçado de peso ou curva da criança. No caso do intervalo entre duas pesagens ser igual ou superior a dois meses, a linha do traçado que liga esses dois pontos deve ser pontilhada e não contínua, para chamar a atenção.</p>
+
             <br/><br/>
             <h2 class="perguntaCasoClinico">De acordo com esses achados, o que você pode concluir? Qual sua conduta nessa situação?</h2>
             <ol type="a">
@@ -698,28 +755,119 @@
                 <li><input type="radio" name="crescimentoS1Q2" id="crescimentoS1Q2dIDa">Arthur está com o peso muito abaixo do esperado para a idade. A conduta será manter a criança em acompanhamento mensal e discutir o caso com outros profissionais ou encaminhar para um serviço de maior complexidade.</li>
 
             </ol>
+
+            <br/>
+            <h2>SE LIGA!</h2>
+            <h3>Curva de peso com traçado ascendente dentro dos pontos de corte -2 a +2 Escore Z</h3>
+            <p>CONDUTAS</p>
+            <ul>
+                <li>Manter Aleitamento Materno Exclusivo até os seis meses.</li>
+            </ul>
+
+            <div class="cc_d_nota_container" style="display: block; width: 260px; height: 160px; float: right">
+                <p class="p_observacao" style="padding: 10px 5px 10px 5px;">O Ministério da Saúde recomenda o seguinte esquema para as consultas de rotina: 1a semana, 1º mês, 2º mês, 4ºmês, 6º mês, 9º mês, 12º mês, 18º mês e 24º mês. A partir dos 2 anos de idade, as consultas de rotina podem ser anuais, próximas ao mês de aniversário</p>
+                <img src="_imagens/divisao_nota.png" class="cc_d_nota_divisao">
+            </div>
+
+            <br/>
+            <h3>Curva de peso com traçado horizontal dentro dos pontos de corte -2 a +2 Escore Z</h3>
+            <p>CONDUTAS</p>
+            <ol type="1">
+                <li>Criança em Aleitamento Materno Exclusivo, averiguar as seguintes situações:
+                    <ul>
+                        <li>Alimentação da mãe;</li>
+                        <li>Descanso da mãe (sobrecarga de trabalho);</li>
+                        <li>Retorno da mãe ao trabalho (ansiedade materna);</li>
+                        <li>Relação mãe e filho;</li>
+                        <li>Sinais de depressão pós-parto.</li>
+                    </ul>
+                </li>
+
+                <li>Na criança:
+                    <ul>
+                        <li>Averiguar o número das mamadas e o tempo de sono (crianças que recebem leite em quantidade suficiente dormem bem);</li>
+                        <li>Investigar a diurese;</li>
+                        <li>Questionar sobre a presença sinais e/ou sintomas que possam sugerir processos patológicos: febre, diarreia, tosse (e/ou dificuldade para respirar). Se necessário, encaminhar para avaliação de um profissional especializado;</li>
+                        <li>Agendar nova consulta em uma semana (no máximo, 15 dias) e avaliar curva ponderal;</li>
+                        <li>Se o ganho ponderal melhorou (mesmo que ainda não tenha atingido o esperado para a idade), estimular a mãe a manter o aleitamento materno exclusivo até a criança completar seis meses e agendar novo retorno em 15 dias para acompanhar o peso;</li>
+                        <li>Se o ganho ponderal não melhorou (continuando muito abaixo do esperado) e, comprovadamente, não há evidências de processo infeccioso - iniciar a introdução dos alimentos complementares conforme orientação do Ministério da Saúde.</li>
+                        <li>Agendar consulta após 15 dias do início da dieta de transição/desmame, para avaliação da curva ponderal e/ou curva do crescimento, além da aceitação dos novos alimentos.</li>
+                        <li>Observação: o preparo dos alimentos complementares deve ser explicado detalhadamente para a mãe enfatizando: higiene das mãos, dos utensílios e dos alimentos, técnica do preparo, combinações dos alimentos, uso de óleo vegetal, água potável etc.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <br/>
+            <h3>Criança com curva de peso acima de +2 Escore Z.</h3>
+            <p>CONDUTAS</p>
+            <ul>
+                <li>Crianças em aleitamento materno exclusivo - conduta expectante;</li>
+                <li>Crianças em aleitamento misto - retirar as mamadeiras e orientar a mãe a oferecer o leite artificial (LA) em corpinho/xícara;</li>
+                <li>Crianças em aleitamento artificial - avaliar a alimentação e, se necessário, corrigir o preparo (reconstituição/diluição do leite e a concentração de hidratos de carbono – açúcar); Não esquecer de enfatizar para as mães que é contra indicado o uso de amido para crianças menores de 4 meses.</li>
+            </ul>
+
+
+            <h3>Peso entre -2 e -3 Escore Z</h3>
+            <p>CONDUTAS</p>
+            <ul>
+                <li>Curva ascendente - tranquilizar os pais e fazer acompanhamento mensal</li>
+                <li>Curva horizontal ou descendente - discutir o caso com o profissional especializado ou encaminhar para um serviço de maior complexidade.</li>
+            </ul>
+
+            <img src="_imagens/divisao_resumo.png" style="display: block; margin: 20px auto 0px auto">
         </div>
 
 
 
         <br/>
-        <button class="abaExpansaoCasoClinicoCrescimento" data-toggle="collapse" data-target="#sc1CrescimentoGrafico3" style="display: block ;margin: 20px auto 20px auto;">
+        <button class="abaExpansaoCasoClinicoCrescimento" onclick="displayComprimentoVsIdadeBlock('sc1CrescimentoGrafico3', sc1CrescimentoGrafico3Display); mudaBotaoExpansaoComprimentoVsIdade('botaoExpansao3SC1CrescimentoId', botaoExpansao3SC1CrescimentoDisplay)">
             Registre no gráfico de Comprimento x Idade (de zero a dois anos)
-            <img class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 79px">
+            <img id="botaoExpansao3SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 79px">
         </button>
-        <div id="sc1CrescimentoGrafico3">
-            Testando 3
+        <div id="sc1CrescimentoGrafico3" style="display: none;">
+            <img src="_imagens/grafico_comprimento_vs_idade.png" width="100%">
+            <img src="_imagens/atencao_grande.png" class="atencaoImgGrandeId">
+            <p>Atenção!</p>
+            <p>O ganho de estatura é um bom parâmetro para a avaliação do crescimento da criança por ser cumulativo, progressivo e não sofrer regressões.</p>
+
+            <br/><br/>
+            <h2>Diante do gráfico, o que você conclui?</h2>
+            <ol type="a">
+                <li><input type="radio" name="crescimentoS1Q3" id="crescimentoS1Q3aIDa">O comprimento está elevado para a idade >+2 escores z.</li>
+                <li><input type="radio" name="crescimentoS1Q3" id="crescimentoS1Q3bIDb">O comprimento está adequado para a idade ≥ -2 e ≤ +2 escores z.</li>
+                <li><input type="radio" name="crescimentoS1Q3" id="crescimentoS1Q3cIDc">O comprimento está abaixo do esperado para a idade ≥-3 e < -2 escore z.</li>
+                <li><input type="radio" name="crescimentoS1Q3" id="crescimentoS1Q3dIDd">O comprimento está muito abaixo do esperado para a idade <-3 escores z.</li>
+            </ol>
+
+            <br/>
+            <img src="_imagens/atencao_grande.png" class="atencaoImgGrandeId">
+            <p>Atenção!</p>
+            <p>O comprimento é a distância que vai da sola (planta) dos pés descalços, ao topo da cabeça, comprimindo os cabelos, com a criança deitada em superfície horizontal, firme e lisa. Deve-se retirar sapatos, toucas, fivelas ou enfeites de cabelo que possam interferir na tomada da medida. <a href="http://189.28.128.100/dab/docs/portaldab/publicacoes/orientacoes_coleta_analise_dados_antropometricos.pdf" target="_blank">Leia mais</a>.</p>
+
+            <img src="_imagens/divisao_resumo.png" style="display: block; margin: 20px auto 0px auto">
         </div>
 
 
 
         <br/>
-        <button class="abaExpansaoCasoClinicoCrescimento" data-toggle="collapse" data-target="#sc1CrescimentoGrafico4" style="display: block ;margin: 20px auto 20px auto;">
+        <button class="abaExpansaoCasoClinicoCrescimento" onclick="displayIMCBlock('sc1CrescimentoGrafico4', sc1CrescimentoGrafico4Display); mudaBotaoExpansaoIMC('botaoExpansao4SC1CrescimentoId', botaoExpansao4SC1CrescimentoDisplay)">
             Índice de Massa Corpórea (IMC)
-            <img class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 240px">
+            <img id="botaoExpansao4SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 240px">
         </button>
-        <div id="sc1CrescimentoGrafico4">
-            Testando 4
+        <div id="sc1CrescimentoGrafico4" style="display: none">
+            <p>Os indicadores antropométricos, incluindo o Peso/Idade são utilizados como indicadores diretos para avaliar o estado nutricional da criança.</p>
+            <p>A avaliação periódica do ganho de peso permite o acompanhamento do progresso individual de cada criança, identificando aquelas de maior risco de morbi/mortalidade, sinalizando o alarme precoce para a desnutrição, causa básica da instalação ou do agravamento da maior parte dos problemas de saúde infantil.</p>
+
+            <br/>
+            <h2>Arthur está com 5 meses e 4 dias, pesando 7.580g e medindo 66 cm. Qual o seu IMC? O que você pode concluir?</h2>
+            <ol type="a">
+                <li><input type="radio" name="crescimentoS1Q4" id="crescimentoS1Q4aIDa">Seu IMC é igual a 19 e ele está com sobrepeso.</li>
+                <li><input type="radio" name="crescimentoS1Q4" id="crescimentoS1Q4bIDb">Seu IMC é igual à 20 e ele apresenta obesidade.</li>
+                <li><input type="radio" name="crescimentoS1Q4" id="crescimentoS1Q4cIDc">Seu IMC é igual a 18 e ele está com risco de Sobrepeso.</li>
+                <li><input type="radio" name="crescimentoS1Q4" id="crescimentoS1Q4dIDd">Seu IMC é igual a 17 e está adequado.</li>
+            </ol>
+
+            <img src="_imagens/divisao_resumo.png" style="display: block; margin: 20px auto 0px auto">
         </div>
 
 

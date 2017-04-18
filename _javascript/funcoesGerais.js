@@ -138,11 +138,6 @@ function resizeIframe(iframeID) {
     iframe.height = iframe.contentWindow.document.body.scrollHeight;
 }
 
-function mudaBotaoExpansao(botaoExpansaoId, expanded) {
-    var botao = document.getElementById(botaoExpansaoId);
-    botao.src = "_imagens/white_minus.png";
-}
-
 function mudaAba(ativaAbaId, desativaAba1Id, desativaAba2Id, desativaAba3Id) {
     var ativaAba = document.getElementById(ativaAbaId);
     var desativaAba1 = document.getElementById(desativaAba1Id);

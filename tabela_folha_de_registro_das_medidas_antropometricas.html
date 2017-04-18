@@ -6,7 +6,7 @@
         <style>
             table#tabelaFolhaDeRegistroDasMedidasAntropometricasId {
                 margin: 0px auto 0px auto;
-                border-spacing: 0px;
+                border-spacing: 0.5px;
                 border: none;
             }
 
@@ -26,20 +26,21 @@
             }
 
             table#tabelaFolhaDeRegistroDasMedidasAntropometricasId tr {
-                border: 1px solid black;
+                border: 1px solid white;
             }
 
             table#tabelaFolhaDeRegistroDasMedidasAntropometricasId td {
-                border: 1px solid black;
+                border: 1px solid white;
                 padding: 5px;;
                 text-align: center;
-                background-color: white;
+                width: 125px;
             }
 
             table#tabelaFolhaDeRegistroDasMedidasAntropometricasId input[type=text] {
                 max-lines: 1;
                 width: 100px;
             }
+
         </style>
     </head>
 
@@ -51,7 +52,7 @@
                 <th colspan="6">Registre os dados de crescimento (idade, peso, comprimento, perímetro cefálico e massa corporal) da consulta atual.</th>
             </tr>
 
-            <tr>
+            <tr class="topicosColunasMasculinas">
                 <td class="topicosColunasMasculinas">Data</td>
                 <td class="topicosColunasMasculinas">Idade</td>
                 <td class="topicosColunasMasculinas">Peso (g)</td>
@@ -60,7 +61,7 @@
                 <td class="topicosColunasMasculinas">Índice de massa corporal (IMC)</td>
             </tr>
 
-            <tr>
+            <tr class="linhaEscuraMasculina">
                 <td>21/03/2016</td>
                 <td>10 dias</td>
                 <td>3.810</td>
@@ -69,7 +70,7 @@
                 <td>15</td>
             </tr>
 
-            <tr>
+            <tr class="linhaEscuraMasculina">
                 <td>13/04/2016</td>
                 <td>1 mês e 2 dias</td>
                 <td>4.900</td>
@@ -78,7 +79,7 @@
                 <td>17</td>
             </tr>
 
-            <tr>
+            <tr class="linhaEscuraMasculina">
                 <td>16/05/2016</td>
                 <td>2 meses e 5 dias</td>
                 <td>6.050</td>
@@ -87,7 +88,7 @@
                 <td>19</td>
             </tr>
 
-            <tr>
+            <tr class="linhaEscuraMasculina">
                 <td>13/06/2016</td>
                 <td>3 meses e 2 dias</td>
                 <td>6.690</td>
@@ -96,7 +97,7 @@
                 <td>18</td>
             </tr>
 
-            <tr>
+            <tr class="linhaEscuraMasculina">
                 <td>12/07/2016</td>
                 <td>4 meses e 1 dia</td>
                 <td>7124</td>
@@ -105,7 +106,7 @@
                 <td>18</td>
             </tr>
 
-            <tr>
+            <tr class="linhaEscuraMasculina">
                 <td>15/08/2016<br/><span style="color: red; font-size: 10pt">Consulta ATUAL</span></td>
                 <td><input type="text" name="idadeFolhaMedidasAntropometricasCaso1" id="idadeFolhaMedidasAntropometricasCaso1Id" placeholder="Idade"></td>
                 <td><input type="text" name="pesoFolhaMedidasAntropometricasCaso1" id="pesoFolhaMedidasAntropometricasCaso1Id" placeholder="Peso"></td>
