@@ -97,28 +97,28 @@
 
             <div id="abas_situacao_clinica">
                 <figure>
-                    <img id="direcionador_desenvolvimento" src="_imagens/grafico_icone_situacao_clinica.png" onmouseover="mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', true)" onmouseout="mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false)" onclick="mudaAba('abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaVacinacaoCaso1Id', 'abaOrientacoesCaso1Id')">
-                    <figcaption id="direcionador_desenvolvimento_texto">Desenvolvimento</figcaption>
-                    <img id="direcionador_desenvolvimento_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+                    <img id="direcionador_desenvolvimento" src="_imagens/grafico_icone_situacao_clinica_colorido.png" onclick="mudaAba('abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaVacinacaoCaso1Id', 'abaOrientacoesCaso1Id'); mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', true); mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false); mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false); mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)">
+                    <figcaption id="direcionador_desenvolvimento_texto" style="color: #00AA18">Desenvolvimento</figcaption>
+                    <img id="direcionador_desenvolvimento_divisor" src="_imagens/divisao_resumo.png">
                 </figure>
                 <figure>
-                    <img id="direcionador_crescimento" src="_imagens/crescimento_icone.png" onmouseover="mudaIconeCor('direcionador_crescimento', 'crescimento_icone', true)" onmouseout="mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false)" onclick="mudaAba('abaCrescimentoCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaVacinacaoCaso1Id', 'abaOrientacoesCaso1Id')">
+                    <img id="direcionador_crescimento" src="_imagens/crescimento_icone.png"  onclick="mudaAba('abaCrescimentoCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaVacinacaoCaso1Id', 'abaOrientacoesCaso1Id'); mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false); mudaIconeCor('direcionador_crescimento', 'crescimento_icone', true); mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false); mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)">
                     <figcaption id="direcionador_crescimento_texto">Crescimento</figcaption>
                     <img id="direcionador_crescimento_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
                 </figure>
                 <figure>
-                    <img id="direcionador_vacinacao" src="_imagens/vacinacao_icone.png" onmouseover="mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', true)" onmouseout="mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false)" onclick="mudaAba('abaVacinacaoCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaOrientacoesCaso1Id')">
+                    <img id="direcionador_vacinacao" src="_imagens/vacinacao_icone.png" onclick="mudaAba('abaVacinacaoCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaOrientacoesCaso1Id'); mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false); mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false); mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', true); mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)">
                     <figcaption id="direcionador_vacinacao_texto">Vacinação</figcaption>
                     <img id="direcionador_vacinacao_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
                 </figure>
                 <figure>
-                    <img id="direcionador_info_gerais" src="_imagens/direcoes_icone.png" onmouseover="mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', true)" onmouseout="mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)" onclick="mudaAba('abaOrientacoesCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaVacinacaoCaso1Id')">
+                    <img id="direcionador_info_gerais" src="_imagens/direcoes_icone.png" onclick="mudaAba('abaOrientacoesCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaVacinacaoCaso1Id'); mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false); mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false); mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false); mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', true)">
                     <figcaption id="direcionador_info_gerais_texto">Orientações</figcaption>
                     <img id="direcionador_info_gerais_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
                 </figure>
             </div>
 
-            <section id="tela_login_corpo_principal">
+            <section style="padding: 0px 15px 0px 15px">
                 <!--ABA DESENVOLVIMENTO-->
                 <iframe src="situacao_clinica_1_desenvolvimento.html" id="abaDesenvolvimentoCaso1Id"></iframe>
 
@@ -126,10 +126,10 @@
                 <iframe src="situacao_clinica_1_crescimento.html" id="abaCrescimentoCaso1Id" style="display: none; height: 1200px"></iframe>
 
                 <!--ABA IMUNIZAÇÃO-->
-                <iframe src="situacao_clinica_1_vacinacao.html" id="abaVacinacaoCaso1Id" style="display: none; height: 1090px;"></iframe>
+                <iframe src="situacao_clinica_1_vacinacao.html" id="abaVacinacaoCaso1Id" style="display: none; height: 1240px;"></iframe>
 
                 <!--ABA ORIENTAÇÕES-->
-                <iframe src="situacao_clinica_1_orientacoes.html" id="abaOrientacoesCaso1Id" style="display: none; height: 420px"></iframe>
+                <iframe src="situacao_clinica_1_orientacoes.html" id="abaOrientacoesCaso1Id" style="display: none; height: 450px"></iframe>
             </section>
 
             <footer id="rodape">
