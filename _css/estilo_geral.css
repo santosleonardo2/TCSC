@@ -315,6 +315,17 @@ section#corpo_geral img#divisorResumoId {
     width: 650px /* Could be more or less, depending on screen size */
 }
 
+.modalContent2 {
+    background-color: #fefefe;
+    background-image: url('../_imagens/background_nota_grande.png');
+    background-size: cover;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #00AA18;
+    border-radius: 10px;
+    width: 800px /* Could be more or less, depending on screen size */
+}
+
 .close {
     color: #aaa;
     float: right;

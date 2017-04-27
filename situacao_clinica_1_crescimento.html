@@ -10,7 +10,7 @@
                 display: block;
                 border: none;
                 width: 100%;
-                height: 350px;
+                height: 390px;
                 margin: 0px auto 0px auto;
                 padding: 0px;
             }
@@ -121,8 +121,8 @@
 
 
         <!-- SUB-TÓPICOS ABA CRESCIMENTO -->
-        <button class="abaExpansaoCasoClinicoCrescimento" onclick="displayPerimetroCefalicoVsIdadeBlock('sc1CrescimentoGrafico1', sc1CrescimentoGrafico1Display); mudaBotaoExpansaoPerimetroCefalicoVsIdade('botaoExpansao1SC1CrescimentoId', botaoExpansao1SC1CrescimentoDisplay)">
-            Registre no gráfico, dados de Perímetro cefálico x Idade (de zero a dois anos)
+        <button class="abaExpansaoCasoClinicoCrescimento" style="height: 37px" onclick="displayPerimetroCefalicoVsIdadeBlock('sc1CrescimentoGrafico1', sc1CrescimentoGrafico1Display); mudaBotaoExpansaoPerimetroCefalicoVsIdade('botaoExpansao1SC1CrescimentoId', botaoExpansao1SC1CrescimentoDisplay)">
+            <span style="position: relative; top: -10px;">Registre no gráfico, dados de Perímetro cefálico x Idade (de zero a dois anos)</span>
             <img id="botaoExpansao1SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 17px">
         </button>
         <div id="sc1CrescimentoGrafico1" style="display: none">
@@ -744,8 +744,8 @@
 
 
         <br/>
-        <button class="abaExpansaoCasoClinicoCrescimento" onclick="displayPesoVsIdadeBlock('sc1CrescimentoGrafico2', sc1CrescimentoGrafico2Display); mudaBotaoExpansaoPesoVsIdade('botaoExpansao2SC1CrescimentoId', botaoExpansao2SC1CrescimentoDisplay)">
-            Registre no gráfico de Peso x Idade (de zero a dois anos)
+        <button class="abaExpansaoCasoClinicoCrescimento" style="height: 37px" onclick="displayPesoVsIdadeBlock('sc1CrescimentoGrafico2', sc1CrescimentoGrafico2Display); mudaBotaoExpansaoPesoVsIdade('botaoExpansao2SC1CrescimentoId', botaoExpansao2SC1CrescimentoDisplay)">
+            <span style="position: relative; top: -10px;">Registre no gráfico de Peso x Idade (de zero a dois anos)</span>
             <img id="botaoExpansao2SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 117px">
         </button>
         <div id="sc1CrescimentoGrafico2" style="display: none;">
@@ -837,8 +837,8 @@
 
 
         <br/>
-        <button class="abaExpansaoCasoClinicoCrescimento" onclick="displayComprimentoVsIdadeBlock('sc1CrescimentoGrafico3', sc1CrescimentoGrafico3Display); mudaBotaoExpansaoComprimentoVsIdade('botaoExpansao3SC1CrescimentoId', botaoExpansao3SC1CrescimentoDisplay)">
-            Registre no gráfico de Comprimento x Idade (de zero a dois anos)
+        <button class="abaExpansaoCasoClinicoCrescimento" style="height: 37px" onclick="displayComprimentoVsIdadeBlock('sc1CrescimentoGrafico3', sc1CrescimentoGrafico3Display); mudaBotaoExpansaoComprimentoVsIdade('botaoExpansao3SC1CrescimentoId', botaoExpansao3SC1CrescimentoDisplay)">
+            <span style="position: relative; top: -10px;">Registre no gráfico de Comprimento x Idade (de zero a dois anos)</span>
             <img id="botaoExpansao3SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 79px">
         </button>
         <div id="sc1CrescimentoGrafico3" style="display: none;">
@@ -874,12 +874,21 @@
 
 
         <br/>
-        <button class="abaExpansaoCasoClinicoCrescimento" onclick="displayIMCBlock('sc1CrescimentoGrafico4', sc1CrescimentoGrafico4Display); mudaBotaoExpansaoIMC('botaoExpansao4SC1CrescimentoId', botaoExpansao4SC1CrescimentoDisplay)">
-            Índice de Massa Corpórea (IMC)
-            <img id="botaoExpansao4SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 240px">
+        <button class="abaExpansaoCasoClinicoCrescimento" style="height: 37px" onclick="displayIMCBlock('sc1CrescimentoGrafico4', sc1CrescimentoGrafico4Display); mudaBotaoExpansaoIMC('botaoExpansao4SC1CrescimentoId', botaoExpansao4SC1CrescimentoDisplay)">
+            <span style="position: relative; top: -10px;">Índice de Massa Corpórea (IMC)</span>
+            <img id="botaoExpansao4SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 240px; top: 0px">
         </button>
         <div id="sc1CrescimentoGrafico4" style="display: none">
-            <p class="p_centralizdo" style="font-size: 14pt; width: 100%">Para facilitar o preenchimento do gráfico de IMC, utilize a <a>tabela de cálculo</a> (Página 76 - 79 da CSC).</p>
+            <p class="p_centralizdo" style="font-size: 14pt; width: 100%">Para facilitar o preenchimento do gráfico de IMC, utilize a <span id="alert_sc1_tabela_calculo_imc" style="cursor: pointer; color: blue; font-style: italic; text-decoration: underline" onclick="openModal('modal_sc1_tabela_calculo_imc', 'alert_sc1_tabela_calculo_imc', 'close_sc1_tabela_calculo_imc')">tabela de cálculo</span> (Página 76 - 79 da CSC).</p>
+            <!--POP UP - MODAL TABELA DE CALCULO IMC-->
+            <div id="modal_sc1_tabela_calculo_imc" class="modal">
+                <div class="modalContent2">
+                    <span class="close" id="close_sc1_tabela_calculo_imc">&times;</span>
+                    <h2>Tabela de Cálculo do IMC</h2>
+                    <img src="_imagens/tabela_calculo_imc_parte1.png" style="width: 100%">
+                </div>
+            </div>
+
             <br/>
             <p>Os indicadores antropométricos, incluindo o Peso/Idade são utilizados como indicadores diretos para avaliar o estado nutricional da criança.</p>
             <p>A avaliação periódica do ganho de peso permite o acompanhamento do progresso individual de cada criança, identificando aquelas de maior risco de morbi/mortalidade, sinalizando o alarme precoce para a desnutrição, causa básica da instalação ou do agravamento da maior parte dos problemas de saúde infantil.</p>
@@ -909,12 +918,12 @@
 
         <br/>
         <button class="botaoSalvarContinuar" style="margin: 0px auto 0px 200px;">
-            Salvar
-            <img class="botaoLabelImg" src="_imagens/rightArrow.png">
+            <label class="botaoLabel">Salvar</label>
+            <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
         </button>
-        <button class="botaoSalvarContinuar" style="margin: 20px 0px 0px 250px;">
-            Continuar
-            <img class="botaoLabelImg" src="_imagens/rightArrow.png">
+        <button class="botaoSalvarContinuar" style="margin: 20px 0px 0px 250px">
+            <label class="botaoLabel">Continuar</label>
+            <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
         </button>
     </body>
 </html>
