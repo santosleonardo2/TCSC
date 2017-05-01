@@ -11,6 +11,8 @@
                 margin-right: auto;
             }
         </style>
+
+        <script src="_javascript/funcoesGerais.js"></script>
     </head>
 
     <body style="background-color: transparent" onload="resizeIframe('iframeTabelaInstrumentoVigilanciaDesenvolvimentoId')">
@@ -32,14 +34,50 @@
         <img class="atencaoImgGrandeId" src="_imagens/atencao_grande.png">
         <p>Atenção!</p>
         <p style="margin-top: 0px">Em torno dos 5 e 6 meses, é esperado o surgimento do primeiro dente de leite. É importante conversar com a mãe que a criança pode apresentar alteração do sono, aumento da salivação, coceira nas gengivas e irritabilidade.</p>
-        
+
+
+        <!--POP UP - MODAL RESPOSTAS TESTE-->
+        <div id="modal_sc1_respostas" class="modal">
+            <div class="modalContent">
+                <span class="close" id="close_sc1_respostas">&times;</span>
+
+                <button class="abaExpansaoCasoClinico" style="height: 37px">
+                    <span style="position: relative; top: -10px;">Desempenho - 1. AVALIAÇÃO DE ROTINA - 97%</span>
+                    <img id="topicoResposta1SC1Id" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 17px">
+                </button>
+
+                <figure>
+                    <img id="direcionador_desenvolvimento" src="_imagens/grafico_icone_situacao_clinica_colorido.png" style="cursor: pointer" onclick="mudaAba('abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaVacinacaoCaso1Id', 'abaOrientacoesCaso1Id'); mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', true); mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false); mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false); mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)">
+                    <figcaption id="direcionador_desenvolvimento_texto" style="color: #00AA18; cursor: pointer">Desenvolvimento</figcaption>
+                    <img id="direcionador_desenvolvimento_divisor" src="_imagens/divisao_resumo.png">
+                </figure>
+                <figure>
+                    <img id="direcionador_crescimento" src="_imagens/crescimento_icone.png" style="cursor: pointer" onclick="mudaAba('abaCrescimentoCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaVacinacaoCaso1Id', 'abaOrientacoesCaso1Id'); mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false); mudaIconeCor('direcionador_crescimento', 'crescimento_icone', true); mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false); mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)">
+                    <figcaption id="direcionador_crescimento_texto" style="cursor: pointer">Crescimento</figcaption>
+                    <img id="direcionador_crescimento_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+                </figure>
+                <figure>
+                    <img id="direcionador_vacinacao" src="_imagens/vacinacao_icone.png" style="cursor: pointer" onclick="mudaAba('abaVacinacaoCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaOrientacoesCaso1Id'); mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false); mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false); mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', true); mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)">
+                    <figcaption id="direcionador_vacinacao_texto" style="cursor: pointer">Vacinação</figcaption>
+                    <img id="direcionador_vacinacao_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+                </figure>
+                <figure>
+                    <img id="direcionador_info_gerais" src="_imagens/direcoes_icone.png" style="cursor: pointer" onclick="mudaAba('abaOrientacoesCaso1Id', 'abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaVacinacaoCaso1Id'); mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', false); mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false); mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false); mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', true)">
+                    <figcaption id="direcionador_info_gerais_texto" style="cursor: pointer">Orientações</figcaption>
+                    <img id="direcionador_info_gerais_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+                </figure>
+
+            </div>
+        </div>
+
+
         <br/><br/>
         <button class="botaoSalvarContinuar" style="margin: 0px auto 0px 200px;">
             <label class="botaoLabel">Salvar</label>
             <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
         </button>
-        <button class="botaoSalvarContinuar" style="margin: 20px 0px 0px 250px">
-            <label class="botaoLabel">Continuar</label>
+        <button class="botaoSalvarContinuar" id="botaoFinalizarSC1" style="margin: 20px 0px 0px 250px">
+            <label class="botaoLabel">Finalizar</label>
             <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
         </button>
     </body>

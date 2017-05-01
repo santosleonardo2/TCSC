@@ -121,8 +121,8 @@ function goToCadernetaDaCrianca() {
 
 
 /* Casos Clinicos*/
-function mudaIconeCor(id, nomeIcone, isMouseOver) {
-    if (isMouseOver == true) {
+function mudaIconeCor(id, nomeIcone, wasClicked) {
+    if (wasClicked == true) {
         document.getElementById(id).src = "_imagens/"+nomeIcone+"_colorido.png";
         document.getElementById(id+"_texto").style.color = "#00AA18";
         displayOnOff(id+"_divisor", true);

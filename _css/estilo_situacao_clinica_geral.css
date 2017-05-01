@@ -4,11 +4,11 @@
     src: url("../_fonts/BalsamiqSansRegular.ttf");
 }
 
-div#abas_situacao_clinica {
+div.abas_situacao_clinica {
     width: 100%;
 }
 
-div#abas_situacao_clinica figure {
+div.abas_situacao_clinica figure {
     width: 24%;
     position: relative;
     display: inline-block;
@@ -16,7 +16,7 @@ div#abas_situacao_clinica figure {
     text-align: center;
 }
 
-div#abas_situacao_clinica figcaption {
+div.abas_situacao_clinica figcaption {
     text-transform: uppercase;
 }
 
@@ -91,6 +91,13 @@ tr.linhaEscuraMasculina {
     background-color: #DEEAF6;
 }
 
+.legendaResposta {
+    display: block;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    width: 330px;
+}
+
 
 
 /* Images && Containers*/
@@ -116,7 +123,7 @@ img.cc_d_nota_divisao {
 
 
 /* Botões */
-button.abaExpansaoCasoClinicoCrescimento {
+button.abaExpansaoCasoClinico {
     display: block;
     text-transform: uppercase;
     font-weight: normal;

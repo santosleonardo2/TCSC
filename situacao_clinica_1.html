@@ -7,6 +7,125 @@
         <link rel="stylesheet" type="text/css" href="_css/estilo_situacao_clinica_geral.css">
         <link rel="stylesheet" type="text/css" href="_css/estilo_situacao_clinica_1.css">
         <script src="_javascript/funcoesGerais.js"></script>
+        <script>
+            //Botões de expansão
+            var botaoExpansao1SC1CrescimentoDisplay = false;
+            var botaoExpansao2SC1CrescimentoDisplay = false;
+            var botaoExpansao3SC1CrescimentoDisplay = false;
+            var botaoExpansao4SC1CrescimentoDisplay = false;
+
+            //Display de cada tópico da aba crescimento
+            var sc1CrescimentoGrafico1Display = true;
+            var sc1CrescimentoGrafico2Display = true;
+            var sc1CrescimentoGrafico3Display = true;
+            var sc1CrescimentoGrafico4Display = true;
+
+            function displayPerimetroCefalicoVsIdadeBlock(id, isVisible) {
+                if (isVisible == true) {
+                    document.getElementById(id).style.display = 'block';
+                } else {
+                    document.getElementById(id).style.display = 'none';
+                }
+                sc1CrescimentoGrafico1Display = !sc1CrescimentoGrafico1Display;
+            }
+
+            function displayPesoVsIdadeBlock(id, isVisible) {
+                if (isVisible == true) {
+                    document.getElementById(id).style.display = 'block';
+                } else {
+                    document.getElementById(id).style.display = 'none';
+                }
+                sc1CrescimentoGrafico2Display = !sc1CrescimentoGrafico2Display;
+            }
+
+            function displayComprimentoVsIdadeBlock(id, isVisible) {
+                if (isVisible == true) {
+                    document.getElementById(id).style.display = 'block';
+                } else {
+                    document.getElementById(id).style.display = 'none';
+                }
+                sc1CrescimentoGrafico3Display = !sc1CrescimentoGrafico3Display;
+            }
+
+            function displayIMCBlock(id, isVisible) {
+                if (isVisible == true) {
+                    document.getElementById(id).style.display = 'block';
+                } else {
+                    document.getElementById(id).style.display = 'none';
+                }
+                sc1CrescimentoGrafico4Display = !sc1CrescimentoGrafico4Display;
+            }
+
+            function mudaBotaoExpansaoPerimetroCefalicoVsIdade(botaoExpansaoId, expanded) {
+                var botao = document.getElementById(botaoExpansaoId);
+                if (expanded == true) {
+                    botao.src = "_imagens/white_cross.png";
+                } else {
+                    botao.src = "_imagens/white_minus.png";
+                }
+                botaoExpansao1SC1CrescimentoDisplay = !botaoExpansao1SC1CrescimentoDisplay;
+            }
+
+            function mudaBotaoExpansaoPesoVsIdade(botaoExpansaoId, expanded) {
+                var botao = document.getElementById(botaoExpansaoId);
+                if (expanded == true) {
+                    botao.src = "_imagens/white_cross.png";
+                } else {
+                    botao.src = "_imagens/white_minus.png";
+                }
+                botaoExpansao2SC1CrescimentoDisplay = !botaoExpansao2SC1CrescimentoDisplay;
+            }
+
+            function mudaBotaoExpansaoComprimentoVsIdade(botaoExpansaoId, expanded) {
+                var botao = document.getElementById(botaoExpansaoId);
+                if (expanded == true) {
+                    botao.src = "_imagens/white_cross.png";
+                } else {
+                    botao.src = "_imagens/white_minus.png";
+                }
+                botaoExpansao3SC1CrescimentoDisplay = !botaoExpansao3SC1CrescimentoDisplay;
+            }
+
+            function mudaBotaoExpansaoIMC(botaoExpansaoId, expanded) {
+                var botao = document.getElementById(botaoExpansaoId);
+                if (expanded == true) {
+                    botao.src = "_imagens/white_cross.png";
+                } else {
+                    botao.src = "_imagens/white_minus.png";
+                }
+                botaoExpansao4SC1CrescimentoDisplay = !botaoExpansao4SC1CrescimentoDisplay;
+            }
+        </script>
+
+        <style>
+            iframe#iframeTabelaInstrumentoVigilanciaDesenvolvimentoId {
+                display: block;
+                border: none;
+                width: 100%;
+                height: 2240px;
+                margin: 0px auto 0px auto;
+                padding: 0px;
+            }
+
+            iframe#iframeFolhaRegistroMedidasAntropometricasId {
+                display: block;
+                border: none;
+                width: 100%;
+                height: 390px;
+                margin: 0px auto 0px auto;
+                padding: 0px;
+            }
+
+            article {
+                margin-top: 20px;
+            }
+
+            img.centerImg {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
     </head>
 
     <body onload="resizeIframe('abaDesenvolvimentoCaso1Id')">
@@ -95,7 +214,7 @@
             </div>
 
 
-            <div id="abas_situacao_clinica">
+            <div class="abas_situacao_clinica">
                 <figure>
                     <img id="direcionador_desenvolvimento" src="_imagens/grafico_icone_situacao_clinica_colorido.png" style="cursor: pointer" onclick="mudaAba('abaDesenvolvimentoCaso1Id', 'abaCrescimentoCaso1Id', 'abaVacinacaoCaso1Id', 'abaOrientacoesCaso1Id'); mudaIconeCor('direcionador_desenvolvimento', 'grafico_icone_situacao_clinica', true); mudaIconeCor('direcionador_crescimento', 'crescimento_icone', false); mudaIconeCor('direcionador_vacinacao', 'vacinacao_icone', false); mudaIconeCor('direcionador_info_gerais', 'direcoes_icone', false)">
                     <figcaption id="direcionador_desenvolvimento_texto" style="color: #00AA18; cursor: pointer">Desenvolvimento</figcaption>
@@ -120,16 +239,1073 @@
 
             <section style="padding: 0px 15px 0px 15px">
                 <!--ABA DESENVOLVIMENTO-->
-                <iframe src="situacao_clinica_1_desenvolvimento.html" id="abaDesenvolvimentoCaso1Id"></iframe>
+                <!--<iframe src="situacao_clinica_1_desenvolvimento.html" id="abaDesenvolvimentoCaso1Id"></iframe>-->
+                <div id="abaDesenvolvimentoCaso1Id">
+                    <p class="p_centralizdo" style="font-size: 14pt">Registre os achados na CSC e Avalie o Desenvolvimento da criança</p>
+                    <br/><br/>
+                    <p>O acompanhamento do desenvolvimento da criança na atenção básica tem como objetivo promover, proteger e detectar precocemente alterações passíveis de modificação que possam repercutir na aquisição de etapas subsequentes da criança.</p>
+                    <p>Para a avaliação do desenvolvimento, a Caderneta disponibiliza, nas páginas 44 e 45, respectivamente, um instrumento de Vigilância do Desenvolvimento da criança de zero a três anos de idade.</p>
+
+                    <article id="situacao1DesenvolvimentoQ1">
+                        <img src="_imagens/question_mark.png" style="display: block; float: left; margin: 5px; padding-top: 10px">
+                        <p class="p_question">Q1: Ao ouvir os relatos da mãe de Arthur durante essa consulta e, analisando o quadro de Vigilância do Desenvolvimento da criança constante na CSC, o que você percebeu? Registre na respectiva tabela da CSC.</p>
+                        <br/>
+                        <iframe src="tabela_instrumento_de_vigilancia_do_desenvolvimento_caso1.html" id="iframeTabelaInstrumentoVigilanciaDesenvolvimentoId" style="display: block; height: 2000px;"></iframe>
+                        <script>
+
+                        </script>
+
+                        <img src="_imagens/atencao_grande.png" class="atencaoImgGrandeId">
+                        <p>ATENÇÃO!</p>
+                        <p style="margin-top: 0px">Após esta etapa, o profissional deve consultar o Instrumento de Avaliação do Desenvolvimento Integral da Criança, que se encontra na CSC, e classificar o desenvolvimento da criança para uma tomada de decisão.</p>
+
+                        <br/><br/><br/>
+                        <ul>
+                            <li>
+                                O que Orientar?
+                                <ul>
+                                    <li class="checkBullet">Ao oferecer algo para o bebê (comida, brinquedo etc.), espere um pouco para ver sua reação. Com isso, ele aprenderá a expressar aceitação, prazer e desconforto.</li>
+                                    <li class="checkBullet">Acostume o bebê a dormir mais à noite.</li>
+                                    <li class="checkBullet">Ofereça brinquedos a pequenas distâncias, dando a ele a chance de alcançá-los.</li>
+                                    <li class="checkBullet">Proporcione estímulos sonoros ao bebê, fora do seu alcance visual, para que ele tente localizar de onde vem o som, virando a cabeça.</li>
+                                    <li class="checkBullet">Estimule-o a rolar, mudando de posição (de barriga para baixo para barriga para cima). Use objetos e outros recursos (brinquedos, palmas etc.).</li>
+                                </ul>
+                            </li>
+
+                            <br/>
+                            <li>
+                                Condutas
+                                <br/>Na presença de atraso nos Marcos de Desenvolvimento, avaliar:
+                                <ul>
+                                    <li>A relação afetiva da criança com a mãe ou com quem cuida dela;</li>
+                                    <li>As oportunidades de estimulação: verificar o local onde a criança permanece a maior parte do tempo, brinquedos adequados para a idade;</li>
+                                    <li>Encaminhar para um serviço de maior complexidade e manter o acompanhamento com a eSF;</li>
+                                    <li>Curva do perímetro cefálico fora dos parâmetros normais (abaixo do P 10 ou acima do P 90) deverá ser encaminhada para avaliação especializada.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="cc_d_nota_container" style="width: 260px; height: 130px">
+                            <p class="p_observacao" style="padding: 10px 5px 10px 5px;">NOTA: A CSC é bem completa e seu manuseio pela família, deve ser estimulado pelos profissionais de saúde que acompanham a criança.</p>
+                            <img src="_imagens/divisao_nota.png" class="cc_d_nota_divisao">
+                        </div>
+
+                        <br/><br/>
+                        <p>Leia mais!</p>
+                        <ul>
+                            <li>Estimulando o desenvolvimento da criança com afeto (Pág 18‐21 CSC)</li>
+                            <li>Avaliação do desenvolvimento: orientação para a tomada de decisão (Pág 48)</li>
+                            <a href="http://bvsms.saude.gov.br/bvs/publicacoes/manual%200902.pdf" target="_blank">Caderneta de Saúde da Criança 2015</a>
+                        </ul>
+
+                        <br/><br/>
+                        <button class="botaoSalvarContinuar" style="margin: 0px auto 0px 200px;">
+                            <label class="botaoLabel">Salvar</label>
+                            <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
+                        </button>
+                        <button class="botaoSalvarContinuar" style="margin: 20px 0px 0px 250px">
+                            <label class="botaoLabel">Continuar</label>
+                            <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
+                        </button>
+                    </article>
+                </div>
+
+
+
 
                 <!--ABA CRESCIMENTO-->
-                <iframe src="situacao_clinica_1_crescimento.html" id="abaCrescimentoCaso1Id" style="display: none; height: 1200px"></iframe>
+                <!--<iframe src="situacao_clinica_1_crescimento.html" id="abaCrescimentoCaso1Id" style="display: none; height: 1200px"></iframe>-->
+                <div id="abaCrescimentoCaso1Id" style="display: none">
+                    <p class="p_centralizdo" style="font-size: 14pt">Registrar os achados na CSC e Avaliar o CRESCIMENTO.</p>
+                    <br/>
+                    <p>A CSC disponibiliza, na página 54, uma tabela para Registro das Medidas Antropométricas. Na CSC de Arthur, analise as anotações preenchidas das consultas anteriores e, registre os dados de crescimento (idade, peso, comprimento, perímetro cefálico e massa corporal) da consulta atual.</p>
+                    <br/>
+
+                    <iframe src="tabela_folha_de_registro_das_medidas_antropometricas.html" id="iframeFolhaRegistroMedidasAntropometricasId"></iframe>
+
+                    <br/><br/>
+                    <p class="p_centralizdo">Os gráficos ajudam a monitorar o crescimento e observar se estão adequados para a idade. Registre nos respectivos gráficos abaixo os dados de crescimento de Arthur.</p>
+
+
+                    <!-- SUB-TÓPICOS ABA CRESCIMENTO: Perimetro Cefalico Vs Idade -->
+                    <div>
+                        <button class="abaExpansaoCasoClinico" style="height: 37px" onclick="displayPerimetroCefalicoVsIdadeBlock('sc1CrescimentoGrafico1', sc1CrescimentoGrafico1Display); mudaBotaoExpansaoPerimetroCefalicoVsIdade('botaoExpansao1SC1CrescimentoId', botaoExpansao1SC1CrescimentoDisplay)">
+                            <span style="position: relative; top: -10px;">Registre no gráfico, dados de Perímetro cefálico x Idade (de zero a dois anos)</span>
+                            <img id="botaoExpansao1SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 17px">
+                        </button>
+                        <div id="sc1CrescimentoGrafico1" style="display: none">
+                            <img src="_imagens/grafico_perimetro_cefalico_vs_idade.png" usemap="#mapaGraficoDePerimetroCefalicoVsIdade" width="100%">
+                            <map name="mapaGraficoDePerimetroCefalicoVsIdade">
+                                <!--all the coordenates are multiplied by 70.53% (=867px) which is the scale of the picture in the page-->
+                                <!--Distance between values in X axis = 32.4438-->
+                                <!--Distance between values in y axis = 20.4537-->
+
+                                <!--LINHA 30-->
+                                <area shape="circle" coords="41.92,506.3,7">
+                                <area shape="circle" coords="74.36,506.3,7">
+                                <area shape="circle" coords="106.8,506.3,7">
+                                <area shape="circle" coords="139.24,506.3,7">
+                                <area shape="circle" coords="171.68,506.3,7">
+                                <area shape="circle" coords="204.12,506.3,7">
+                                <area shape="circle" coords="236.56,506.3,7">
+                                <area shape="circle" coords="269,506.3,7">
+                                <area shape="circle" coords="301.44,506.3,7">
+                                <area shape="circle" coords="333.88,506.3,7">
+                                <area shape="circle" coords="366.32,506.3,7">
+                                <area shape="circle" coords="398.76,506.3,7">
+                                <area shape="circle" coords="431.2,506.3,7">
+                                <area shape="circle" coords="463.64,506.3,7">
+                                <area shape="circle" coords="496.08,506.3,7">
+                                <area shape="circle" coords="528.52,506.3,7">
+                                <area shape="circle" coords="560.96,506.3,7">
+                                <area shape="circle" coords="593.4,506.3,7">
+                                <area shape="circle" coords="625.84,506.3,7">
+                                <area shape="circle" coords="658.28,506.3,7">
+                                <area shape="circle" coords="690.72,506.3,7">
+                                <area shape="circle" coords="723.16,506.3,7">
+                                <area shape="circle" coords="755.6,506.3,7">
+
+                                <!--LINHA 31-->
+                                <area shape="circle" coords="41.92,491.85,7">
+                                <area shape="circle" coords="74.36,491.85,7">
+                                <area shape="circle" coords="106.8,491.85,7">
+                                <area shape="circle" coords="139.24,491.85,7">
+                                <area shape="circle" coords="171.68,491.85,7">
+                                <area shape="circle" coords="204.12,491.85,7">
+                                <area shape="circle" coords="236.56,491.85,7">
+                                <area shape="circle" coords="269,491.85,7">
+                                <area shape="circle" coords="301.44,491.85,7">
+                                <area shape="circle" coords="333.88,491.85,7">
+                                <area shape="circle" coords="366.32,491.85,7">
+                                <area shape="circle" coords="398.76,491.85,7">
+                                <area shape="circle" coords="431.2,491.85,7">
+                                <area shape="circle" coords="463.64,491.85,7">
+                                <area shape="circle" coords="496.08,491.85,7">
+                                <area shape="circle" coords="528.52,491.85,7">
+                                <area shape="circle" coords="560.96,491.85,7">
+                                <area shape="circle" coords="593.4,491.85,7">
+                                <area shape="circle" coords="625.84,491.85,7">
+                                <area shape="circle" coords="658.28,491.85,7">
+                                <area shape="circle" coords="690.72,491.85,7">
+                                <area shape="circle" coords="723.16,491.85,7">
+                                <area shape="circle" coords="755.6,491.85,7">
+
+                                <!--LINHA 32-->
+                                <area shape="circle" coords="41.92,471.4,7">
+                                <area shape="circle" coords="74.36,471.4,7">
+                                <area shape="circle" coords="106.8,471.4,7">
+                                <area shape="circle" coords="139.24,471.4,7">
+                                <area shape="circle" coords="171.68,471.4,7">
+                                <area shape="circle" coords="204.12,471.4,7">
+                                <area shape="circle" coords="236.56,471.4,7">
+                                <area shape="circle" coords="269,471.4,7">
+                                <area shape="circle" coords="301.44,471.4,7">
+                                <area shape="circle" coords="333.88,471.4,7">
+                                <area shape="circle" coords="366.32,471.4,7">
+                                <area shape="circle" coords="398.76,471.4,7">
+                                <area shape="circle" coords="431.2,471.4,7">
+                                <area shape="circle" coords="463.64,471.4,7">
+                                <area shape="circle" coords="496.08,471.4,7">
+                                <area shape="circle" coords="528.52,471.4,7">
+                                <area shape="circle" coords="560.96,471.4,7">
+                                <area shape="circle" coords="593.4,471.4,7">
+                                <area shape="circle" coords="625.84,471.4,7">
+                                <area shape="circle" coords="658.28,471.4,7">
+                                <area shape="circle" coords="690.72,471.4,7">
+                                <area shape="circle" coords="723.16,471.4,7">
+                                <area shape="circle" coords="755.6,471.4,7">
+
+                                <!--LINHA 33-->
+                                <area shape="circle" coords="41.92,450.95,7">
+                                <area shape="circle" coords="74.36,450.95,7">
+                                <area shape="circle" coords="106.8,450.95,7">
+                                <area shape="circle" coords="139.24,450.95,7">
+                                <area shape="circle" coords="171.68,450.95,7">
+                                <area shape="circle" coords="204.12,450.95,7">
+                                <area shape="circle" coords="236.56,450.95,7">
+                                <area shape="circle" coords="269,450.95,7">
+                                <area shape="circle" coords="301.44,450.95,7">
+                                <area shape="circle" coords="333.88,450.95,7">
+                                <area shape="circle" coords="366.32,450.95,7">
+                                <area shape="circle" coords="398.76,450.95,7">
+                                <area shape="circle" coords="431.2,450.95,7">
+                                <area shape="circle" coords="463.64,450.95,7">
+                                <area shape="circle" coords="496.08,450.95,7">
+                                <area shape="circle" coords="528.52,450.95,7">
+                                <area shape="circle" coords="560.96,450.95,7">
+                                <area shape="circle" coords="593.4,450.95,7">
+                                <area shape="circle" coords="625.84,450.95,7">
+                                <area shape="circle" coords="658.28,450.95,7">
+                                <area shape="circle" coords="690.72,450.95,7">
+                                <area shape="circle" coords="723.16,450.95,7">
+                                <area shape="circle" coords="755.6,450.95,7">
+
+                                <!--LINHA 34-->
+                                <area shape="circle" coords="41.92,430.5,7">
+                                <area shape="circle" coords="74.36,430.5,7">
+                                <area shape="circle" coords="106.8,430.5,7">
+                                <area shape="circle" coords="139.24,430.5,7">
+                                <area shape="circle" coords="171.68,430.5,7">
+                                <area shape="circle" coords="204.12,430.5,7">
+                                <area shape="circle" coords="236.56,430.5,7">
+                                <area shape="circle" coords="269,430.5,7">
+                                <area shape="circle" coords="301.44,430.5,7">
+                                <area shape="circle" coords="333.88,430.5,7">
+                                <area shape="circle" coords="366.32,430.5,7">
+                                <area shape="circle" coords="398.76,430.5,7">
+                                <area shape="circle" coords="431.2,430.5,7">
+                                <area shape="circle" coords="463.64,430.5,7">
+                                <area shape="circle" coords="496.08,430.5,7">
+                                <area shape="circle" coords="528.52,430.5,7">
+                                <area shape="circle" coords="560.96,430.5,7">
+                                <area shape="circle" coords="593.4,430.5,7">
+                                <area shape="circle" coords="625.84,430.5,7">
+                                <area shape="circle" coords="658.28,430.5,7">
+                                <area shape="circle" coords="690.72,430.5,7">
+                                <area shape="circle" coords="723.16,430.5,7">
+                                <area shape="circle" coords="755.6,430.5,7">
+
+                                <!--LINHA 35-->
+                                <area shape="circle" coords="41.92,410.05,7">
+                                <area shape="circle" coords="74.36,410.05,7">
+                                <area shape="circle" coords="106.8,410.05,7">
+                                <area shape="circle" coords="139.24,410.05,7">
+                                <area shape="circle" coords="171.68,410.05,7">
+                                <area shape="circle" coords="204.12,410.05,7">
+                                <area shape="circle" coords="236.56,410.05,7">
+                                <area shape="circle" coords="269,410.05,7">
+                                <area shape="circle" coords="301.44,410.05,7">
+                                <area shape="circle" coords="333.88,410.05,7">
+                                <area shape="circle" coords="366.32,410.05,7">
+                                <area shape="circle" coords="398.76,410.05,7">
+                                <area shape="circle" coords="431.2,410.05,7">
+                                <area shape="circle" coords="463.64,410.05,7">
+                                <area shape="circle" coords="496.08,410.05,7">
+                                <area shape="circle" coords="528.52,410.05,7">
+                                <area shape="circle" coords="560.96,410.05,7">
+                                <area shape="circle" coords="593.4,410.05,7">
+                                <area shape="circle" coords="625.84,410.05,7">
+                                <area shape="circle" coords="658.28,410.05,7">
+                                <area shape="circle" coords="690.72,410.05,7">
+                                <area shape="circle" coords="723.16,410.05,7">
+                                <area shape="circle" coords="755.6,410.05,7">
+
+                                <!--LINHA 36-->
+                                <area shape="circle" coords="41.92,389.6,7">
+                                <area shape="circle" coords="74.36,389.6,7">
+                                <area shape="circle" coords="106.8,389.6,7">
+                                <area shape="circle" coords="139.24,389.6,7">
+                                <area shape="circle" coords="171.68,389.6,7">
+                                <area shape="circle" coords="204.12,389.6,7">
+                                <area shape="circle" coords="236.56,389.6,7">
+                                <area shape="circle" coords="269,389.6,7">
+                                <area shape="circle" coords="301.44,389.6,7">
+                                <area shape="circle" coords="333.88,389.6,7">
+                                <area shape="circle" coords="366.32,389.6,7">
+                                <area shape="circle" coords="398.76,389.6,7">
+                                <area shape="circle" coords="431.2,389.6,7">
+                                <area shape="circle" coords="463.64,389.6,7">
+                                <area shape="circle" coords="496.08,389.6,7">
+                                <area shape="circle" coords="528.52,389.6,7">
+                                <area shape="circle" coords="560.96,389.6,7">
+                                <area shape="circle" coords="593.4,389.6,7">
+                                <area shape="circle" coords="625.84,389.6,7">
+                                <area shape="circle" coords="658.28,389.6,7">
+                                <area shape="circle" coords="690.72,389.6,7">
+                                <area shape="circle" coords="723.16,389.6,7">
+                                <area shape="circle" coords="755.6,389.6,7">
+
+                                <!--LINHA 37-->
+                                <area shape="circle" coords="41.92,369.15,7">
+                                <area shape="circle" coords="74.36,369.15,7">
+                                <area shape="circle" coords="106.8,369.15,7">
+                                <area shape="circle" coords="139.24,369.15,7">
+                                <area shape="circle" coords="171.68,369.15,7">
+                                <area shape="circle" coords="204.12,369.15,7">
+                                <area shape="circle" coords="236.56,369.15,7">
+                                <area shape="circle" coords="269,369.15,7">
+                                <area shape="circle" coords="301.44,369.15,7">
+                                <area shape="circle" coords="333.88,369.15,7">
+                                <area shape="circle" coords="366.32,369.15,7">
+                                <area shape="circle" coords="398.76,369.15,7">
+                                <area shape="circle" coords="431.2,369.15,7">
+                                <area shape="circle" coords="463.64,369.15,7">
+                                <area shape="circle" coords="496.08,369.15,7">
+                                <area shape="circle" coords="528.52,369.15,7">
+                                <area shape="circle" coords="560.96,369.15,7">
+                                <area shape="circle" coords="593.4,369.15,7">
+                                <area shape="circle" coords="625.84,369.15,7">
+                                <area shape="circle" coords="658.28,369.15,7">
+                                <area shape="circle" coords="690.72,369.15,7">
+                                <area shape="circle" coords="723.16,369.15,7">
+                                <area shape="circle" coords="755.6,369.15,7">
+
+                                <!--LINHA 38-->
+                                <area shape="circle" coords="41.92,348.7,7">
+                                <area shape="circle" coords="74.36,348.7,7">
+                                <area shape="circle" coords="106.8,348.7,7">
+                                <area shape="circle" coords="139.24,348.7,7">
+                                <area shape="circle" coords="171.68,348.7,7">
+                                <area shape="circle" coords="204.12,348.7,7">
+                                <area shape="circle" coords="236.56,348.7,7">
+                                <area shape="circle" coords="269,348.7,7">
+                                <area shape="circle" coords="301.44,348.7,7">
+                                <area shape="circle" coords="333.88,348.7,7">
+                                <area shape="circle" coords="366.32,348.7,7">
+                                <area shape="circle" coords="398.76,348.7,7">
+                                <area shape="circle" coords="431.2,348.7,7">
+                                <area shape="circle" coords="463.64,348.7,7">
+                                <area shape="circle" coords="496.08,348.7,7">
+                                <area shape="circle" coords="528.52,348.7,7">
+                                <area shape="circle" coords="560.96,348.7,7">
+                                <area shape="circle" coords="593.4,348.7,7">
+                                <area shape="circle" coords="625.84,348.7,7">
+                                <area shape="circle" coords="658.28,348.7,7">
+                                <area shape="circle" coords="690.72,348.7,7">
+                                <area shape="circle" coords="723.16,348.7,7">
+                                <area shape="circle" coords="755.6,348.7,7">
+
+                                <!--LINHA 39-->
+                                <area shape="circle" coords="41.92,328.25,7">
+                                <area shape="circle" coords="74.36,328.25,7">
+                                <area shape="circle" coords="106.8,328.25,7">
+                                <area shape="circle" coords="139.24,328.25,7">
+                                <area shape="circle" coords="171.68,328.25,7">
+                                <area shape="circle" coords="204.12,328.25,7">
+                                <area shape="circle" coords="236.56,328.25,7">
+                                <area shape="circle" coords="269,328.25,7">
+                                <area shape="circle" coords="301.44,328.25,7">
+                                <area shape="circle" coords="333.88,328.25,7">
+                                <area shape="circle" coords="366.32,328.25,7">
+                                <area shape="circle" coords="398.76,328.25,7">
+                                <area shape="circle" coords="431.2,328.25,7">
+                                <area shape="circle" coords="463.64,328.25,7">
+                                <area shape="circle" coords="496.08,328.25,7">
+                                <area shape="circle" coords="528.52,328.25,7">
+                                <area shape="circle" coords="560.96,328.25,7">
+                                <area shape="circle" coords="593.4,328.25,7">
+                                <area shape="circle" coords="625.84,328.25,7">
+                                <area shape="circle" coords="658.28,328.25,7">
+                                <area shape="circle" coords="690.72,328.25,7">
+                                <area shape="circle" coords="723.16,328.25,7">
+                                <area shape="circle" coords="755.6,328.25,7">
+
+                                <!--LINHA 40-->
+                                <area shape="circle" coords="41.92,307.8,7">
+                                <area shape="circle" coords="74.36,307.8,7">
+                                <area shape="circle" coords="106.8,307.8,7">
+                                <area shape="circle" coords="139.24,307.8,7">
+                                <area shape="circle" coords="171.68,307.8,7">
+                                <area shape="circle" coords="204.12,307.8,7">
+                                <area shape="circle" coords="236.56,307.8,7">
+                                <area shape="circle" coords="269,307.8,7">
+                                <area shape="circle" coords="301.44,307.8,7">
+                                <area shape="circle" coords="333.88,307.8,7">
+                                <area shape="circle" coords="366.32,307.8,7">
+                                <area shape="circle" coords="398.76,307.8,7">
+                                <area shape="circle" coords="431.2,307.8,7">
+                                <area shape="circle" coords="463.64,307.8,7">
+                                <area shape="circle" coords="496.08,307.8,7">
+                                <area shape="circle" coords="528.52,307.8,7">
+                                <area shape="circle" coords="560.96,307.8,7">
+                                <area shape="circle" coords="593.4,307.8,7">
+                                <area shape="circle" coords="625.84,307.8,7">
+                                <area shape="circle" coords="658.28,307.8,7">
+                                <area shape="circle" coords="690.72,307.8,7">
+                                <area shape="circle" coords="723.16,307.8,7">
+                                <area shape="circle" coords="755.6,307.8,7">
+
+                                <!--LINHA 41-->
+                                <area shape="circle" coords="41.92,287.35,7">
+                                <area shape="circle" coords="74.36,287.35,7">
+                                <area shape="circle" coords="106.8,287.35,7">
+                                <area shape="circle" coords="139.24,287.35,7">
+                                <area shape="circle" coords="171.68,287.35,7">
+                                <area shape="circle" coords="204.12,287.35,7">
+                                <area shape="circle" coords="236.56,287.35,7">
+                                <area shape="circle" coords="269,287.35,7">
+                                <area shape="circle" coords="301.44,287.35,7">
+                                <area shape="circle" coords="333.88,287.35,7">
+                                <area shape="circle" coords="366.32,287.35,7">
+                                <area shape="circle" coords="398.76,287.35,7">
+                                <area shape="circle" coords="431.2,287.35,7">
+                                <area shape="circle" coords="463.64,287.35,7">
+                                <area shape="circle" coords="496.08,287.35,7">
+                                <area shape="circle" coords="528.52,287.35,7">
+                                <area shape="circle" coords="560.96,287.35,7">
+                                <area shape="circle" coords="593.4,287.35,7">
+                                <area shape="circle" coords="625.84,287.35,7">
+                                <area shape="circle" coords="658.28,287.35,7">
+                                <area shape="circle" coords="690.72,287.35,7">
+                                <area shape="circle" coords="723.16,287.35,7">
+                                <area shape="circle" coords="755.6,287.35,7">
+
+                                <!--LINHA 42-->
+                                <area shape="circle" coords="41.92,266.9,7">
+                                <area shape="circle" coords="74.36,266.9,7">
+                                <area shape="circle" coords="106.8,266.9,7">
+                                <area shape="circle" coords="139.24,266.9,7">
+                                <area shape="circle" coords="171.68,266.9,7">
+                                <area shape="circle" coords="204.12,266.9,7">
+                                <area shape="circle" coords="236.56,266.9,7">
+                                <area shape="circle" coords="269,266.9,7">
+                                <area shape="circle" coords="301.44,266.9,7">
+                                <area shape="circle" coords="333.88,266.9,7">
+                                <area shape="circle" coords="366.32,266.9,7">
+                                <area shape="circle" coords="398.76,266.9,7">
+                                <area shape="circle" coords="431.2,266.9,7">
+                                <area shape="circle" coords="463.64,266.9,7">
+                                <area shape="circle" coords="496.08,266.9,7">
+                                <area shape="circle" coords="528.52,266.9,7">
+                                <area shape="circle" coords="560.96,266.9,7">
+                                <area shape="circle" coords="593.4,266.9,7">
+                                <area shape="circle" coords="625.84,266.9,7">
+                                <area shape="circle" coords="658.28,266.9,7">
+                                <area shape="circle" coords="690.72,266.9,7">
+                                <area shape="circle" coords="723.16,266.9,7">
+                                <area shape="circle" coords="755.6,266.9,7">
+
+                                <!--LINHA 43-->
+                                <area shape="circle" coords="41.92,246.45,7">
+                                <area shape="circle" coords="74.36,246.45,7">
+                                <area shape="circle" coords="106.8,246.45,7">
+                                <area shape="circle" coords="139.24,246.45,7">
+                                <area shape="circle" coords="171.68,246.45,7">
+                                <area shape="circle" coords="204.12,246.45,7">
+                                <area shape="circle" coords="236.56,246.45,7">
+                                <area shape="circle" coords="269,246.45,7">
+                                <area shape="circle" coords="301.44,246.45,7">
+                                <area shape="circle" coords="333.88,246.45,7">
+                                <area shape="circle" coords="366.32,246.45,7">
+                                <area shape="circle" coords="398.76,246.45,7">
+                                <area shape="circle" coords="431.2,246.45,7">
+                                <area shape="circle" coords="463.64,246.45,7">
+                                <area shape="circle" coords="496.08,246.45,7">
+                                <area shape="circle" coords="528.52,246.45,7">
+                                <area shape="circle" coords="560.96,246.45,7">
+                                <area shape="circle" coords="593.4,246.45,7">
+                                <area shape="circle" coords="625.84,246.45,7">
+                                <area shape="circle" coords="658.28,246.45,7">
+                                <area shape="circle" coords="690.72,246.45,7">
+                                <area shape="circle" coords="723.16,246.45,7">
+                                <area shape="circle" coords="755.6,246.45,7">
+
+                                <!--LINHA 44-->
+                                <area shape="circle" coords="41.92,226,7">
+                                <area shape="circle" coords="74.36,226,7">
+                                <area shape="circle" coords="106.8,226,7">
+                                <area shape="circle" coords="139.24,226,7">
+                                <area shape="circle" coords="171.68,226,7">
+                                <area shape="circle" coords="204.12,226,7">
+                                <area shape="circle" coords="236.56,226,7">
+                                <area shape="circle" coords="269,226,7">
+                                <area shape="circle" coords="301.44,226,7">
+                                <area shape="circle" coords="333.88,226,7">
+                                <area shape="circle" coords="366.32,226,7">
+                                <area shape="circle" coords="398.76,226,7">
+                                <area shape="circle" coords="431.2,226,7">
+                                <area shape="circle" coords="463.64,226,7">
+                                <area shape="circle" coords="496.08,226,7">
+                                <area shape="circle" coords="528.52,226,7">
+                                <area shape="circle" coords="560.96,226,7">
+                                <area shape="circle" coords="593.4,226,7">
+                                <area shape="circle" coords="625.84,226,7">
+                                <area shape="circle" coords="658.28,226,7">
+                                <area shape="circle" coords="690.72,226,7">
+                                <area shape="circle" coords="723.16,226,7">
+                                <area shape="circle" coords="755.6,226,7">
+
+                                <!--LINHA 45-->
+                                <area shape="circle" coords="41.92,205.55,7">
+                                <area shape="circle" coords="74.36,205.55,7">
+                                <area shape="circle" coords="106.8,205.55,7">
+                                <area shape="circle" coords="139.24,205.55,7">
+                                <area shape="circle" coords="171.68,205.55,7">
+                                <area shape="circle" coords="204.12,205.55,7">
+                                <area shape="circle" coords="236.56,205.55,7">
+                                <area shape="circle" coords="269,205.55,7">
+                                <area shape="circle" coords="301.44,205.55,7">
+                                <area shape="circle" coords="333.88,205.55,7">
+                                <area shape="circle" coords="366.32,205.55,7">
+                                <area shape="circle" coords="398.76,205.55,7">
+                                <area shape="circle" coords="431.2,205.55,7">
+                                <area shape="circle" coords="463.64,205.55,7">
+                                <area shape="circle" coords="496.08,205.55,7">
+                                <area shape="circle" coords="528.52,205.55,7">
+                                <area shape="circle" coords="560.96,205.55,7">
+                                <area shape="circle" coords="593.4,205.55,7">
+                                <area shape="circle" coords="625.84,205.55,7">
+                                <area shape="circle" coords="658.28,205.55,7">
+                                <area shape="circle" coords="690.72,205.55,7">
+                                <area shape="circle" coords="723.16,205.55,7">
+                                <area shape="circle" coords="755.6,205.55,7">
+
+                                <!--LINHA 46-->
+                                <area shape="circle" coords="41.92,185.1,7">
+                                <area shape="circle" coords="74.36,185.1,7">
+                                <area shape="circle" coords="106.8,185.1,7">
+                                <area shape="circle" coords="139.24,185.1,7">
+                                <area shape="circle" coords="171.68,185.1,7">
+                                <area shape="circle" coords="204.12,185.1,7">
+                                <area shape="circle" coords="236.56,185.1,7">
+                                <area shape="circle" coords="269,185.1,7">
+                                <area shape="circle" coords="301.44,185.1,7">
+                                <area shape="circle" coords="333.88,185.1,7">
+                                <area shape="circle" coords="366.32,185.1,7">
+                                <area shape="circle" coords="398.76,185.1,7">
+                                <area shape="circle" coords="431.2,185.1,7">
+                                <area shape="circle" coords="463.64,185.1,7">
+                                <area shape="circle" coords="496.08,185.1,7">
+                                <area shape="circle" coords="528.52,185.1,7">
+                                <area shape="circle" coords="560.96,185.1,7">
+                                <area shape="circle" coords="593.4,185.1,7">
+                                <area shape="circle" coords="625.84,185.1,7">
+                                <area shape="circle" coords="658.28,185.1,7">
+                                <area shape="circle" coords="690.72,185.1,7">
+                                <area shape="circle" coords="723.16,185.1,7">
+                                <area shape="circle" coords="755.6,185.1,7">
+
+                                <!--LINHA 47-->
+                                <area shape="circle" coords="41.92,164.65,7">
+                                <area shape="circle" coords="74.36,164.65,7">
+                                <area shape="circle" coords="106.8,164.65,7">
+                                <area shape="circle" coords="139.24,164.65,7">
+                                <area shape="circle" coords="171.68,164.65,7">
+                                <area shape="circle" coords="204.12,164.65,7">
+                                <area shape="circle" coords="236.56,164.65,7">
+                                <area shape="circle" coords="269,164.65,7">
+                                <area shape="circle" coords="301.44,164.65,7">
+                                <area shape="circle" coords="333.88,164.65,7">
+                                <area shape="circle" coords="366.32,164.65,7">
+                                <area shape="circle" coords="398.76,164.65,7">
+                                <area shape="circle" coords="431.2,164.65,7">
+                                <area shape="circle" coords="463.64,164.65,7">
+                                <area shape="circle" coords="496.08,164.65,7">
+                                <area shape="circle" coords="528.52,164.65,7">
+                                <area shape="circle" coords="560.96,164.65,7">
+                                <area shape="circle" coords="593.4,164.65,7">
+                                <area shape="circle" coords="625.84,164.65,7">
+                                <area shape="circle" coords="658.28,164.65,7">
+                                <area shape="circle" coords="690.72,164.65,7">
+                                <area shape="circle" coords="723.16,164.65,7">
+                                <area shape="circle" coords="755.6,164.65,7">
+
+                                <!--LINHA 48-->
+                                <area shape="circle" coords="41.92,144.2,7">
+                                <area shape="circle" coords="74.36,144.2,7">
+                                <area shape="circle" coords="106.8,144.2,7">
+                                <area shape="circle" coords="139.24,144.2,7">
+                                <area shape="circle" coords="171.68,144.2,7">
+                                <area shape="circle" coords="204.12,144.2,7">
+                                <area shape="circle" coords="236.56,144.2,7">
+                                <area shape="circle" coords="269,144.2,7">
+                                <area shape="circle" coords="301.44,144.2,7">
+                                <area shape="circle" coords="333.88,144.2,7">
+                                <area shape="circle" coords="366.32,144.2,7">
+                                <area shape="circle" coords="398.76,144.2,7">
+                                <area shape="circle" coords="431.2,144.2,7">
+                                <area shape="circle" coords="463.64,144.2,7">
+                                <area shape="circle" coords="496.08,144.2,7">
+                                <area shape="circle" coords="528.52,144.2,7">
+                                <area shape="circle" coords="560.96,144.2,7">
+                                <area shape="circle" coords="593.4,144.2,7">
+                                <area shape="circle" coords="625.84,144.2,7">
+                                <area shape="circle" coords="658.28,144.2,7">
+                                <area shape="circle" coords="690.72,144.2,7">
+                                <area shape="circle" coords="723.16,144.2,7">
+                                <area shape="circle" coords="755.6,144.2,7">
+
+                                <!--LINHA 49-->
+                                <area shape="circle" coords="41.92,123.75,7">
+                                <area shape="circle" coords="74.36,123.75,7">
+                                <area shape="circle" coords="106.8,123.75,7">
+                                <area shape="circle" coords="139.24,123.75,7">
+                                <area shape="circle" coords="171.68,123.75,7">
+                                <area shape="circle" coords="204.12,123.75,7">
+                                <area shape="circle" coords="236.56,123.75,7">
+                                <area shape="circle" coords="269,123.75,7">
+                                <area shape="circle" coords="301.44,123.75,7">
+                                <area shape="circle" coords="333.88,123.75,7">
+                                <area shape="circle" coords="366.32,123.75,7">
+                                <area shape="circle" coords="398.76,123.75,7">
+                                <area shape="circle" coords="431.2,123.75,7">
+                                <area shape="circle" coords="463.64,123.75,7">
+                                <area shape="circle" coords="496.08,123.75,7">
+                                <area shape="circle" coords="528.52,123.75,7">
+                                <area shape="circle" coords="560.96,123.75,7">
+                                <area shape="circle" coords="593.4,123.75,7">
+                                <area shape="circle" coords="625.84,123.75,7">
+                                <area shape="circle" coords="658.28,123.75,7">
+                                <area shape="circle" coords="690.72,123.75,7">
+                                <area shape="circle" coords="723.16,123.75,7">
+                                <area shape="circle" coords="755.6,123.75,7">
+
+                                <!--LINHA 50-->
+                                <area shape="circle" coords="41.92,103.3,7">
+                                <area shape="circle" coords="74.36,103.3,7">
+                                <area shape="circle" coords="106.8,103.3,7">
+                                <area shape="circle" coords="139.24,103.3,7">
+                                <area shape="circle" coords="171.68,103.3,7">
+                                <area shape="circle" coords="204.12,103.3,7">
+                                <area shape="circle" coords="236.56,103.3,7">
+                                <area shape="circle" coords="269,103.3,7">
+                                <area shape="circle" coords="301.44,103.3,7">
+                                <area shape="circle" coords="333.88,103.3,7">
+                                <area shape="circle" coords="366.32,103.3,7">
+                                <area shape="circle" coords="398.76,103.3,7">
+                                <area shape="circle" coords="431.2,103.3,7">
+                                <area shape="circle" coords="463.64,103.3,7">
+                                <area shape="circle" coords="496.08,103.3,7">
+                                <area shape="circle" coords="528.52,103.3,7">
+                                <area shape="circle" coords="560.96,103.3,7">
+                                <area shape="circle" coords="593.4,103.3,7">
+                                <area shape="circle" coords="625.84,103.3,7">
+                                <area shape="circle" coords="658.28,103.3,7">
+                                <area shape="circle" coords="690.72,103.3,7">
+                                <area shape="circle" coords="723.16,103.3,7">
+                                <area shape="circle" coords="755.6,103.3,7">
+
+                                <!--LINHA 51-->
+                                <area shape="circle" coords="41.92,82.85,7">
+                                <area shape="circle" coords="74.36,82.85,7">
+                                <area shape="circle" coords="106.8,82.85,7">
+                                <area shape="circle" coords="139.24,82.85,7">
+                                <area shape="circle" coords="171.68,82.85,7">
+                                <area shape="circle" coords="204.12,82.85,7">
+                                <area shape="circle" coords="236.56,82.85,7">
+                                <area shape="circle" coords="269,82.85,7">
+                                <area shape="circle" coords="301.44,82.85,7">
+                                <area shape="circle" coords="333.88,82.85,7">
+                                <area shape="circle" coords="366.32,82.85,7">
+                                <area shape="circle" coords="398.76,82.85,7">
+                                <area shape="circle" coords="431.2,82.85,7">
+                                <area shape="circle" coords="463.64,82.85,7">
+                                <area shape="circle" coords="496.08,82.85,7">
+                                <area shape="circle" coords="528.52,82.85,7">
+                                <area shape="circle" coords="560.96,82.85,7">
+                                <area shape="circle" coords="593.4,82.85,7">
+                                <area shape="circle" coords="625.84,82.85,7">
+                                <area shape="circle" coords="658.28,82.85,7">
+                                <area shape="circle" coords="690.72,82.85,7">
+                                <area shape="circle" coords="723.16,82.85,7">
+                                <area shape="circle" coords="755.6,82.85,7">
+
+                                <!--LINHA 52-->
+                                <area shape="circle" coords="41.92,62.4,7">
+                                <area shape="circle" coords="74.36,62.4,7">
+                                <area shape="circle" coords="106.8,62.4,7">
+                                <area shape="circle" coords="139.24,62.4,7">
+                                <area shape="circle" coords="171.68,62.4,7">
+                                <area shape="circle" coords="204.12,62.4,7">
+                                <area shape="circle" coords="236.56,62.4,7">
+                                <area shape="circle" coords="269,62.4,7">
+                                <area shape="circle" coords="301.44,62.4,7">
+                                <area shape="circle" coords="333.88,62.4,7">
+                                <area shape="circle" coords="366.32,62.4,7">
+                                <area shape="circle" coords="398.76,62.4,7">
+                                <area shape="circle" coords="431.2,62.4,7">
+                                <area shape="circle" coords="463.64,62.4,7">
+                                <area shape="circle" coords="496.08,62.4,7">
+                                <area shape="circle" coords="528.52,62.4,7">
+                                <area shape="circle" coords="560.96,62.4,7">
+                                <area shape="circle" coords="593.4,62.4,7">
+                                <area shape="circle" coords="625.84,62.4,7">
+                                <area shape="circle" coords="658.28,62.4,7">
+                                <area shape="circle" coords="690.72,62.4,7">
+                                <area shape="circle" coords="723.16,62.4,7">
+                                <area shape="circle" coords="755.6,62.4,7">
+                            </map>
+                            <br/><br/>
+
+                            <div class="cc_d_nota_container" style="width: 260px; height: 180px; float: right; margin-left: 10px">
+                                <p class="p_observacao" style="padding: 10px 5px 10px 5px;">Criança com 4 meses e com PC= 39,5cm está no P10 e com PC=43,0cm está no P90, perímetro cefálico fora destes parâmetros, de acordo com o MS, deverão ser encaminhados para investigação.</p>
+                                <img src="_imagens/divisao_nota.png" class="cc_d_nota_divisao">
+                            </div>
+                            <br/>
+
+                            <img src="_imagens/atencao_grande.png" class="atencaoImgGrandeId">
+                            <p>Atenção!</p>
+                            <p style="margin-top: 0px">A página 52 da CSC cita a Vigilância do crescimento infantil e como entender/ interpretar os gráficos.</p>
+                            <br/><br/>
+
+                            <img src="_imagens/question_mark.png" style="display: block; float: left; margin: 5px; padding-top: 10px">
+                            <p class="p_question">Q1: Como você explicaria esse gráfico para a mãe do Arthur?</p>
+                            <ol type="a">
+                                <li><input type="radio" name="crescimentoS1Q1" id="crescimentoS1Q1aIDa">O tamanho da cabeça de Arthur está acima do esperado para a idade dele.</li>
+                                <li><input type="radio" name="crescimentoS1Q1" id="crescimentoS1Q1aIDb">O tamanho da cabeça de Arthur está normal para a idade dele.</li>
+                                <li><input type="radio" name="crescimentoS1Q1" id="crescimentoS1Q1aIDc">O tamanho da cabeça de Arthur está abaixo do esperado para a idade dele.</li>
+                                <li><input type="radio" name="crescimentoS1Q1" id="crescimentoS1Q1aIDd">Apesar de não ter sido medida, considera-se que não há anormalidades pois a sua cabeça está proporcional ao corpo.</li>
+                            </ol>
+
+                            <br/><br/>
+                            <ul>
+                                <li>SE LIGA!</li>
+                                <ul>
+                                    <li>O traçado da curva de Perímetro Cefálico está acima do esperado para a idade, quando os registros de PC estão > +2 Escore Z.</li>
+                                    <li>O traçado da curva de Perímetro Cefálico está adequado para a idade, quando os registros de PC estão dentro dos pontos de corte ≤+2 Escore Z e ≥-2 escores.</li>
+                                    <li>O traçado da curva de Perímetro Cefálico está abaixo do esperado para a idade quando os registros de PC estão dentro dos pontos de corte <-2 Escore Z.</li>
+                                </ul>
+                            </ul>
+
+                            <img src="_imagens/divisao_resumo.png" style="display: block; margin: 20px auto 0px auto">
+                        </div>
+                    </div>
+
+
+
+                    <!-- SUB-TÓPICOS ABA CRESCIMENTO: Peso Vs Idade -->
+                    <br/>
+                    <div>
+                        <button class="abaExpansaoCasoClinico" style="height: 37px" onclick="displayPesoVsIdadeBlock('sc1CrescimentoGrafico2', sc1CrescimentoGrafico2Display); mudaBotaoExpansaoPesoVsIdade('botaoExpansao2SC1CrescimentoId', botaoExpansao2SC1CrescimentoDisplay)">
+                            <span style="position: relative; top: -10px;">Registre no gráfico de Peso x Idade (de zero a dois anos)</span>
+                            <img id="botaoExpansao2SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 117px">
+                        </button>
+                        <div id="sc1CrescimentoGrafico2" style="display: none;">
+                            <img src="_imagens/grafico_peso_vs_idade.png" style="width: 100%">
+                            <br/><br/>
+
+                            <img src="_imagens/atencao_grande.png" class="atencaoImgGrandeId">
+                            <p>Atenção!</p>
+                            <p style="margin-top: 0px">Toda vez que a criança é pesada o peso deve ser marcado no Gráfico Peso/Idade (ponto de encontro das  linhas correspondentes ao peso e à idade da criança) e todos os pontos devem ser ligados com um traço, formando, assim, o traçado de peso ou curva da criança. No caso do intervalo entre duas pesagens ser igual ou superior a dois meses, a linha do traçado que liga esses dois pontos deve ser pontilhada e não contínua, para chamar a atenção.</p>
+
+                            <br/><br/>
+                            <img src="_imagens/question_mark.png" style="display: block; float: left; margin: 5px; padding-top: 10px">
+                            <p class="p_question">Q2: De acordo com esses achados, o que você pode concluir? Qual sua conduta nessa situação?</p>
+                            <ol type="a">
+                                <li><input type="radio" name="crescimentoS1Q2" id="crescimentoS1Q2aIDa">Arthur está com o peso adequado para a idade e ganhando peso como esperado. A conduta será orientar a mãe a manter o Aleitamento Materno Exclusivo até os 6 meses.</li>
+                                <li><input type="radio" name="crescimentoS1Q2" id="crescimentoS1Q2bIDa">Arthur está com o peso elevado para a idade. Como a criança está em Aleitamento Materno Exclusivo, a conduta será orientar a mãe a suspender o Aleitamento Materno Exclusivo e introduzir alimentos saudáveis.</li>
+                                <li><input type="radio" name="crescimentoS1Q2" id="crescimentoS1Q2cIDa">Arthur está com o peso abaixo do esperado para a idade. A conduta será orientar a mãe para interromper o Aleitamento Materno Exclusivo e iniciar a transição alimentar.</li>
+                                <li><input type="radio" name="crescimentoS1Q2" id="crescimentoS1Q2dIDa">Arthur está com o peso muito abaixo do esperado para a idade. A conduta será manter a criança em acompanhamento mensal e discutir o caso com outros profissionais ou encaminhar para um serviço de maior complexidade.</li>
+
+                            </ol>
+
+                            <br/>
+                            <p style="font-size: 14pt">SE LIGA!</p>
+                            <ul>
+                                <li>
+                                    <p style="margin-top: 0px">Condutas para curva de peso com traçado ascendente dentro dos pontos de corte -2 a +2 Escore Z</p>
+                                    <ul>
+                                        <li>Manter Aleitamento Materno Exclusivo até os seis meses.</li>
+                                    </ul>
+
+                                    <div class="cc_d_nota_container" style="display: block; width: 260px; height: 215px; float: right">
+                                        <p class="p_observacao" style="padding: 10px 5px 10px 5px;">O Ministério da Saúde recomenda o seguinte esquema para as consultas de rotina: 1a semana, 1º mês, 2º mês, 4ºmês, 6º mês, 9º mês, 12º mês, 18º mês e 24º mês. A partir dos 2 anos de idade, as consultas de rotina podem ser anuais, próximas ao mês de aniversário</p>
+                                        <img src="_imagens/divisao_nota.png" class="cc_d_nota_divisao">
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <p> Contutas para curva de peso com traçado horizontal dentro dos pontos de corte -2 a +2 Escore Z</p>
+                                    <ol type="1"  style="margin-top: 0px">
+                                        <li>Criança em Aleitamento Materno Exclusivo, averiguar as seguintes situações:
+                                            <ul>
+                                                <li>Alimentação da mãe;</li>
+                                                <li>Descanso da mãe (sobrecarga de trabalho);</li>
+                                                <li>Retorno da mãe ao trabalho (ansiedade materna);</li>
+                                                <li>Relação mãe e filho;</li>
+                                                <li>Sinais de depressão pós-parto.</li>
+                                            </ul>
+                                        </li>
+
+                                        <li>Na criança:
+                                            <ul>
+                                                <li>Averiguar o número das mamadas e o tempo de sono (crianças que recebem leite em quantidade suficiente dormem bem);</li>
+                                                <li>Investigar a diurese;</li>
+                                                <li>Questionar sobre a presença sinais e/ou sintomas que possam sugerir processos patológicos: febre, diarreia, tosse (e/ou dificuldade para respirar). Se necessário, encaminhar para avaliação de um profissional especializado;</li>
+                                                <li>Agendar nova consulta em uma semana (no máximo, 15 dias) e avaliar curva ponderal;</li>
+                                                <li>Se o ganho ponderal melhorou (mesmo que ainda não tenha atingido o esperado para a idade), estimular a mãe a manter o aleitamento materno exclusivo até a criança completar seis meses e agendar novo retorno em 15 dias para acompanhar o peso;</li>
+                                                <li>Se o ganho ponderal não melhorou (continuando muito abaixo do esperado) e, comprovadamente, não há evidências de processo infeccioso - iniciar a introdução dos alimentos complementares conforme orientação do Ministério da Saúde.</li>
+                                                <li>Agendar consulta após 15 dias do início da dieta de transição/desmame, para avaliação da curva ponderal e/ou curva do crescimento, além da aceitação dos novos alimentos.</li>
+                                                <li>Observação: o preparo dos alimentos complementares deve ser explicado detalhadamente para a mãe enfatizando: higiene das mãos, dos utensílios e dos alimentos, técnica do preparo, combinações dos alimentos, uso de óleo vegetal, água potável etc.</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </li>
+
+
+                                <li>
+                                    <p>Condutas para crianças com curva de peso acima de +2 Escore Z.</p>
+                                    <ul style="margin-top: 0px">
+                                        <li>Crianças em aleitamento materno exclusivo - conduta expectante;</li>
+                                        <li>Crianças em aleitamento misto - retirar as mamadeiras e orientar a mãe a oferecer o leite artificial (LA) em corpinho/xícara;</li>
+                                        <li>Crianças em aleitamento artificial - avaliar a alimentação e, se necessário, corrigir o preparo (reconstituição/diluição do leite e a concentração de hidratos de carbono – açúcar); Não esquecer de enfatizar para as mães que é contra indicado o uso de amido para crianças menores de 4 meses.</li>
+                                    </ul>
+                                </li>
+
+
+                                <li>
+                                    <p> Condutas para crianças com curva de peso entre -2 e -3 Escore Z</p>
+                                    <ul>
+                                        <li>Curva ascendente - tranquilizar os pais e fazer acompanhamento mensal</li>
+                                        <li>Curva horizontal ou descendente - discutir o caso com o profissional especializado ou encaminhar para um serviço de maior complexidade.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <img src="_imagens/divisao_resumo.png" style="display: block; margin: 20px auto 0px auto">
+                        </div>
+                    </div>
+
+
+
+                    <!-- SUB-TÓPICOS ABA CRESCIMENTO: Comprimento Vs Idade -->
+                    <br/>
+                    <div>
+                        <button class="abaExpansaoCasoClinico" style="height: 37px" onclick="displayComprimentoVsIdadeBlock('sc1CrescimentoGrafico3', sc1CrescimentoGrafico3Display); mudaBotaoExpansaoComprimentoVsIdade('botaoExpansao3SC1CrescimentoId', botaoExpansao3SC1CrescimentoDisplay)">
+                            <span style="position: relative; top: -10px;">Registre no gráfico de Comprimento x Idade (de zero a dois anos)</span>
+                            <img id="botaoExpansao3SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 79px">
+                        </button>
+                        <div id="sc1CrescimentoGrafico3" style="display: none;">
+                            <img src="_imagens/grafico_comprimento_vs_idade.png" width="100%">
+                            <img src="_imagens/atencao_grande.png" class="atencaoImgGrandeId">
+                            <p>Atenção!</p>
+                            <p style="margin-top: 0px">O ganho de estatura é um bom parâmetro para a avaliação do crescimento da criança por ser cumulativo, progressivo e não sofrer regressões.</p>
+
+                            <br/><br/>
+                            <img src="_imagens/question_mark.png" style="display: block; float: left; margin: 5px">
+                            <p class="p_question">Q3: Diante do gráfico, o que você conclui?</p>
+                            <ol type="a">
+                                <li><input type="radio" name="crescimentoS1Q3" id="crescimentoS1Q3aIDa">O comprimento está elevado para a idade >+2 escores z.</li>
+                                <li><input type="radio" name="crescimentoS1Q3" id="crescimentoS1Q3bIDb">O comprimento está adequado para a idade ≥ -2 e ≤ +2 escores z.</li>
+                                <li><input type="radio" name="crescimentoS1Q3" id="crescimentoS1Q3cIDc">O comprimento está abaixo do esperado para a idade ≥-3 e < -2 escore z.</li>
+                                <li><input type="radio" name="crescimentoS1Q3" id="crescimentoS1Q3dIDd">O comprimento está muito abaixo do esperado para a idade <-3 escores z.</li>
+                            </ol>
+
+                            <br/>
+                            <img src="_imagens/atencao_grande.png" class="atencaoImgGrandeId">
+                            <p>IMPORTANTE</p>
+                            <p style="margin-top: 0px">O comprimento é a distância que vai da sola (planta) dos pés descalços, ao topo da cabeça, comprimindo os cabelos, com a criança deitada em superfície horizontal, firme e lisa. Deve-se retirar sapatos, toucas, fivelas ou enfeites de cabelo que possam interferir na tomada da medida.</p>
+
+                            <br/><br/>
+                            <p>Leia mais!</p>
+                            <ul>
+                                <li><a href="http://189.28.128.100/dab/docs/portaldab/publicacoes/orientacoes_coleta_analise_dados_antropometricos.pdf" target="_blank">Orientações para a coleta e análise de dados antropométricos em serviços de saúde:</a></li>
+                            </ul>
+
+                            <img src="_imagens/divisao_resumo.png" style="display: block; margin: 20px auto 0px auto">
+                        </div>
+                    </div>
+
+
+
+                    <!-- SUB-TÓPICOS ABA CRESCIMENTO: IMC -->
+                    <br/>
+                    <div>
+                        <button class="abaExpansaoCasoClinico" style="height: 37px" onclick="displayIMCBlock('sc1CrescimentoGrafico4', sc1CrescimentoGrafico4Display); mudaBotaoExpansaoIMC('botaoExpansao4SC1CrescimentoId', botaoExpansao4SC1CrescimentoDisplay)">
+                            <span style="position: relative; top: -10px;">Índice de Massa Corpórea (IMC)</span>
+                            <img id="botaoExpansao4SC1CrescimentoId" class="abaExpansaoImg" src="_imagens/white_cross.png" style="left: 240px; top: 0px">
+                        </button>
+                        <div id="sc1CrescimentoGrafico4" style="display: none">
+                            <p class="p_centralizdo" style="font-size: 14pt; width: 100%">Para facilitar o preenchimento do gráfico de IMC, utilize a <span id="alert_sc1_tabela_calculo_imc" style="cursor: pointer; color: blue; font-style: italic; text-decoration: underline" onclick="openModal('modal_sc1_tabela_calculo_imc', 'alert_sc1_tabela_calculo_imc', 'close_sc1_tabela_calculo_imc')">tabela de cálculo</span> (Página 76 - 79 da CSC).</p>
+                            <!--POP UP - MODAL TABELA DE CALCULO IMC-->
+                            <div id="modal_sc1_tabela_calculo_imc" class="modal">
+                                <div class="modalContent2">
+                                    <span class="close" id="close_sc1_tabela_calculo_imc">&times;</span>
+                                    <h2>Tabela de Cálculo do IMC</h2>
+                                    <img src="_imagens/tabela_calculo_imc_parte1.png" style="width: 100%">
+                                </div>
+                            </div>
+
+                            <br/>
+                            <p>Os indicadores antropométricos, incluindo o Peso/Idade são utilizados como indicadores diretos para avaliar o estado nutricional da criança.</p>
+                            <p>A avaliação periódica do ganho de peso permite o acompanhamento do progresso individual de cada criança, identificando aquelas de maior risco de morbi/mortalidade, sinalizando o alarme precoce para a desnutrição, causa básica da instalação ou do agravamento da maior parte dos problemas de saúde infantil.</p>
+
+                            <br/>
+                            <img src="_imagens/question_mark.png" style="display: block; float: left; margin: 5px; padding-top: 10px">
+                            <p class="p_question">Q4: Arthur está com 5 meses e 4 dias, pesando 7.580g e medindo 66 cm. Qual o seu IMC? O que você pode concluir?</p>
+                            <ol type="a">
+                                <li><input type="radio" name="crescimentoS1Q4" id="crescimentoS1Q4aIDa">Seu IMC é igual a 19 e ele está com sobrepeso.</li>
+                                <li><input type="radio" name="crescimentoS1Q4" id="crescimentoS1Q4bIDb">Seu IMC é igual à 20 e ele apresenta obesidade.</li>
+                                <li><input type="radio" name="crescimentoS1Q4" id="crescimentoS1Q4cIDc">Seu IMC é igual a 18 e ele está com risco de Sobrepeso.</li>
+                                <li><input type="radio" name="crescimentoS1Q4" id="crescimentoS1Q4dIDd">Seu IMC é igual a 17 e está adequado.</li>
+                            </ol>
+
+                            <br/><br/>
+                            <img src="_imagens/grafico_massa_corporea_vs_idade.png" style="display: block; margin: 0px auto 0px auto">
+
+                            <br/><br/>
+                            <img src="_imagens/grafico_massa_corporea_vs_idade_2-5_anos.png" style="display: block; margin: 0px auto 0px auto">
+
+                            <br/><br/>
+                            <img src="_imagens/grafico_massa_corporea_vs_idade_5-10_anos.png" style="display: block; margin: 0px auto 0px auto">
+
+                            <img src="_imagens/divisao_resumo.png" style="display: block; margin: 20px auto 0px auto">
+                        </div>
+                    </div>
+
+
+
+                    <br/>
+                    <button class="botaoSalvarContinuar" style="margin: 0px auto 0px 200px;">
+                        <label class="botaoLabel">Salvar</label>
+                        <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
+                    </button>
+                    <button class="botaoSalvarContinuar" style="margin: 20px 0px 0px 250px">
+                        <label class="botaoLabel">Continuar</label>
+                        <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
+                    </button>
+                </div>
+
+
 
                 <!--ABA IMUNIZAÇÃO-->
-                <iframe src="situacao_clinica_1_vacinacao.html" id="abaVacinacaoCaso1Id" style="display: none; height: 1240px;"></iframe>
+                <!--<iframe src="situacao_clinica_1_vacinacao.html" id="abaVacinacaoCaso1Id" style="display: none; height: 1240px;"></iframe>-->
+                <div id="abaVacinacaoCaso1Id" style="display: none">
+                    <img class="centerImg" src="_imagens/vacinas_Arthur.jpg">
+                    <!--<br/>-->
+                    <!--<img class="centerImg" src="_imagens/tabela_registro_vacinas_e_calendario_parte2-menino.PNG">-->
+
+                    <br/>
+                    <img src="_imagens/question_mark.png" style="display: block; float: left; margin: 5px">
+                    <p class="p_question">Q1: O Calendário Básico de vacinas de Arthur está atualizado?</p>
+                    <ol type="a">
+                        <li><input type="radio" name="vacinacaoS1Q1" id="vacinacaoS1Q1IDa">Sim</li>
+                        <li><input type="radio" name="vacinacaoS1Q1" id="vacinacaoS1Q1IDb">Não</li>
+                    </ol>
+
+                    <br/>
+                    <img src="_imagens/question_mark.png" style="display: block; float: left; margin: 5px">
+                    <p class="p_question">Q2: Na idade dele o que orientar a mãe em relação ao calendário básico de vacinas?</p>
+                    <ol type="a">
+                        <li><input type="radio" name="vacinacaoS1Q2" id="vacinacaoS1Q2IDa">Levá-lo para fazer a segunda dose da vacina meningocócica C, recomendada para crianças de cinco meses;</li>
+                        <li><input type="radio" name="vacinacaoS1Q2" id="vacinacaoS1Q2IDb">Não há recomendações, visto que a situação vacinal da criança está atualizada;</li>
+                        <li><input type="radio" name="vacinacaoS1Q2" id="vacinacaoS1Q2IDc">Não é necessário fazer nenhuma orientação, pois esta é atribuição do técnico de enfermagem na sala de vacina;</li>
+                        <li><input type="radio" name="vacinacaoS1Q2" id="vacinacaoS1Q2IDd">Levá-lo para fazer a terceira dose da vacina Penta/ Tríplice bacteriana tipo infantil (DTP) e das Vacinas Inativada Poliomielite (VIP)/ Vacina Oral Poliomielite (VOP), recomendadas para crianças de cinco meses.</li>
+                    </ol>
+
+                    <br/>
+                    <div class="cc_d_nota_container" style="float: right; display: block; width: 230px; height: 120px; margin-left: 10px">
+                        <p class="p_observacao" style="padding: 10px 5px 10px 5px;">Na próxima consulta, ele já estará na idade para iniciar a SUPLEMENTAÇÃO DE FERRO e de VITAMINA A</p>
+                        <img src="_imagens/divisao_nota.png" class="cc_d_nota_divisao">
+                    </div>
+
+                    <br/>
+                    <img class="atencaoImgGrandeId" src="_imagens/atencao_grande.png" id="atencaoImgGrandeId">
+                    <p>Atenção!</p>
+                    <p style="margin-top: 0px">Crianças em aleitamento materno exclusivo só devem receber suplementos a partir do sexto mês de idade. Se a criança não estiver em aleitamento materno exclusivo, a suplementação poderá ser realizada a partir dos quatro meses de idade, juntamente com a introdução dos alimentos complementares (BRASIL, 2013).</p>
+
+                    <br/><br/>
+                    <p>Leia mais!</p>
+                    <ul>
+                        <li><a href="http://189.28.128.100/dab/docs/portaldab/publicacoes/manual_ferro.pdf" target="_blank">Programa Nacional de Suplementação de Ferro Manual de Condutas Gerais</a></li>
+                        <li><a href="http://portalsaude.saude.gov.br/index.php/o-ministerio/principal/leia-mais-o-ministerio/197-secretaria-svs/13600-calendario-nacional-de-vacinacao" target="_blank">Calendário do Programa Nacional de Imunização</a></li>
+                        <li><a href="http://www.saude.pr.gov.br/arquivos/File/-01VACINA/manual_procedimentos_2014.pdf" target="_blank">Manual de Normas e Procedimentos para Vacinação</a></li>
+                    </ul>
+
+                    <br/><br/>
+                    <button class="botaoSalvarContinuar" style="margin: 0px auto 0px 200px;">
+                        <label class="botaoLabel">Salvar</label>
+                        <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
+                    </button>
+                    <button class="botaoSalvarContinuar" style="margin: 20px 0px 0px 250px">
+                        <label class="botaoLabel">Continuar</label>
+                        <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
+                    </button>
+                </div>
+
+
 
                 <!--ABA ORIENTAÇÕES-->
-                <iframe src="situacao_clinica_1_orientacoes.html" id="abaOrientacoesCaso1Id" style="display: none; height: 450px"></iframe>
+                <!--<iframe src="situacao_clinica_1_orientacoes.html" id="abaOrientacoesCaso1Id" style="display: none; height: 450px"></iframe>-->
+                <div id="abaOrientacoesCaso1Id" style="display: none;">
+                    <img src="_imagens/question_mark.png" style="display: block; float: left; margin: 5px">
+                    <p class="p_question">Q1: Nessa fase final da consulta o que você ainda deve orientar? Marque abaixo o que você acha relevante conversar com a mãe de Arthur:</p>
+                    <br/>
+                    <ul type="none">
+                        <li><input type="checkbox" name="orientacoesS1Q1" id="orientacoesS1Q1aId">Teste da Linguinha</li>
+                        <li><input type="checkbox" name="orientacoesS1Q1" id="orientacoesS1Q1bId">Transição alimentar</li>
+                        <li><input type="checkbox" name="orientacoesS1Q1" id="orientacoesS1Q1cId">Saúde bucal*</li>
+                        <li><input type="checkbox" name="orientacoesS1Q1" id="orientacoesS1Q1dId">Prevenção de acidentes</li>
+                        <li><input type="checkbox" name="orientacoesS1Q1" id="orientacoesS1Q1eId">Outros cuidados para uma boa saúde</li>
+                        <li><input type="checkbox" name="orientacoesS1Q1" id="orientacoesS1Q1fId">A importância de deixar a criança brincar no chão forrado</li>
+                        <li><input type="checkbox" name="orientacoesS1Q1" id="orientacoesS1Q1gId">Higiene dos brinquedos e demais utensílios que leva à boca</li>
+                        <li><input type="checkbox" name="orientacoesS1Q1" id="orientacoesS1Q1hId">Passeios com a criança ao ar livre e banho de sol diário</li>
+                    </ul>
+
+                    <br/>
+                    <img class="atencaoImgGrandeId" src="_imagens/atencao_grande.png">
+                    <p>Atenção!</p>
+                    <p style="margin-top: 0px">Em torno dos 5 e 6 meses, é esperado o surgimento do primeiro dente de leite. É importante conversar com a mãe que a criança pode apresentar alteração do sono, aumento da salivação, coceira nas gengivas e irritabilidade.</p>
+
+                    <br/><br/>
+                    <button class="botaoSalvarContinuar" style="margin: 0px auto 0px 200px;">
+                        <label class="botaoLabel">Salvar</label>
+                        <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
+                    </button>
+                    <button class="botaoSalvarContinuar" id="botaoFinalizarSC1" style="margin: 20px 0px 0px 250px" onclick="openModal('modal_sc1_respostas', 'botaoFinalizarSC1', 'close_sc1_respostas')">
+                        <label class="botaoLabel">Finalizar</label>
+                        <label class="botaoLabelImg"><img src="_imagens/rightArrow.png"></label>
+                    </button>
+                </div>
+
+
+
+                <!--POP UP - MODAL RESPOSTAS TESTE-->
+                <div id="modal_sc1_respostas" class="modal">
+                    <div class="modalContent" style="width: 800px">
+                        <span class="close" id="close_sc1_respostas">&times;</span>
+
+                        <div class="legendaResposta">
+                            <table class="legendaResposta">
+                                <th class="legendaResposta">Legenda</th>
+                                <tr class="legendaResposta">
+                                    <td style="color: blue; background-color: blue">ABCD</td>
+                                    <td>Correta</td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td style="color: red; background-color: red">ABCD</td>
+                                    <td>Errada</td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td style="color: green; background-color: green">ABCD</td>
+                                    <td>Acertada</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <button class="abaExpansaoCasoClinico" style="height: 37px">
+                            <p class="p_centralizdo">Desempenho - 1. AVALIAÇÃO DE ROTINA - <span id="avaliacaoNotaSC1" style="color: green">97%</span></p>
+                        </button>
+
+                        <div class="abas_situacao_clinica">
+                            <figure>
+                                <img id="direcionador_desenvolvimento_resposta_SC1" src="_imagens/grafico_icone_situacao_clinica_colorido.png" style="cursor: pointer" onclick="mudaAba('abaDesenvolvimentoRespostaCaso1Id', 'abaCrescimentoRespostaCaso1Id', 'abaVacinacaoRespostaCaso1Id', 'abaOrientacoesRespostaCaso1Id'); mudaIconeCor('direcionador_desenvolvimento_resposta_SC1', 'grafico_icone_situacao_clinica', true); mudaIconeCor('direcionador_crescimento_resposta_SC1', 'crescimento_icone', false); mudaIconeCor('direcionador_vacinacao_resposta_SC1', 'vacinacao_icone', false); mudaIconeCor('direcionador_info_gerais_resposta_SC1', 'direcoes_icone', false)">
+                                <figcaption id="direcionador_desenvolvimento_resposta_SC1_texto" style="color: #00AA18; cursor: pointer">Desenvolvimento</figcaption>
+                                <img id="direcionador_desenvolvimento_resposta_SC1_divisor" src="_imagens/divisao_resumo.png">
+                            </figure>
+                            <figure>
+                                <img id="direcionador_crescimento_resposta_SC1" src="_imagens/crescimento_icone.png" style="cursor: pointer" onclick="mudaAba('abaCrescimentoRespostaCaso1Id', 'abaDesenvolvimentoRespostaCaso1Id', 'abaVacinacaoRespostaCaso1Id', 'abaOrientacoesRespostaCaso1Id'); mudaIconeCor('direcionador_desenvolvimento_resposta_SC1', 'grafico_icone_situacao_clinica', false); mudaIconeCor('direcionador_crescimento_resposta_SC1', 'crescimento_icone', true); mudaIconeCor('direcionador_vacinacao_resposta_SC1', 'vacinacao_icone', false); mudaIconeCor('direcionador_info_gerais_resposta_SC1', 'direcoes_icone', false)">
+                                <figcaption id="direcionador_crescimento_resposta_SC1_texto" style="cursor: pointer">Crescimento</figcaption>
+                                <img id="direcionador_crescimento_resposta_SC1_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+                            </figure>
+                            <figure>
+                                <img id="direcionador_vacinacao_resposta_SC1" src="_imagens/vacinacao_icone.png" style="cursor: pointer" onclick="mudaAba('abaVacinacaoRespostaCaso1Id', 'abaDesenvolvimentoRespostaCaso1Id', 'abaCrescimentoRespostaCaso1Id', 'abaOrientacoesRespostaCaso1Id'); mudaIconeCor('direcionador_desenvolvimento_resposta_SC1', 'grafico_icone_situacao_clinica', false); mudaIconeCor('direcionador_crescimento_resposta_SC1', 'crescimento_icone', false); mudaIconeCor('direcionador_vacinacao_resposta_SC1', 'vacinacao_icone', true); mudaIconeCor('direcionador_info_gerais_resposta_SC1', 'direcoes_icone', false)">
+                                <figcaption id="direcionador_vacinacao_resposta_SC1_texto" style="cursor: pointer">Vacinação</figcaption>
+                                <img id="direcionador_vacinacao_resposta_SC1_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+                            </figure>
+                            <figure>
+                                <img id="direcionador_info_gerais_resposta_SC1" src="_imagens/direcoes_icone.png" style="cursor: pointer" onclick="mudaAba('abaOrientacoesRespostaCaso1Id', 'abaDesenvolvimentoRespostaCaso1Id', 'abaCrescimentoRespostaCaso1Id', 'abaVacinacaoRespostaCaso1Id'); mudaIconeCor('direcionador_desenvolvimento_resposta_SC1', 'grafico_icone_situacao_clinica', false); mudaIconeCor('direcionador_crescimento_resposta_SC1', 'crescimento_icone', false); mudaIconeCor('direcionador_vacinacao_resposta_SC1', 'vacinacao_icone', false); mudaIconeCor('direcionador_info_gerais_resposta_SC1', 'direcoes_icone', true)">
+                                <figcaption id="direcionador_info_gerais_resposta_SC1_texto" style="cursor: pointer">Orientações</figcaption>
+                                <img id="direcionador_info_gerais_resposta_SC1_divisor" src="_imagens/divisao_resumo.png" style="visibility: hidden">
+                            </figure>
+                        </div>
+
+                        <div id="abaDesenvolvimentoRespostaCaso1Id">
+                            <p>ABA DESENVOLVIMENTO RESPOSTA</p>
+                        </div>
+
+                        <div id="abaCrescimentoRespostaCaso1Id" style="display: none;">
+                            <p>ABA CRESCIMENTO RESPOSTA</p>
+                        </div>
+
+                        <div id="abaVacinacaoRespostaCaso1Id" style="display: none;">
+                            <p>ABA IMUNIZAÇÃO RESPOSTA</p>
+                        </div>
+
+                        <div id="abaOrientacoesRespostaCaso1Id" style="display: none;">
+                            <p>ABA ORIENTAÇÃO RESPOSTA</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <footer id="rodape">
