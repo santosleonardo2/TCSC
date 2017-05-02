@@ -243,6 +243,14 @@ p.p_question {
     font-weight: bold
 }
 
+p.p_resposta {
+    font-size: 12pt;
+    text-align: left;
+    margin: 0px;
+    font-family: Balsamiq, sans-serif;
+    color: blue;
+}
+
 p {
     font-size: 12pt;
     text-align: left;
