@@ -216,6 +216,11 @@ div#interface {
     position: relative;
 }
 
+.respostaTopico {
+    font-weight: bold;
+    color: black
+}
+
 p.p_centralizdo {
     text-align: center;
     font-size: 12pt;
