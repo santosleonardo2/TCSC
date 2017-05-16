@@ -177,3 +177,8 @@ function openModal(modalId, alertId, spanId) {
         }
     };
 }
+
+function setGraphValue(x, y, xInputId, yInputId) {
+    document.getElementById(xInputId).defaultValue = x;
+    document.getElementById(yInputId).defaultValue = y;
+}
